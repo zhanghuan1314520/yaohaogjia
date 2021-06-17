@@ -1,0 +1,43 @@
+<view class="content">
+    <view class="floorSelect">
+        <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{res}}" wx:key="index">{{item}}</view>
+    </view>
+    <view class="information">
+        <view class="inf-list" wx:if="{{floorIndex==0}}">
+            <view bindtap="__e" class="inf-block" data-event-opts="{{[ [ 'tap',[ [ 'MesDeatils',['$0'],[ [ ['news','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="i-left">
+                    <view class="t-b">
+                        <label class="_span">{{item[$orig].title}}</label>
+                    </view>
+                    <view class="b-i align-center">
+                        <view class="b-left align-center">
+                            <label class="_span">{{item[$orig].officialAccount}}</label>
+                        </view>
+                        <view class="b-right">
+                            <label class="_span">{{item.g0}}</label>
+                        </view>
+                    </view>
+                </view>
+                <view class="i-right">
+                    <image class="i-img" src="{{item[$orig].picture+'?x-oss-process=style/123'}}"></image>
+                </view>
+            </view>
+            <uni-load-more bind:__l="__l" contentText="{{contentText}}" loadingType="{{loadingType}}" status="{{loadingType===0?'loading':loadingType===1?'more':'noMore'}}" vueId="609d63d2-1"></uni-load-more>
+        </view>
+        <view class="dynamic" wx:if="{{floorIndex==1}}">
+            <view class="header">
+                <view bindtap="__e" class="{{['dy-nav',index==navIndex?'nav-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navSelect',['$0',index],[ [ ['nav','',index,'type'] ] ] ] ] ] ]}}" wx:for="{{nav}}" wx:key="index">{{''+item.typeName+'('+item.count+')'}}</view>
+            </view>
+            <view class="new-block" wx:for="{{$root.l1}}" wx:key="index">
+                <view class="timeline">
+                    <image class="lineimg" src="https://cdn.lottery.okgoes.com/timeline.png"></image>
+                    <label class="time-line-title _span">{{item[$orig].publishTime}}</label>
+                </view>
+                <view class="new-content">
+                    <view class="title">{{item[$orig].title}}</view>
+                    <rich-text bindtap="tap" nodes="{{item.m0}}"></rich-text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

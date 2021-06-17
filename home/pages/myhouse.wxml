@@ -1,0 +1,144 @@
+<view class="content data-v-a351502a">
+    <view class="header data-v-a351502a" style="background:url(https://cdn.lottery.okgoes.com/task_header.png);background-size:cover;">
+        <view class="title data-v-a351502a">
+            <image bindtap="__e" class="left data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>顾问之家</view>
+        <view bindtap="__e" class="my-top data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$0'],['refresh'] ] ] ] ]}}" wx:if="{{!isLogin}}">
+            <view class="top-left data-v-a351502a">
+                <image class="my-head data-v-a351502a" src="https://cdn.lottery.okgoes.com/nolog.png"></image>
+                <view class="my-des data-v-a351502a">
+                    <view class="data-v-a351502a">
+                        <text class="my-name data-v-a351502a">{{userName}}</text>
+                        <text class="my-rank data-v-a351502a">请登录</text>
+                    </view>
+                    <view bindtap="__e" class="data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['/home/pages/houseDis?pfsId='+detail.pfsId] ] ] ] ]}}" wx:if="{{detail.pfsName}}">
+                        <text class="pfsName data-v-a351502a">{{detail.pfsName}}</text>
+                        <image mode class="arrow_Rt data-v-a351502a" src="https://cdn.lottery.okgoes.com/arrow_rt.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="top-right data-v-a351502a">
+                <button sessionFrom class="data-v-a351502a" openType="contact" plain="true">
+                    <image class="my-icon data-v-a351502a" src="https://cdn.lottery.okgoes.com/myHouse4.png"></image>
+                </button>
+            </view>
+        </view>
+        <view class="my-top data-v-a351502a" wx:else>
+            <view class="top-left data-v-a351502a">
+                <image class="my-head userAvt data-v-a351502a" src="{{user_avt}}"></image>
+                <view class="my-des data-v-a351502a">
+                    <view class="data-v-a351502a">
+                        <text class="my-name data-v-a351502a">{{userName}}</text>
+                        <text class="my-rank data-v-a351502a" wx:if="{{user.userType===2}}">{{user.userTitle}}</text>
+                    </view>
+                    <view bindtap="__e" class="data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['/home/pages/houseDis?pfsId='+detail.pfsId] ] ] ] ]}}" wx:if="{{detail.pfsName}}">
+                        <text class="pfsName data-v-a351502a">{{detail.pfsName}}</text>
+                        <image mode class="arrow_Rt data-v-a351502a" src="https://cdn.lottery.okgoes.com/arrow_rt.png"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="top-right data-v-a351502a">
+                <button sessionFrom class="data-v-a351502a" openType="contact" plain="true">
+                    <image class="my-icon data-v-a351502a" src="https://cdn.lottery.okgoes.com/myHouse4.png"></image>
+                </button>
+            </view>
+        </view>
+        <view class="my-h-b data-v-a351502a">
+            <view bindtap="__e" class="h-block data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'integral',['$event'] ] ] ] ]}}">
+                <view class="my-total data-v-a351502a">{{goldAndPoint.point||0}}</view>
+                <view class="my-title data-v-a351502a">积分</view>
+            </view>
+            <view class="_hr data-v-a351502a" style="width:1px;height:54rpx;background-color:#ccc;"></view>
+            <view bindtap="__e" class="h-block data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'liveness',['$event'] ] ] ] ]}}">
+                <view class="my-total data-v-a351502a">{{goldAndPoint.activeCount||0}}</view>
+                <view class="my-title data-v-a351502a">活跃度</view>
+            </view>
+            <view class="_hr data-v-a351502a" style="width:1px;height:54rpx;background-color:#ccc;"></view>
+            <view bindtap="__e" class="h-block data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'gold',['$event'] ] ] ] ]}}">
+                <view class="my-total data-v-a351502a">{{goldAndPoint.gold||0}}</view>
+                <view class="my-title data-v-a351502a">金币</view>
+            </view>
+        </view>
+    </view>
+    <view class="body data-v-a351502a">
+        <view class="body-nav data-v-a351502a">
+            <view class="my-client title data-v-a351502a">我的客户</view>
+            <view class="body-block data-v-a351502a">
+                <view bindtap="__e" class="client-block data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'myPhone',['$event'] ] ] ] ]}}">
+                    <view class="my-total data-v-a351502a">{{info.contactPhoneCount+''}}<view class="{{['data-v-a351502a',info.contactPhoneCount>9?'my-num my-num2':'my-num']}}" wx:if="{{info.contactPhoneUnReadCount>0}}">{{'+'+(info.contactPhoneUnReadCount>99?'99':info.contactPhoneUnReadCount)}}</view>
+                    </view>
+                    <view class="my-title data-v-a351502a">电话</view>
+                </view>
+                <view class="data-v-a351502a" style="width:1px;height:54rpx;background-color:#ccc;"></view>
+                <view bindtap="__e" class="client-block data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'myMesess',['$event'] ] ] ] ]}}">
+                    <view class="my-total data-v-a351502a">{{info.chatCount+''}}<view class="{{['data-v-a351502a',info.chatCount>9?'my-num my-num2':'my-num']}}" wx:if="{{info.chatUserUnReadCount>0}}">{{'+'+(info.chatUserUnReadCount>99?'99':info.chatUserUnReadCount)}}</view>
+                    </view>
+                    <view class="my-title data-v-a351502a">聊天</view>
+                </view>
+                <view class="data-v-a351502a" style="width:1px;height:54rpx;background-color:#ccc;"></view>
+                <view bindtap="__e" class="client-block data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'myClient',['$event'] ] ] ] ]}}">
+                    <view class="my-total data-v-a351502a">{{info.belongCount+''}}<view class="{{['data-v-a351502a',info.belongCount>9?'my-num my-num2':'my-num']}}" wx:if="{{info.belongUserUnReadCount>0}}">{{'+'+(info.belongUserUnReadCount>99?'99':info.belongUserUnReadCount)}}</view>
+                    </view>
+                    <view class="my-title data-v-a351502a">专属客户</view>
+                </view>
+            </view>
+        </view>
+        <view class="bgc data-v-a351502a"></view>
+        <view class="body-middle data-v-a351502a">
+            <view class="title data-v-a351502a">我的段位</view>
+            <view class="img-block data-v-a351502a">
+                <view bindtap="__e" class="middle-img data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['/pages/common/counselor?pfsId='+info.belongPfsId] ] ] ] ]}}" style="background:url(https://cdn.lottery.okgoes.com/task-icon_1.png);background-size:cover;">
+                    <view class="bgc-title flex justify-around align-center data-v-a351502a">
+                        <view class="b-title data-v-a351502a">{{info.pfsSort||0}}</view>
+                        <view class="bth-text data-v-a351502a">
+                            <text class="data-v-a351502a">本楼盘排位</text>
+                            <text class="triangle-right data-v-a351502a"></text>
+                        </view>
+                    </view>
+                    <view class="text data-v-a351502a">本楼盘</view>
+                </view>
+                <view bindtap="__e" class="middle-img data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['/pages/common/counselor'] ] ] ] ]}}" style="background:url(https://cdn.lottery.okgoes.com/task-icon_2.png);background-size:cover;">
+                    <view class="bgc-title flex justify-around align-center data-v-a351502a">
+                        <view class="b-title data-v-a351502a">{{info.inAllSort||0}}</view>
+                        <view class="bth-text bth-r data-v-a351502a">
+                            <text class="data-v-a351502a">置业顾问总排位</text>
+                            <text class="triangle-right data-v-a351502a"></text>
+                        </view>
+                    </view>
+                    <view class="text data-v-a351502a">全部楼盘</view>
+                </view>
+            </view>
+        </view>
+        <view class="bgc data-v-a351502a"></view>
+        <view class="day-welfare data-v-a351502a">
+            <view class="b-block data-v-a351502a">
+                <view class="b-title data-v-a351502a">{{myWelfare.title}}</view>
+                <view class="b-ul data-v-a351502a">
+                    <block wx:for="{{myWelfare.content}}" wx:for-index="i" wx:for-item="content" wx:key="i">
+                        <view bindtap="__e" class="b-li data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['/myPackageA/pages/urlArticle?url=https://mp.weixin.qq.com/s/C8YD2ox7KJ4IWLYaoLuxyw'] ] ] ] ]}}" wx:if="{{content.id===1}}">
+                            <view class="left-li data-v-a351502a">
+                                <image class="my-icon data-v-a351502a" src="{{content.src}}"></image>
+                                <label class="_span data-v-a351502a">{{content.name}}</label>
+                            </view>
+                            <view class="right-li data-v-a351502a">
+                                <text class="-text data-v-a351502a">{{content.grade}}</text>
+                                <image class="my-icon data-v-a351502a" src="{{content.leftIcon}}"></image>
+                            </view>
+                        </view>
+                        <view class="data-v-a351502a" wx:else>
+                            <view bindtap="__e" class="b-li data-v-a351502a" data-event-opts="{{[ [ 'tap',[ [ 'curIndex',['$0'],[ [ ['myWelfare.content','',i] ] ] ] ] ] ]}}">
+                                <view class="left-li data-v-a351502a">
+                                    <image class="my-icon data-v-a351502a" src="{{content.src}}"></image>
+                                    <label class="_span data-v-a351502a">{{content.name}}</label>
+                                </view>
+                                <view class="right-li data-v-a351502a">
+                                    <text class="-text data-v-a351502a">{{content.grade}}</text>
+                                    <image class="my-icon data-v-a351502a" src="{{content.leftIcon}}"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

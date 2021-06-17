@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "摇号时刻表",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+        "search": "/pages/common/search",
+        "house": "/pages/common/house"
+    }
+}

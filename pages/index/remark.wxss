@@ -1,0 +1,25 @@
+.search-con.data-v-54ff7c49 {
+    height: 88rpx;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 32rpx;
+    margin-top: 16rpx;
+}
+
+.content.data-v-54ff7c49,.search-con.data-v-54ff7c49 {
+    width: 100%;
+    display: flex;
+}
+
+.content.data-v-54ff7c49 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.tip.data-v-54ff7c49 {
+    text-align: center;
+    color: #ccc;
+}

@@ -1,0 +1,34 @@
+<view class="content">
+    <view class="search">
+        <search bind:__l="__l" bind:confirm="__e" data-event-opts="{{[ [ '^confirm',[ ['handle_search'] ] ] ]}}" disabled="{{false}}" placeholderList="{{placeholderList}}" vueId="a3f2ace4-1"></search>
+    </view>
+    <view class="body">
+        <view class="area">
+            <view class="sigle">
+                <view class="title">区域</view>
+                <view class="block">
+                    <view bindtap="__e" class="{{['tag',index==tagIndex?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'areaSelect',[index,'$0'],[ [ ['areaList','id',item.id] ] ] ] ] ] ]}}" wx:for="{{areaList}}" wx:key="id">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="school-dis" wx:for="{{$root.l0}}" wx:key="index">
+            <view class="scroll-top">
+                <label class="title _span">{{item[$orig].name}}</label>
+                <view bindtap="__e" class="nav-right" data-event-opts="{{[ [ 'tap',[ [ 'moreBlock',['$0'],[ [ ['houseList','',index] ] ] ] ] ] ]}}">
+                    <label class="more _span">分析详情</label>
+                    <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                </view>
+            </view>
+            <view class="school-tags">
+                <view bindtap="__e" class="{{['school-tag',index==schoolIndex?'school-tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'schoolSelect',[index] ] ] ] ]}}" wx:for="{{schoolList}}" wx:key="index">{{''+item[$orig]+''}}</view>
+            </view>
+            <view>
+                <view class="schoolDistrictImage" style="{{'background-image:'+'url('+item[$orig].mapPicture+'?x-oss-process=style/123)'+';'+'background-size:'+'cover'+';'}}"></view>
+                <view class="flex">
+                    <text class="des-title ellipsisTwo">
+                        <text class="school-des">学区分析:</text>{{item.m0}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "drag-ball": "/components/drag-ball/drag-ball",
+        "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
+        "house": "/pages/common/house",
+        "search": "/pages/common/search",
+        "t-table": "/components/t-table/t-table",
+        "t-th": "/components/t-table/t-th",
+        "t-tr": "/components/t-table/t-tr",
+        "t-td": "/components/t-table/t-td"
+    }
+}

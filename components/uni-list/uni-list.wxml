@@ -1,0 +1,5 @@
+<view class="uni-list uni-border-top-bottom">
+    <view class="uni-list--border-top" wx:if="{{border}}"></view>
+    <slot></slot>
+    <view class="uni-list--border-bottom" wx:if="{{border}}"></view>
+</view>

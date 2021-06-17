@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "智能选房",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+        "search": "/pages/common/search",
+        "house": "/pages/common/house"
+    }
+}

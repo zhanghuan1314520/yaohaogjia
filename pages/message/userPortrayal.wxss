@@ -1,0 +1,89 @@
+.content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 88rpx 0 0;
+}
+
+.content,.content .header .title {
+    width: 100%;
+    display: flex;
+}
+
+.content .header .title {
+    font-size: 32rpx;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 600;
+    color: #000;
+}
+
+.body {
+    padding: 40rpx;
+}
+
+.body .b-block {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-bottom: 2rpx solid #ccc;
+    padding-bottom: 16rpx;
+    margin-bottom: 54rpx;
+}
+
+.body .b-block .b-title {
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 32rpx;
+}
+
+.body .b-block .sigle {
+    width: 100%;
+    margin-bottom: 48rpx;
+}
+
+.body .b-block .sigle .b-top {
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 28rpx;
+    font-weight: 500;
+    margin-bottom: 16rpx;
+}
+
+.body .b-block .sigle .b-top .scope {
+    color: #878f9a;
+}
+
+.body .b-block .sigle .b-top .percentage {
+    color: #2b67ff;
+}
+
+.body .b-block .sigle .b-bottom {
+    display: flex;
+    width: 100%;
+}
+
+.body .b-block .sigle .b-bottom .bgline {
+    width: 100%;
+    height: 20rpx;
+    background: #f1f3f5;
+    border-radius: 16px;
+}
+
+.body .b-block .sigle .b-bottom .line {
+    height: 20rpx;
+    background: #2b67ff;
+    border-radius: 16px;
+}

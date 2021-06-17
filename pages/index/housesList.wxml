@@ -1,0 +1,27 @@
+<view class="content">
+    <view class="search">
+        <search bind:__l="__l" vueId="48173302-1"></search>
+    </view>
+    <view class="swiper">
+        <uni-swiper-dot autoplay="{{autoplay}}" bind:__l="__l" current="{{current}}" dotsStyles="{{dotsStyles}}" field="content" info="{{info}}" mode="{{mode}}" vueId="48173302-2" vueSlots="{{['default']}}">
+            <swiper bindchange="__e" class="swiper-box" data-event-opts="{{[ [ 'change',[ [ 'change',['$event'] ] ] ] ]}}">
+                <swiper-item wx:for="{{info}}" wx:key="index">
+                    <view class="swiper-item">{{item.content}}</view>
+                </swiper-item>
+            </swiper>
+        </uni-swiper-dot>
+    </view>
+    <view class="sign">
+        <view class="block" wx:if="{{show}}">
+            <view class="left">即将预售：近期将会取得预售许可证的楼盘，取证后进入公示期</view>
+            <icon bindtap="__e" class="right" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" size="14" type="clear"></icon>
+        </view>
+    </view>
+    <view class="select-area">
+        <area-select bind:__l="__l" bind:selected="__e" data-event-opts="{{[ [ '^selected',[ ['handleSelect'] ] ] ]}}" vueId="48173302-3"></area-select>
+    </view>
+    <view class="house-data">
+        <house bind:__l="__l" houseData="{{houseData}}" show_des="{{false}}" vueId="48173302-4"></house>
+    </view>
+    <view class="tips" wx:if="{{isBottom}}">没有更多信息...</view>
+</view>

@@ -1,0 +1,31 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/client.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>我的金币</view>
+        <view class="h-content">
+            <view class="h-gold">{{gold}}</view>
+            <view class="h-footer">
+                <picker bindchange="__e" class="mount" data-event-opts="{{[ [ 'change',[ [ 'bindDateChange',['$event'] ] ] ] ]}}" end="{{endDate}}" fields="month" mode="date" start="{{startDate}}" value="{{date}}">
+                    <view>{{curMonth+'月'}}<view class="icon"></view>
+                    </view>
+                </picker>
+                <view class="gold">金币(枚)</view>
+                <view bindtap="__e" class="gain-gold" data-event-opts="{{[ [ 'tap',[ [ 'getGold',['$event'] ] ] ] ]}}">获取金币</view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="floorSelect">
+            <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{res}}" wx:key="index">{{''+item+''}}</view>
+        </view>
+        <scroll-view bindscrolltolower="__e" bindscrolltoupper="__e" class="scroll-Y" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'upper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'lower',['$event'] ] ] ] ]}}" scrollTop="{{scrollTop}}" scrollY="true">
+            <view class="scroll-view-item block" id="demo1" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="voc-left">
+                    <view class="top-b">{{item[$orig].description}}</view>
+                    <view class="time-c">{{item.m0}}</view>
+                </view>
+                <view class="voc-right">{{item[$orig].gold>0?'+'+item[$orig].gold:item[$orig].gold}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

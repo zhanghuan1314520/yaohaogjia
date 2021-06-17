@@ -1,0 +1,64 @@
+.section.data-v-9ef86ce6 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0 32rpx;
+    width: 100%;
+    height: 104rpx;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8rpx;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.section .box.data-v-9ef86ce6 {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 32rpx;
+}
+
+.section .incon.data-v-9ef86ce6 {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #2b67ff;
+    line-height: 32px;
+}
+
+.section .openbgc.data-v-9ef86ce6 {
+    background: #f4f8fe;
+}
+
+.coll-open .coll-block.data-v-9ef86ce6 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 144rpx;
+    border-bottom: 2rpx solid #ccc;
+}
+
+.coll-open .coll-block .coll-left .c-l-t.data-v-9ef86ce6 {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 32rpx;
+    margin-bottom: 24rpx;
+}
+
+.coll-open .coll-block .coll-left .c-l-b.data-v-9ef86ce6 {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #666;
+    line-height: 24rpx;
+}
+
+.coll-open .coll-block .coll-right.data-v-9ef86ce6 {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #ff5637;
+    line-height: 32rpx;
+}

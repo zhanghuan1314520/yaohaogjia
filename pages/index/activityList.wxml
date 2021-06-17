@@ -1,0 +1,50 @@
+<view class="content">
+    <view class="swiper-area" wx:if="{{bannerList.length>0}}">
+        <uni-swiper-dot bind:__l="__l" current="{{current}}" dotsStyles="{{dotsStyles}}" field="content" info="{{bannerList}}" mode="{{mode}}" vueId="0b5ce87a-1" vueSlots="{{['default']}}">
+            <swiper autoplay="{{true}}" bindchange="__e" class="swiper" data-event-opts="{{[ [ 'change',[ [ 'change',['$event'] ] ] ] ]}}" duration="{{500}}" interval="{{2000}}">
+                <swiper-item wx:for="{{bannerList}}" wx:for-index="__i0__" wx:key="activityId">
+                    <view bindtap="__e" class="swiper-item" data-event-opts="{{[ [ 'tap',[ [ 'toDetail',['$0'],[ [ ['bannerList','activityId',item.activityId] ] ] ] ] ] ]}}">
+                        <view class="img-area">
+                            <image mode src="{{item.cover}}"></image>
+                        </view>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </uni-swiper-dot>
+    </view>
+    <view class="total-area">{{'全部('+total+')'}}</view>
+    <view class="ul" wx:if="{{list.length>0}}">
+        <view bindtap="__e" class="li" data-event-opts="{{[ [ 'tap',[ [ 'toDetail',['$0'],[ [ ['list','activityId',item[$orig].activityId] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:for-index="__i1__" wx:key="activityId">
+            <view class="up-area">
+                <view class="left">
+                    <image mode src="{{item[$orig].cover}}"></image>
+                    <view class="{{['status',item[$orig].status===3?'finished':'']}}">{{item[$orig].status===3?'已结束':item[$orig].status===2?'进行中':'报名中'}}</view>
+                </view>
+                <view class="right">
+                    <view class="title">{{item[$orig].name}}</view>
+                    <view class="sub-info">
+                        <image mode src="https://cdn.lottery.okgoes.com/icon-timing-grey.png"></image>
+                        <text class="text">{{item.f0+'-'+item.f1}}</text>
+                    </view>
+                    <view class="sub-info">
+                        <image mode src="https://cdn.lottery.okgoes.com/icon-location-grey.png"></image>
+                        <text class="text">{{item[$orig].address}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="down-area _div">
+                <text class="tag">主办</text>
+                <text class="tag-name">{{item[$orig].host}}</text>
+                <view class="{{['btn _div',item[$orig].status!==1?'disabled':'']}}">{{item[$orig].isSignup?'查看':'报名'}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="empty" wx:else>
+        <text>暂无数据</text>
+    </view>
+    <view class="float-btn">
+        <button openType="contact" plain="true">
+            <image mode src="https://cdn.lottery.okgoes.com/myicon6.png"></image>
+        </button>
+    </view>
+</view>

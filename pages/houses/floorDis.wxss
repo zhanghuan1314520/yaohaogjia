@@ -1,0 +1,207 @@
+.content.data-v-758fc162,.header.data-v-758fc162 {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.header.data-v-758fc162 {
+    height: 404rpx;
+    position: relative;
+    padding: 88rpx 46rpx 0 40rpx;
+}
+
+.header .title.data-v-758fc162 {
+    position: absolute;
+    top: 100rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #fff;
+    left: 0;
+}
+
+.header .title .left.data-v-758fc162 {
+    width: 80rpx;
+    height: 80rpx;
+    top: 0;
+    left: 20rpx;
+    position: absolute;
+    z-index: 100;
+}
+
+.header .title .left image.data-v-758fc162 {
+    margin-top: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.header .name.data-v-758fc162 {
+    height: 48rpx;
+    font-size: 48rpx;
+    font-weight: 600;
+    color: #fff;
+    line-height: 48rpx;
+    margin-top: 100rpx;
+    margin-bottom: 28rpx;
+}
+
+.header .address.data-v-758fc162 {
+    height: 28rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #fff;
+    line-height: 28rpx;
+}
+
+.body.data-v-758fc162 {
+    width: 100%;
+    height: 570rpx;
+    background: #fff;
+    border-radius: 40rpx;
+    position: absolute;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    top: 320rpx;
+    padding: 40rpx 40rpx 0;
+    box-sizing: border-box;
+}
+
+.body .project.data-v-758fc162 {
+    padding-bottom: 140rpx;
+    border-top: 1rpx solid #dbdbdb;
+}
+
+.body .project .title.data-v-758fc162 {
+    width: 100%;
+    height: 88rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    margin-top: 40rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .project-text.data-v-758fc162 {
+    color: #5b6168;
+}
+
+.body .project ._p.data-v-758fc162 {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #5b6168;
+    text-indent: 40rpx;
+    line-height: 52rpx;
+}
+
+.body .bodydis .title.data-v-758fc162 {
+    width: 100%;
+    height: 88rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    margin-top: 40rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .sigle.data-v-758fc162 {
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    margin-bottom: 32rpx;
+}
+
+.body .sigle .block.data-v-758fc162 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 16rpx;
+}
+
+.body .sigle .block .block-left.data-v-758fc162 {
+    width: 120rpx;
+    height: 40rpx;
+    margin-right: 30rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8b9199;
+    line-height: 40rpx;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align-last: justify;
+}
+
+.body .sigle .block .block-right.data-v-758fc162 {
+    max-width: 520rpx;
+    min-height: 40rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+    line-height: 40rpx;
+}
+
+.footer.data-v-758fc162 {
+    width: 100%;
+    height: 124rpx;
+    background: #fff;
+    box-shadow: 0rpx 2rpx 0rpx 0rpx #f0f0f0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    border-top: 1rpx solid #ccc;
+    font-size: 30rpx;
+    color: #fff;
+    z-index: 99;
+}
+
+.footer .follow_box.data-v-758fc162 {
+    width: 150rpx;
+    height: 80rpx;
+    text-align: center;
+    color: #333;
+}
+
+.footer .follow_box .follow_text.data-v-758fc162 {
+    height: 20rpx;
+    line-height: 20rpx;
+    font-size: 20rpx;
+    text-align: center;
+}
+
+.footer .follow.data-v-758fc162 {
+    display: block;
+    margin: 0 auto 4rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.footer .mes.data-v-758fc162,.footer .relation.data-v-758fc162 {
+    width: 272rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 50px;
+    text-align: center;
+    border: none!important;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.footer .relation.data-v-758fc162 {
+    background: #2b67ff;
+    margin-right: 16rpx;
+}
+
+.footer .mes.data-v-758fc162 {
+    background: #00bfbf;
+}

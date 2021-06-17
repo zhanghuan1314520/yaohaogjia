@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "摇号查询",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+        "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
+        "search": "/pages/common/search",
+        "house": "/pages/common/house"
+    }
+}

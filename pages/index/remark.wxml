@@ -1,0 +1,9 @@
+<view class="content data-v-54ff7c49">
+    <view class="search-con data-v-54ff7c49">
+        <search bind:__l="__l" bind:confirm="__e" class="data-v-54ff7c49" data-event-opts="{{[ [ '^confirm',[ ['confirm'] ] ] ]}}" disabled="{{false}}" placeholderList="{{placeholderList}}" vueId="67055c20-1"></search>
+    </view>
+    <view class="house-data data-v-54ff7c49">
+        <house bind:__l="__l" bind:getDetail="__e" class="data-v-54ff7c49" data-event-opts="{{[ [ '^getDetail',[ ['toDetail'] ] ] ]}}" houseData="{{houseData}}" isToDetail="{{false}}" show_des="{{true}}" vueId="67055c20-2"></house>
+    </view>
+    <view class="tip data-v-54ff7c49" wx:if="{{isBottom}}">没有更多信息...</view>
+</view>

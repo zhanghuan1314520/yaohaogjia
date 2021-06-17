@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "摇号点评",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+        "house": "/pages/common/house",
+        "search": "/pages/common/search"
+    }
+}

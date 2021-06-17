@@ -1,0 +1,38 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/client.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>活跃度明细</view>
+        <view class="h-content">
+            <view class="mount">近30天</view>
+            <view class="h-footer">
+                <view class="h-gold">{{activeCount||0}}</view>
+                <view class="gold">活跃度</view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="Suborder">
+            <view class="Suborder">
+                <view class="collaose" wx:for="{{$root.l1}}" wx:key="index">
+                    <view bindtap="__e" class="{{['section',item[$orig].open?'openbgc':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleclick',[index] ] ] ] ]}}">
+                        <view class="box">{{item[$orig].time}}</view>
+                        <view class="box-right">
+                            <view class="incon">{{item[$orig].point}}</view>
+                            <image class="my-icon" src="https://cdn.lottery.okgoes.com/shang.png" wx:if="{{item[$orig].open}}"></image>
+                            <image class="my-icon" src="https://cdn.lottery.okgoes.com/xia.png" wx:else></image>
+                        </view>
+                    </view>
+                    <view class="coll-open" hidden="{{!item[$orig].open}}">
+                        <view class="coll-block" wx:for="{{item.l0}}" wx:for-index="i" wx:for-item="t" wx:key="i">
+                            <view class="coll-left">
+                                <view class="c-l-t">{{t[$orig].description}}</view>
+                                <view class="c-l-b">{{t.m0}}</view>
+                            </view>
+                            <view class="coll-right">{{t[$orig].point>0?'+'+t[$orig].point:t[$orig].point}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

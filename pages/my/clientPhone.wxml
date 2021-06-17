@@ -1,0 +1,50 @@
+<view class="content clientPhone">
+    <view class="header" style="{{'background:'+'url(https://cdn.lottery.okgoes.com/client.png)'+';'+'background-size:'+'cover'+';'+'padding-top:'+statusBarHeight+'px'+';'}}">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>我的客户-电话</view>
+        <view class="h-content">
+            <view class="my-h-b">
+                <view class="h-block">
+                    <view class="my-total">{{num}}</view>
+                    <view class="my-title">电话</view>
+                </view>
+                <view class="_hr" style="width:1px;height:54rpx;background-color:#ccc;"></view>
+                <view class="h-block">
+                    <view class="my-total">{{addNum}}</view>
+                    <view class="my-title">今日新增</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="floorSelect">
+            <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{res}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="body-title" wx:if="{{list.length===0}}">
+            <view class="title-left">
+                <view>本月</view>
+            </view>
+        </view>
+        <scroll-view bindscroll="__e" bindscrolltolower="__e" bindscrolltoupper="__e" class="scroll-Y" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'upper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'lower',['$event'] ] ] ],[ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollTop="{{scrollTop}}" scrollY="true" wx:else>
+            <block wx:for="{{list}}" wx:key="index">
+                <view class="body-title">
+                    <view class="title-left">
+                        <view>{{item.time}}</view>
+                    </view>
+                </view>
+                <view class="scroll-view-item block" id="demo1" wx:for="{{item.dataList}}" wx:for-index="n" wx:for-item="i">
+                    <view class="voc-left">
+                        <image class="clientPhone-avatar" src="{{i.avatar}}"></image>
+                        <view class="voc-middle">
+                            <label class="voc-name _span">{{i.nickname||''}}</label>
+                            <label class="voc-title _span">{{'活跃度：'+(i.activeCount||0)+' | 咨询量：'+i.contactCount}}</label>
+                        </view>
+                    </view>
+                    <view class="voc-right">
+                        <image bindtap="__e" class="voc-img" data-event-opts="{{[ [ 'tap',[ [ 'vocphone',['$0',n],[ [ ['list','',index],['dataList','',n] ] ] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/phone.png"></image>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>

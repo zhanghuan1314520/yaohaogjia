@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "摇号大师",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "painter": "/wxcomponents/painter/painter"
+    }
+}

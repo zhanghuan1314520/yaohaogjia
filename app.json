@@ -1,0 +1,136 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/activityList",
+    "pages/index/activityDetail",
+    "pages/index/activitySignup",
+    "pages/HM-search/HM-search",
+    "pages/my/confrimSuccess",
+    "pages/my/signIn",
+    "pages/houses/ahousePic",
+    "pages/index/schoolDistrict",
+    "pages/common/counselor",
+    "pages/message/index",
+    "pages/index/lotteryResults",
+    "pages/my/my",
+    "pages/message/mychat",
+    "pages/index/tim",
+    "pages/tim/record",
+    "pages/tim/room",
+    "pages/index/housesList",
+    "pages/houses/index",
+    "pages/houses/publicPlan",
+    "pages/houses/openInformation",
+    "pages/houses/doorModelDetails",
+    "pages/houses/suceessRate",
+    "pages/my/randomTask",
+    "pages/my/livenesss",
+    "pages/my/integral",
+    "pages/my/coll",
+    "pages/my/indexRecommend",
+    "pages/my/myGold",
+    "pages/my/myExchange",
+    "pages/my/daytask",
+    "pages/my/basicPic",
+    "pages/my/basic",
+    "pages/my/clientPhone",
+    "pages/my/clientChat",
+    "pages/my/myClient",
+    "pages/news/index",
+    "pages/my/selectBuilding",
+    "pages/index/talents",
+    "pages/message/userPortrayal",
+    "pages/index/analyzeDis",
+    "pages/login/login",
+    "pages/houses/floorRemark",
+    "pages/houses/floorDis",
+    "pages/index/lotteryTime",
+    "pages/index/searchAl",
+    "pages/index/alHouse",
+    "pages/index/lotterySearch",
+    "pages/index/searchResult",
+    "pages/common/area",
+    "pages/index/remark",
+
+    "pages/tabBar/component/component",
+    "pages/tabBar/API/API",
+    "pages/tabBar/template/template",
+    "pages/tabBar/extUI/extUI",
+    "pages/hotList/hotList",
+    "pages/my/myFocus"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "摇号大师",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/ic_home.png",
+        "selectedIconPath": "static/ic_home_sel.png"
+      },
+      {
+        "pagePath": "pages/houses/index",
+        "text": "楼盘",
+        "iconPath": "static/hourse.png",
+        "selectedIconPath": "static/ic_building_sel.png"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "资讯",
+        "iconPath": "static/ic_news.png",
+        "selectedIconPath": "static/ic_news_sel.png"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "信息",
+        "iconPath": "static/ic_message.png",
+        "selectedIconPath": "static/ic_message_sel.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/ic_my.png",
+        "selectedIconPath": "static/ic_my_sel.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "myPackageA/",
+      "pages": [
+        "pages/schoolMap",
+        "pages/myLottery",
+        "pages/daySecond",
+        "pages/newsInfo",
+        "pages/urlArticle",
+        "pages/logIn",
+        "pages/my/counselorCheck",
+        "pages/my/counselorShare",
+        "pages/my/postersPage",
+        "pages/my/sharePostersPage"
+      ]
+    },
+    {
+      "root": "home/",
+      "pages": [
+        "pages/map",
+        "pages/map-index",
+        "pages/map-index-build",
+        "pages/map-build",
+        "pages/houseDis",
+        "pages/pushThePlate",
+        "pages/myhouse"
+      ]
+    }
+  ],
+  "sitemapLocation": "sitemap.json"
+}

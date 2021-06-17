@@ -1,0 +1,229 @@
+<view class="content">
+    <drag-ball bind:__l="__l" isScrolling="{{scrolling}}" postersData="{{postersData}}" vueId="8dd740cc-1"></drag-ball>
+    <view catchtouchmove="__e" class="openAd" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ] ]}}" wx:if="{{show_openAd}}">
+        <view class="content">
+            <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'jump_houseDis',[ [ 'o',['pfsId',adBigConfig.linkId] ] ] ] ] ] ]}}" src="{{adBigConfig.coverImage}}"></image>
+        </view>
+        <view bindtap="__e" class="close" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">✕</view>
+    </view>
+    <view class="nav">
+        <view class="title">摇号大师</view>
+        <view class="search">
+            <search bind:__l="__l" placeholderList="{{placeholderList}}" vueId="8dd740cc-2"></search>
+            <view class="line"></view>
+            <image bindtap="__e" class="controls-map" data-event-opts="{{[ [ 'tap',[ [ 'toMap',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/map2.png"></image>
+        </view>
+    </view>
+    <view class="header">
+        <view class="swiper">
+            <uni-swiper-dot bind:__l="__l" current="{{current}}" dotsStyles="{{dotsStyles}}" field="content" info="{{info}}" mode="{{mode}}" vueId="8dd740cc-3" vueSlots="{{['default']}}">
+                <swiper autoplay="{{autoplay}}" bindchange="__e" class="swiper-box" data-event-opts="{{[ [ 'change',[ [ 'change',['$event'] ] ] ] ]}}">
+                    <swiper-item wx:for="{{info}}" wx:key="index">
+                        <view bindtap="__e" class="swiper-item" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$0'],[ [ ['info','',index] ] ] ] ] ] ]}}" style="{{'background-image:'+item.picture+';'+'background-size:'+'cover'+';'}}"></view>
+                    </swiper-item>
+                </swiper>
+            </uni-swiper-dot>
+        </view>
+        <view class="position-block">
+            <view class="position-content" wx:if="{{isLogin}}">
+                <view bindtap="__e" class="box-content" data-event-opts="{{[ [ 'tap',[ [ 'jump',['$0'],[ [ ['positionList','',index,'url'] ] ] ] ] ] ]}}" wx:for="{{positionList}}" wx:key="index">
+                    <view class="box-top" style="{{'background-size:cover;'+'background-image:'+'url('+item.src+')'+';'}}">{{item.size>0?item.size:0}}</view>
+                    <view class="box-bottom">{{item.name}}</view>
+                </view>
+            </view>
+            <view class="position-content" wx:else>
+                <view bindtap="__e" class="h-block box-content" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$event'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" withCredentials="true" wx:for="{{positionList}}" wx:key="index">
+                    <view class="box-top" style="{{'background-size:cover;'+'background-image:'+'url('+item.src+')'+';'}}">{{item.size>0?item.size:0}}</view>
+                    <view class="box-bottom">{{item.name}}</view>
+                </view>
+            </view>
+            <view class="position-solid"></view>
+            <view class="position-bottom">
+                <view class="bot-left">摇号播报</view>
+                <view class="bot-right">
+                    <image class="controls-play" src="https://cdn.lottery.okgoes.com/lottery39.png"></image>
+                    <view class="broadcast-wrap">
+                        <broadcast bind:__l="__l" bind:showDetail="__e" data-event-opts="{{[ [ '^showDetail',[ ['showBroadcastDetail'] ] ] ]}}" list="{{broadcastList}}" vueId="8dd740cc-4"></broadcast>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="padding">
+        <view class="Grid">
+            <view class="Grid-Item" wx:for="{{List}}" wx:key="index">
+                <view bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'routeTo',['$0'],[ [ ['List','',index] ] ] ] ] ] ]}}">
+                    <view class="{{['GSimg',index<5?'s-img':'b-img']}}">
+                        <image class="Image" src="{{item.img}}"></image>
+                        <text class="dot" wx:if="{{item.id===5&&isActivityNoticeShow}}"></text>
+                    </view>
+                    <view class="GStitle">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="block-scroll">
+            <view class="scroll-top">
+                <label class="title _span">即将加推</label>
+                <label class="icon _span">
+                    <view bindtap="__e" class="nav-right" data-event-opts="{{[ [ 'tap',[ [ 'moreBlock',['/home/pages/map?type=17'] ] ] ] ]}}">
+                        <label class="more _span">更多</label>
+                        <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                    </view>
+                </label>
+            </view>
+            <view style="height:360rpx;padding-left:40rpx;">
+                <scroll-view bindscroll="__e" data-event-opts="{{[ [ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;">
+                    <view class="scroll-view_H">
+                        <view class="membershipLevel_item" id="demo1" wx:for="{{$root.l1}}" wx:key="index">
+                            <view bindtap="__e" class="single" data-event-opts="{{[ [ 'tap',[ [ 'jump_houseDis',['$0'],[ [ ['registeringList','',index] ] ] ] ] ] ]}}">
+                                <view class="host-photo" style="{{'background-size:cover;'+'background-image:'+'url('+item[$orig].picture+'?x-oss-process=style/123)'+';'}}">
+                                    <view class="host-describe">
+                                        <view class="host-status" style="{{item[$orig].status!=9&&item[$orig].status!=11?'':'width: 126rpx'}}" wx:if="{{!(item[$orig].status==1&&!item[$orig].timeStart)}}">{{''+item.m0+''}}</view>
+                                        <view class="host-time" wx:if="{{item[$orig].status!=9&&item[$orig].status!=11}}">{{''+item.g0+'-'+item.g1+''}}</view>
+                                    </view>
+                                </view>
+                                <view class="site">
+                                    <label class="site-left _span">{{item[$orig].name}}</label>
+                                    <label class="site-right _span">{{item.g2}}</label>
+                                </view>
+                                <view class="price">{{''+(item[$orig].price?item[$orig].price+'元/㎡':'价格待定')+''}}</view>
+                                <view class="lable-site" wx:if="{{false}}">
+                                    <label class="_span" wx:for="{{item.l0}}" wx:for-index="i" wx:for-item="tab" wx:key="i">{{tab}}</label>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="title-block" wx:if="{{lotteryTimeSignList.length>0}}">
+            <view class="scroll-top">
+                <label class="title _span">摇号时刻表</label>
+                <view bindtap="__e" class="nav-right" data-event-opts="{{[ [ 'tap',[ [ 'moreBlock',['lottery'] ] ] ] ]}}">
+                    <label class="more _span">更多</label>
+                    <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                </view>
+            </view>
+            <view class="padd_block">
+                <view class="time-table">
+                    <scroll-view bindscroll="__e" data-event-opts="{{[ [ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;">
+                        <view bindtap="__e" class="{{['time-item',index==currentIndex?'time-item--active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'timeSelect',[index,'$0'],[ [ ['lotteryTimeSignList','',index] ] ] ] ] ] ]}}" wx:for="{{lotteryTimeSignList}}" wx:key="index">{{''+item.timeSign+''}}</view>
+                    </scroll-view>
+                </view>
+                <view class="time-scroll">
+                    <scroll-view bindscroll="__e" data-event-opts="{{[ [ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;">
+                        <view bindtap="__e" class="time-single" data-event-opts="{{[ [ 'tap',[ [ 'toLotteryTime',['$0'],[ [ ['lotteryTimeList','',index,'pfsId'] ] ] ] ] ] ]}}" wx:for="{{$root.l2}}" wx:key="index">
+                            <view class="time-photo" style="{{'background-size:cover;'+'background-image:'+'url('+item[$orig].picture+')'+';'}}">
+                                <view class="host-describe">
+                                    <view class="host-status">{{item.m1}}</view>
+                                    <view class="host-time">{{''+item.g3+'-'+item.g4+''}}</view>
+                                </view>
+                            </view>
+                            <view class="time-host">{{item[$orig].name}}</view>
+                            <view class="time-price">{{item[$orig].minPrice?item[$orig].minPrice+'元/㎡':'价格待定'}}</view>
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+        <view class="vocational-counselor">
+            <view class="scroll-top">
+                <label class="title _span">优秀置业顾问</label>
+                <view bindtap="__e" class="h-block box-content nav-right" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$event'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" withCredentials="true" wx:if="{{!isLogin}}">
+                    <label class="more _span">更多</label>
+                    <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                </view>
+                <view bindtap="__e" class="nav-right" data-event-opts="{{[ [ 'tap',[ [ 'moreBlock',['counselor'] ] ] ] ]}}" wx:else>
+                    <label class="more _span">更多</label>
+                    <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                </view>
+            </view>
+            <scroll-view scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;box-sizing:border-box;padding-left:40rpx;" wx:if="{{!isLogin}}">
+                <view bindtap="__e" class="h-block box-content vocational" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$event'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" style="{{'background-image:'+'url(https://cdn.lottery.okgoes.com/lottery5'+(index===0?'3':index===1?'5':'8')+'.png)'+';'}}" withCredentials="true" wx:for="{{goodSellerList}}" wx:key="index">
+                    <view class="voc-right">
+                        <image class="voc-img" src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="voc-left">
+                        <label class="voc-name _span">{{item.name}}</label>
+                        <label class="voc-title _span">{{item.company}}</label>
+                        <button class="voc-consult-btn">咨询</button>
+                    </view>
+                </view>
+            </scroll-view>
+            <scroll-view scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;box-sizing:border-box;padding-left:40rpx;" wx:else>
+                <view bindtap="__e" class="vocational" data-event-opts="{{[ [ 'tap',[ [ 'consult',['$0'],[ [ ['goodSellerList','',index] ] ] ] ] ] ]}}" style="{{'background-image:'+'url(https://cdn.lottery.okgoes.com/lottery5'+(index===0?'3':index===1?'5':'8')+'.png)'+';'}}" wx:for="{{goodSellerList}}" wx:key="index">
+                    <view class="voc-right">
+                        <image class="voc-img" src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="voc-left">
+                        <label class="voc-name _span">{{item.name}}</label>
+                        <label class="voc-title _span">{{item.company}}</label>
+                        <button class="voc-consult-btn">咨询</button>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="remark">
+            <view class="scroll-top">
+                <label class="title _span">摇号点评</label>
+                <view bindtap="__e" class="nav-right" data-event-opts="{{[ [ 'tap',[ [ 'remark',['$event'] ] ] ] ]}}">
+                    <label class="more _span">更多</label>
+                    <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                </view>
+            </view>
+            <view class="padd_block">
+                <scroll-view scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;">
+                    <view bindtap="__e" class="remark-block" data-event-opts="{{[ [ 'tap',[ [ 'toLottery',['$0'],[ [ ['lotteryCommentList','',index,'pfsId'] ] ] ] ] ] ]}}" wx:for="{{lotteryCommentList}}" wx:key="index">
+                        <view class="remark-photo" style="{{'background-size:cover;'+'background-image:'+'url('+item.picture+'?x-oss-process=style/123)'+';'}}"></view>
+                        <view class="remark-name">{{item.name}}</view>
+                        <view class="remark-title">{{item.remark}}</view>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="school-dis">
+            <view class="scroll-top">
+                <label class="title _span">学区分析</label>
+                <view bindtap="__e" class="nav-right" data-event-opts="{{[ [ 'tap',[ [ 'moreBlock',['schoolDistrict'] ] ] ] ]}}">
+                    <label class="more _span">更多</label>
+                    <image class="more-icon" src="https://cdn.lottery.okgoes.com/lottery20.png"></image>
+                </view>
+            </view>
+            <view>
+                <view style="padding:0 0rpx 0 40rpx;">
+                    <view class="school-tags">
+                        <view bindtap="__e" class="{{['school-tag',index==schoolIndex?'school-tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'schoolSelect',[index] ] ] ] ]}}" wx:for="{{schoolBuildingList}}" wx:key="index">{{''+item.name+''}}</view>
+                    </view>
+                </view>
+                <view class="padd_block">
+                    <view bindtap="__e" class="school-map" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['$0'],['schoolBuildingList.'+schoolIndex+''] ] ] ] ]}}" style="{{'background-image:'+'url('+schoolBuildingList[schoolIndex].mapPicture+'?x-oss-process=style/123)'+';'+'background-size:'+'cover'+';'}}"></view>
+                    <view class="school-title">
+                        <label class="des-title _span">
+                            <view class="school-des _b">学区分析:</view>{{schoolBuildingList[schoolIndex].remark}}</label>
+                    </view>
+                    <view class="school-footer" wx:if="{{false}}">
+                        <cover-image bindtap="__e" class="controls-obs" data-event-opts="{{[ [ 'tap',[ [ 'play',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/lottery36.png"></cover-image>
+                        <label class="observeCount _span">{{schoolBuildingList[schoolIndex].readCount}}</label>
+                        <cover-image bindtap="__e" class="controls-obs" data-event-opts="{{[ [ 'tap',[ [ 'play',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/lottery29.png"></cover-image>
+                        <label class="observeCount _span">{{schoolBuildingList[schoolIndex].commentCount}}</label>
+                    </view>
+                    <view bindtap="__e" class="title_box flex justify-end" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['$0'],['schoolBuildingList.'+schoolIndex+''] ] ] ] ]}}">
+                        <label class="more _span">查看分析详情</label>
+                        <image class="more-icon" src="https://cdn.lottery.okgoes.com/arrow_icon_blue.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="footer">
+            <view class="floorSelect">
+                <view bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{loupan}}" wx:key="index">
+                    <view class="{{[ 'footer-radio',[index==floorIndex?'floor-active':''] ]}}">{{item}}</view>
+                </view>
+            </view>
+            <view class="footer-data">
+                <house bind:__l="__l" houseData="{{showBuildingData}}" show_des="{{false}}" vueId="8dd740cc-5"></house>
+                <view class="tip">{{showTip}}</view>
+            </view>
+        </view>
+    </view>
+</view>

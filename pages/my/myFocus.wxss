@@ -1,0 +1,10 @@
+.myFocus.data-v-03a5e418 {
+    width: 100%;
+    padding: 40rpx;
+    box-sizing: border-box;
+}
+
+.myFocus .empty.data-v-03a5e418 {
+    color: #ddd;
+    text-align: center;
+}

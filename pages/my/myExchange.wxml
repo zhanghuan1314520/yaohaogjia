@@ -1,0 +1,44 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/client.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>金币兑换</view>
+        <view class="my-top">
+            <view class="top-left">
+                <image class="my-head" src="https://cdn.lottery.okgoes.com/avt.png"></image>
+                <view class="my-des">
+                    <view class="my-name">张建锋</view>
+                </view>
+            </view>
+        </view>
+        <view class="h-content">
+            <view class="my-h-b">
+                <view class="h-block">
+                    <view class="my-total">{{goldAndPoint.gold}}</view>
+                    <view class="my-title">金币(枚)</view>
+                </view>
+                <view class="_hr" style="width:1rpx;height:54rpx;background-color:#ccc;"></view>
+                <view class="h-block">
+                    <view class="my-total">{{goldAndPoint.point}}</view>
+                    <view class="my-title">积分</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="b-padding">
+            <blcok bind:__l="__l" class="block" vueId="219a2ac6-1" vueSlots="{{['default']}}">
+                <view class="body-title">兑换金币</view>
+                <view class="body-input">
+                    <input bindblur="__e" bindinput="__e" class="name-input" data-event-opts="{{[ [ 'blur',[ [ 'checkInput',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','gold','$event',[] ] ] ] ] ]}}" placeholder="请输入金币" type="text" value="{{gold}}"></input>
+                </view>
+                <view class="des">
+                    <label class="text-c _span">{{'10积分=1金币，最多可兑换'+maxGold+'金币'}}</label>
+                    <label bindtap="__e" class="text-b _span" data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}">获取更多金币</label>
+                </view>
+            </blcok>
+        </view>
+        <view bindtap="__e" class="confirm" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">
+            <view class="btn">确认兑换</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="login">
+    <view class="text-center login-header">
+        <image mode class="logo" src="https://cdn.lottery.okgoes.com/logo.jpg"></image>
+    </view>
+    <view class="btn-box confirm">
+        <button bindtap="__e" class="btn-lg" data-event-opts="{{[ [ 'tap',[ [ 'goLogin',['$event'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" withCredentials="true">微信授权</button>
+    </view>
+</view>

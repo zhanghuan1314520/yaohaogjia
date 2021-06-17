@@ -1,0 +1,21 @@
+<view class="myLottery-container data-v-12655f78">
+    <view class="lq_nav data-v-12655f78">
+        <view class="title data-v-12655f78">
+            <view bindtap="__e" class="left data-v-12655f78" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                <image class="data-v-12655f78" src="https://cdn.lottery.okgoes.com/back.png"></image>
+            </view>我的摇号</view>
+    </view>
+    <view class="list data-v-12655f78">
+        <view class="sigle data-v-12655f78">
+            <view class="data-v-12655f78" wx:for="{{sigleData}}" wx:key="index">
+                <view class="block data-v-12655f78" wx:for="{{item}}" wx:for-index="key" wx:for-item="t" wx:key="key">
+                    <view class="block-left data-v-12655f78">{{sigleDataLabel[key]}}</view>
+                    <view class="block-right data-v-12655f78">
+                        <view class="r-block data-v-12655f78" wx:for="{{t}}" wx:for-index="__i0__" wx:for-item="i" wx:key="*this">{{''+i+''}}</view>
+                    </view>
+                </view>
+            </view>
+            <image class="icon-right data-v-12655f78" src="https://cdn.lottery.okgoes.com/arrow_right.png"></image>
+        </view>
+    </view>
+</view>

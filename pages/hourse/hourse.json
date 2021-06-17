@@ -1,0 +1,11 @@
+{
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "楼盘",
+    "usingComponents": {
+        "hourse-uni-clientdb-default": "/pages/hourse/hourse-uni-clientdb-default",
+        "uni-clientdb": "/components/uni-clientdb/uni-clientdb",
+        "uni-list": "/components/uni-list/uni-list",
+        "uni-list-item": "/components/uni-list-item/uni-list-item",
+        "uni-load-more": "/components/uni-load-more/uni-load-more"
+    }
+}

@@ -1,0 +1,337 @@
+.content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    font-family: PingFangSC-Semibold,PingFang SC;
+}
+
+.content,.content .floorSelect {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.content .floorSelect {
+    height: 88rpx;
+    background: #fff;
+    padding: 0 40rpx;
+}
+
+.content .floorSelect .footer-radio {
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #595f66;
+    margin-right: 40rpx;
+}
+
+.content .floorSelect .floor-active {
+    height: 38rpx;
+    font-size: 38rpx;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    font-weight: 600;
+    color: #000;
+    line-height: 38rpx;
+    position: relative;
+}
+
+.content .floorSelect .floor-active::after {
+    content: "";
+    position: absolute;
+    bottom: -24rpx;
+    left: 32%;
+    width: 48rpx;
+    height: 8rpx;
+    background: #0940ff;
+    border-radius: 6rpx;
+}
+
+.content .c-v {
+    width: 100%;
+    height: 288rpx;
+    border-radius: 8rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    margin-bottom: 32rpx;
+}
+
+.content .c-v .c-img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .body {
+    box-sizing: border-box;
+    padding: 0 40rpx;
+}
+
+.content .body .body-price {
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    border-top: 2rpx solid #dbdbdb;
+    border-bottom: 2rpx solid #dbdbdb;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.content .body .body-price .left-price {
+    border-right: 2rpx solid #dbdbdb;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.content .body .body-price .right-price {
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+
+.content .body .body-price .l-t {
+    font-size: 32rpx;
+    font-family: Helvetica;
+    color: #ff5637;
+    display: block;
+    line-height: 32rpx;
+    text-align: center;
+}
+
+.content .body .body-price .l-b {
+    margin-top: 10rpx;
+    font-weight: 400;
+    color: #707680;
+    display: block;
+    font-size: 24rpx;
+    text-align: center;
+}
+
+.content .body .des-content {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-top: 40rpx;
+}
+
+.content .body .des-content .title {
+    margin-bottom: 16rpx;
+}
+
+.content .body .des-content .des-block {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-bottom: 40rpx;
+}
+
+.content .body .des-content .des-block .title {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.content .body .des-content .des-block .title .l-title {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8b9199;
+    line-height: 40rpx;
+}
+
+.content .body .des-content .des-block .title .r-map {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.content .body .des-content .des-block .title .r-map .img {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.content .body .des-content .des-block .title .r-map .linktext {
+    width: 168rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    color: #2b67ff;
+    line-height: 40rpx;
+}
+
+.content .body .des-content .des-block ._p {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: #000;
+    line-height: 44rpx;
+}
+
+.content .body .explain {
+    width: 670rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+    background: #fff8e7;
+    color: #b36f0a;
+    border-radius: 8rpx;
+    padding: 14rpx 16rpx;
+    margin-bottom: 48rpx;
+    font-size: 24rpx;
+    line-height: 36rpx;
+}
+
+.content .send-message {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    background: #f6f7f8;
+    padding: 56rpx 40rpx;
+    box-sizing: border-box;
+}
+
+.content .send-message .send-header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 28rpx;
+    font-weight: 400;
+    line-height: 28rpx;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 48rpx;
+}
+
+.content .send-message .send-header .send-title {
+    color: #000;
+}
+
+.content .send-message .send-header .write {
+    color: #2b67ff;
+}
+
+.content .send-message .send-content,.content .send-message .send-content .block-send {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.content .send-message .send-content .block-send {
+    margin-bottom: 64rpx;
+}
+
+.content .send-message .send-content .block-send .send-r {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.content .send-message .send-content .block-send .send-r .like {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.content .send-message .send-content .block-send .send-r ._span {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8b9199;
+    line-height: 28rpx;
+    margin-right: 32rpx;
+}
+
+.content .send-message .send-content .block-send .send-top {
+    height: 64rpx;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.content .send-message .send-content .block-send .send-top,.content .send-message .send-content .block-send .send-top .send-l {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.content .send-message .send-content .block-send .send-top .send-l image {
+    width: 64rpx;
+    height: 64rpx;
+    margin-right: 16rpx;
+    border-radius: 50%;
+}
+
+.content .send-message .send-content .block-send .send-top .send-l .name {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8b9199;
+}
+
+.content .send-message .send-content .c-content {
+    box-sizing: border-box;
+    padding-left: 80rpx;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.content .send-message .send-content .c-content .avt-comment {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 16rpx;
+    border-radius: 50%;
+}
+
+.content .send-message .send-content .c-content ._p {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: #000;
+    line-height: 44rpx;
+}
+
+.content .send-message .send-content .c-content .send-time {
+    margin-top: 12rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #868e99;
+    line-height: 24rpx;
+}
+
+.content .send-message .send-content .c-content .comment {
+    margin-top: 48rpx;
+}
+
+.relpy {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10rpx 40rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 9;
+    background: #fff;
+}
+
+.relpy,.relpy .box {
+    box-sizing: border-box;
+}
+
+.relpy .box {
+    width: 592rpx;
+    border-radius: 8px;
+    border: 2rpx solid #eceef0;
+    padding: 28rpx 24rpx;
+}
+
+.relpy .box .textarea {
+    font-size: 28rpx;
+    font-weight: 400;
+    line-height: 28rpx;
+    width: 100%;
+}
+
+.relpy .send {
+    margin-left: 20rpx;
+    color: #000;
+}

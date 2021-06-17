@@ -1,0 +1,18 @@
+<view class="content doorModelDetails">
+    <view class="body">
+        <view class="scroll">
+            <scroll-view bindscroll="__e" class="scroll-view_block" data-event-opts="{{[ [ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;">
+                <view bindtap="__e" class="{{['block',index==blockIndex?'block-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'block',[index] ] ] ] ]}}" wx:for="{{titList}}" wx:key="index">{{item.title}}</view>
+            </scroll-view>
+            <view class="body-content doorModelDetails-item">
+                <block wx:if="{{item.num==titList[blockIndex].num}}" wx:for="{{hourseTypeList}}" wx:key="index">
+                    <image bindtap="__e" class="more-icon" data-event-opts="{{[ [ 'tap',[ [ 'openImg',[item.image+'?x-oss-process=style/123'] ] ] ] ]}}" src="{{item.image+'?x-oss-process=style/123'}}"></image>
+                    <view class="flex justify-between doorModelDetails-title">
+                        <text>{{'建面：'+item.area+'m²'}}</text>
+                        <text>{{'户型：'+item.name}}</text>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

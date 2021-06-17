@@ -1,0 +1,20 @@
+<view class="content">
+    <view class="header" style="{{'background-size:cover;background-position:center;'+'background-image:'+'url('+data.src+')'+';'+'padding-top:'+statusBarHeight+'px'+';'}}">
+        <view class="title">
+            <view bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                <image src="https://cdn.lottery.okgoes.com/back.png"></image>
+            </view>摇号点评</view>
+    </view>
+    <view class="body">
+        <view class="bodydis">
+            <view class="nav">
+                <view class="title-area _div">
+                    <view bindtap="__e" class="title" data-event-opts="{{[ [ 'tap',[ [ 'jumpToHouseDis',['$event'] ] ] ] ]}}">{{data.name}}</view>
+                    <image src="https://cdn.lottery.okgoes.com/back.png"></image>
+                </view>
+                <view class="time">{{$root.g0}}</view>
+            </view>
+            <text class="content-p" wx:if="{{data.lotteryComment!==undefined}}">{{''+$root.m0+''}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+.t-th {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 30rpx;
+    font-weight: 700;
+    text-align: center;
+    color: #3b4246;
+    border-left: 1px solid #d0dee5;
+    border-top: 1px solid #d0dee5;
+    padding: 14rpx 0;
+}

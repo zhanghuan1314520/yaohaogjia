@@ -1,0 +1,6 @@
+<view class="content">
+    <view class="search">
+        <image class="icon-search" src="https://cdn.lottery.okgoes.com/search1.png"></image>
+        <input bindconfirm="__e" bindinput="__e" bindtap="__e" class="search-input" confirmType="search" data-event-opts="{{[ [ 'tap',[ [ 'focusChang',['$event'] ] ] ],[ 'confirm',[ [ 'confirm',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','searchVal','$event',[] ] ] ] ] ]}}" disabled="{{disabled}}" focus="{{showSync}}" placeholder="{{placeholder}}" type="text" value="{{searchVal}}"></input>
+    </view>
+</view>

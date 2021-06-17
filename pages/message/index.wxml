@@ -1,0 +1,40 @@
+<view class="content">
+    <view class="nav">
+        <view class="title">杭州摇号大师</view>
+    </view>
+    <view class="call flex">
+        <label class="call-left _span">关注服务号，第一时间获取回复通知</label>
+        <view bindtap="__e" class="call-btn-box" data-event-opts="{{[ [ 'tap',[ [ 'follow',['$event'] ] ] ] ]}}">
+            <view class="call-btn-text">
+                <label class="_span">去关注</label>
+                <image class="more-icon" src="https://cdn.lottery.okgoes.com/mesBtn.png"></image>
+            </view>
+            <label class="call-btn _span"></label>
+        </view>
+    </view>
+    <view class="body" wx:if="{{conversationList&&conversationList.length>0}}">
+        <view class="title">全部消息</view>
+        <view class="list-box">
+            <scroll-view bindscroll="__e" bindscrolltolower="__e" bindscrolltoupper="__e" class="scroll-Y" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'upper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'lower',['$event'] ] ] ],[ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollTop="{{scrollTop}}" scrollY="true">
+                <view bindtap="__e" class="scroll-view-item" data-event-opts="{{[ [ 'tap',[ [ 'toRoom',['$0'],[ [ ['conversationList','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                    <view class="b-left">
+                        <image class="avt" src="{{item[$orig].userProfile.avatar}}"></image>
+                    </view>
+                    <view class="b-right">
+                        <view class="des">
+                            <view class="name">{{item[$orig].userProfile.nick}}</view>
+                            <view class="mes">
+                                <rich-text nodes="{{item.m0}}"></rich-text>
+                            </view>
+                        </view>
+                        <view class="time">{{item.g0}}</view>
+                        <view class="item-msg-icon" wx:if="{{item[$orig].unreadCount}}">{{item[$orig].unreadCount}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="no-img-box" wx:else>
+        <image mode class="no-img" src="https://cdn.lottery.okgoes.com/news_no_message.png"></image>
+    </view>
+</view>

@@ -1,0 +1,39 @@
+<view class="content signIn">
+    <view catchtouchmove="__e" class="signIn-openAd" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ] ]}}" wx:if="{{show_openAd}}">
+        <view class="signIn-openAd-box">
+            <view class="signIn-openAd-cont">
+                <view class="signIn-openAd-tit">签到成功</view>
+                <view class="signIn-openAd-num">{{'+'+num.currentSignInPoint}}</view>
+            </view>
+            <view class="signIn-openAd-tips">{{'明天签到还可获得'+num.nextSignInPoint+'积分哦'}}</view>
+        </view>
+        <view bindtap="__e" class="close" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">✕</view>
+    </view>
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/signIn.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>每日签到</view>
+        <view class="pagedes">每天签到送积分，连续签到，积分翻倍。</view>
+    </view>
+    <view class="body">
+        <view class="body-content">
+            <image class="p-img" src="https://cdn.lottery.okgoes.com/gold.png"></image>
+            <view class="gold">
+                <view class="block" wx:for="{{list}}" wx:for-index="i" wx:key="i">
+                    <view class="point">
+                        <view class="s-img" style="background:url('https://cdn.lottery.okgoes.com/s-gold.png');background-size:cover;">{{item.point}}</view>
+                    </view>
+                    <view class="{{['signLine',item.status?'signLine-ok':'']}}">
+                        <view class="img-block">
+                            <image src="https://cdn.lottery.okgoes.com/sign.png" wx:if="{{item.status}}"></image>
+                            <image src="https://cdn.lottery.okgoes.com/notSignIn.png" wx:else></image>
+                            <view class="day">{{item.name}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="__e" class="confirm" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">
+            <view class="{{['btn',Issignin?'btn_active':'']}}">{{(Issignin?'已':'')+'签到'}}</view>
+        </view>
+    </view>
+</view>

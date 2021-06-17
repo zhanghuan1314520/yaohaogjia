@@ -1,0 +1,72 @@
+.content .title {
+    height: 80rpx;
+    line-height: 80rpx;
+    position: relative;
+    padding-left: 60rpx;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.content .title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40rpx;
+    transform: translateY(-50%);
+    width: 8rpx;
+    height: 32rpx;
+    background: #2b67ff;
+    border-radius: 4rpxs;
+}
+
+.content .form-area {
+    padding: 30rpx;
+}
+
+.content .form-area .row {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 20rpx 0;
+}
+
+.content .form-area .row .label {
+    width: 150rpx;
+    text-align: right;
+}
+
+.content .form-area .row .input {
+    -webkit-box-flex: 1;
+    flex: 1;
+    border: 1px solid #f0f0f0;
+    border-radius: 8rpx;
+    height: 70rpx;
+    padding: 0 10rpx;
+}
+
+.content .btn-area {
+    padding: 30rpx;
+    justify-content: space-around;
+}
+
+.content .btn-area,.content .btn-area .btn {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.content .btn-area .btn {
+    width: 100%;
+    height: 80rpx;
+    border: 1px solid #d3d3d3;
+    color: #333;
+    font-size: 28rpx;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 40rpx;
+}
+
+.content .btn-area .btn-primary {
+    background: #2b67ff;
+    color: #fff;
+}

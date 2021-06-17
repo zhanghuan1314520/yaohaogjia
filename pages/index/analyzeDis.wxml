@@ -1,0 +1,57 @@
+<view class="content">
+    <view class="lq_nav">
+        <view class="title">
+            <view bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                <image src="https://cdn.lottery.okgoes.com/back.png"></image>
+            </view>{{''+name+'-学区分析'}}</view>
+    </view>
+    <view class="floorSelect">
+        <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{res}}" wx:key="index">{{item}}</view>
+    </view>
+    <view class="body" wx:for="{{$root.l0}}" wx:key="index">
+        <view class="c-v">
+            <image class="c-img" src="{{item[$orig].picture}}"></image>
+        </view>
+        <view class="body-price">
+            <view class="left-price">
+                <label class="l-t _span">{{item[$orig].buildTime===null?'/':item.m0}}</label>
+                <label class="l-b _span">建成时间</label>
+            </view>
+            <view class="left-price">
+                <label class="l-t _span">{{item[$orig].size||'/'}}</label>
+                <label class="l-b _span">建成规模</label>
+            </view>
+            <view class="right-price">
+                <label class="l-t _span">{{item[$orig].classNum||'/'}}</label>
+                <label class="l-b _span">班级</label>
+            </view>
+        </view>
+        <view class="des-content">
+            <view class="des-block">
+                <view class="title">
+                    <view class="l-title">简要介绍</view>
+                    <view class="r-map"></view>
+                </view>
+                <view class="_p">{{item[$orig].intro}}</view>
+            </view>
+            <view class="des-block">
+                <view class="title">
+                    <view class="l-title">学区范围</view>
+                    <view bindtap="__e" class="r-map" data-event-opts="{{[ [ 'tap',[ [ 'toSchoolMap',['$event'] ] ] ] ]}}">
+                        <image class="img" src="https://cdn.lottery.okgoes.com/lottery27.png"></image>
+                        <view class="linktext">查看学区地图</view>
+                    </view>
+                </view>
+                <view class="_p">{{item[$orig].areaRange}}</view>
+            </view>
+            <view class="des-block">
+                <view class="title">
+                    <view class="l-title">综合分析</view>
+                    <view class="r-map"></view>
+                </view>
+                <text>{{item.m1}}</text>
+            </view>
+        </view>
+        <view class="explain">*以上仅为平台观点，不构成投资决策，最终解释权归摇号大师所有。</view>
+    </view>
+</view>

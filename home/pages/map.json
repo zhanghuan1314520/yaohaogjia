@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "house": "/home/pages/house",
+        "search": "/home/pages/search"
+    }
+}

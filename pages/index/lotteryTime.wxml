@@ -1,0 +1,16 @@
+<view class="content">
+    <view class="search" wx:if="{{false}}">
+        <search bind:__l="__l" bind:confirm="__e" data-event-opts="{{[ [ '^confirm',[ ['search'] ] ] ]}}" placeholder="搜索：翠语华庭" vueId="40aa5eb6-1"></search>
+    </view>
+    <view class="footer-data">
+        <view class="new-block" wx:for="{{$root.l0}}" wx:key="index">
+            <view class="timeline">
+                <image class="lineimg" src="https://cdn.lottery.okgoes.com/timeline.png"></image>
+                <label class="time-line-title _span">{{item.g0}}</label>
+            </view>
+            <view class="new-content">
+                <house bind:__l="__l" houseData="{{item[$orig].data}}" show_des="{{false}}" vueId="{{'40aa5eb6-2-'+index}}"></house>
+            </view>
+        </view>
+    </view>
+</view>

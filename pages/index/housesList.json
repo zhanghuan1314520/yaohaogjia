@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "楼盘列表",
+    "navigationBarBackgroundColor": "#fff",
+    "onReachBottomDistance": 50,
+    "usingComponents": {
+        "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
+        "house": "/pages/common/house",
+        "search": "/pages/common/search",
+        "area-select": "/pages/common/area"
+    }
+}

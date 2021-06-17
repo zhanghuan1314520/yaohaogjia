@@ -1,0 +1,1158 @@
+.status_bar {
+    width: 100%;
+}
+
+.pdr40 {
+    padding-right: 40rpx;
+}
+
+.pdr20 {
+    padding-right: 20rpx;
+}
+
+.uni-swiper__dots-box {
+    bottom: 90rpx!important;
+}
+
+.ellipsisTwo {
+    line-height: 50rpx;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}
+
+.content,.ellipsisTwo {
+    -webkit-box-orient: vertical;
+}
+
+.content {
+    display: flex;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slogan {
+    width: 100%;
+    height: 160rpx;
+    margin: 56rpx 0 24rpx;
+}
+
+.scroll-top {
+    height: 88rpx;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.scroll-top .title {
+    font-size: 38rpx;
+    font-family: Helvetica;
+    color: #000;
+    line-height: 88rpx;
+    font-weight: 600;
+}
+
+.scroll-top .nav-right {
+    display: flex;
+}
+
+.scroll-top .nav-right ._span {
+    height: 48rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #868e99;
+    line-height: 48rpx;
+}
+
+.scroll-top .nav-right .more-icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.header,.header .swiper,.header .swiper .swiper-box {
+    height: 640rpx;
+}
+
+.header .swiper .swiper-box-bg {
+    background: url(https://cdn.lottery.okgoes.com/no-header-bg.png) no-repeat;
+    background-size: contain;
+}
+
+.header .swiper .swiper-item {
+    height: 640rpx;
+    background-position: center 0;
+}
+
+.header .title {
+    position: absolute;
+    top: 100rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #fff;
+    transition: all .3s;
+}
+
+.header .title .left {
+    width: 80rpx;
+    height: 80rpx;
+    top: 0;
+    left: 20rpx;
+    position: absolute;
+    z-index: 100;
+}
+
+.header .title .left image {
+    margin-top: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.header .isTop {
+    position: fixed;
+    background: #fff;
+    z-index: 999;
+    top: 0;
+    color: #000;
+}
+
+.header .h-fotter {
+    position: absolute;
+    bottom: 40rpx;
+    display: flex;
+    margin: 32rpx 0 24rpx;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.header .h-fotter .h-f {
+    margin-left: 32rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.header .h-fotter .h-title {
+    height: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #fff;
+    line-height: 24rpx;
+}
+
+.header .imgstyle {
+    width: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 460rpx;
+}
+
+.header .imgstyle,.header .imgstyle .time-table {
+    display: flex;
+}
+
+.header .imgstyle .time-table {
+    width: 560rpx;
+    height: 48rpx;
+    background: rgba(0,0,0,.6);
+    border-radius: 28rpx;
+}
+
+.header .imgstyle .time-table .time-item {
+    width: 134rpx;
+    height: 100%;
+    border-radius: 24rpx;
+    color: #fff;
+    line-height: 48rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+
+.header .imgstyle .time-table .time-item--active {
+    background: #2c68ff;
+}
+
+.header .no-info {
+    top: 378rpx;
+    font-size: 40rpx;
+    color: #fff;
+    opacity: .4;
+}
+
+.body {
+    width: 100%;
+    background: #fff;
+    border-radius: 40rpx;
+    position: absolute;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    top: 580rpx;
+    padding: 40rpx 0 126rpx 40rpx;
+    box-sizing: border-box;
+}
+
+.body .no-more {
+    color: #999;
+    padding: 30rpx 0;
+}
+
+.body .body-nav {
+    position: relative;
+}
+
+.body .body-nav .sub-tip {
+    margin-top: 32rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-left: 16rpx;
+    background: #fff8e7;
+    color: #b36f0a;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+}
+
+.body .body-nav .b-img {
+    position: absolute;
+    top: -92rpx;
+    right: 10rpx;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .body-nav .b-img .img-img {
+    width: 96rpx;
+    height: 96rpx;
+    margin-bottom: 16rpx;
+}
+
+.body .body-nav .b-img ._span {
+    width: 150rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #595f66;
+    line-height: 24rpx;
+    text-align: center;
+}
+
+.body .body-nav .title {
+    height: 44rpx;
+    font-size: 44rpx;
+    font-family: Helvetica;
+    color: #000;
+    line-height: 44rpx;
+}
+
+.body .body-nav .body-tag {
+    margin: 24rpx 0 8rpx;
+}
+
+.body .body-nav .body-tag .tag {
+    height: 40rpx;
+    line-height: 40rpx;
+    padding: 0 8rpx;
+    background: #f4f8fe;
+    border-radius: 4rpx;
+    font-weight: 400;
+    color: #707680;
+    font-size: 24rpx;
+    display: inline-block;
+    margin-right: 24rpx;
+    margin-bottom: 14rpx;
+}
+
+.body .body-nav .body-tag .tag-active {
+    color: #2b67ff;
+    background: #f4f8fe;
+}
+
+.body .body-nav .body-price {
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    border-top: 1rpx solid #dbdbdb;
+    border-bottom: 1rpx solid #dbdbdb;
+    box-sizing: border-box;
+    padding: 24rpx 0;
+}
+
+.body .body-nav .body-price .left-price {
+    width: 334.24rpx;
+}
+
+.body .body-nav .body-price .left-price .l-t {
+    font-weight: 600;
+}
+
+.body .body-nav .body-price .line {
+    width: 0.5rpx;
+    height: 100%;
+    background-color: #dbdbdb;
+}
+
+.body .body-nav .body-price .right-price {
+    width: 334.25rpx;
+    text-align: left;
+}
+
+.body .body-nav .body-price .right-price ._span {
+    margin-left: 40rpx;
+}
+
+.body .body-nav .body-price .l-t {
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    font-family: Helvetica;
+    color: #ff5637;
+    display: block;
+}
+
+.body .body-nav .body-price .l-b {
+    height: 24rpx;
+    line-height: 24rpx;
+    font-size: 24rpx;
+    color: #707680;
+    text-align: left;
+}
+
+.body .map-solid {
+    padding-left: 64rpx;
+    height: 80rpx;
+    background: #f4f8fe;
+    border-radius: 8rpx;
+    position: relative;
+    margin: 32rpx 0 48rpx;
+}
+
+.body .map-solid .map-map {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 16rpx;
+}
+
+.body .map-solid .map-text {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: #000;
+    line-height: 80rpx;
+    white-space: nowrap;
+    width: 580rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body .map-solid .map-right {
+    width: 32rpx;
+    height: 32rpx;
+    position: absolute;
+    top: 24rpx;
+    right: 16rpx;
+}
+
+.body .Grid {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-content: space-between;
+    background: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 40rpx;
+}
+
+.body .Grid .Grid-Item {
+    height: 144rpx;
+}
+
+.body .Grid .Grid-Item:nth-last-child(-n+4) {
+    height: 138rpx;
+    margin-top: 16rpx;
+}
+
+.body .Grid-Item {
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .Grid-Item .GSimg {
+    width: 80%;
+}
+
+.body .Grid-Item .GStitle {
+    width: 100%;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-size: 26rpx;
+    color: #333;
+    margin-top: 10rpx;
+}
+
+.body .Grid-Item .s-img {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .Grid-Item .s-img image {
+    width: 92rpx;
+    height: 92rpx;
+}
+
+.body .Grid-Item .b-img {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .Grid-Item .b-img image {
+    width: 56rpx;
+    height: 56rpx;
+    margin-bottom: 10rpx;
+}
+
+.body .Grid-Item .b-img .GStitle {
+    margin: 20rpx 0 36rpx;
+}
+
+.body .yhao {
+    padding-bottom: 32rpx;
+}
+
+.body .yhao .title {
+    width: 100%;
+    height: 88rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #868e99;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .yhao .block-left {
+    padding-top: 4rpx;
+    width: 155rpx!important;
+    color: #000;
+}
+
+.body .yhao .block-right {
+    color: #868e99;
+}
+
+.body .yhao .scroll-top {
+    height: 102rpx;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .yhao .scroll-top .title {
+    font-size: 38rpx;
+    font-family: Helvetica;
+    color: #000;
+    line-height: 102rpx;
+}
+
+.body .yhao .scroll-top .nav-right {
+    display: flex;
+}
+
+.body .yhao .scroll-top .nav-right ._span {
+    width: 120rpx;
+    height: 48rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    line-height: 48rpx;
+}
+
+.body .yhao .scroll-top .nav-right .more-icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.body .bodydis {
+    padding-bottom: 44rpx;
+}
+
+.body .bodydis .title {
+    width: 100%;
+    height: 88rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .body-time {
+    padding-bottom: 40rpx;
+}
+
+.body .body-time .time-content {
+    font-weight: 400;
+    color: #000;
+    margin-left: -40rpx;
+}
+
+.body .body-time .time-content .box {
+    display: inline-block;
+}
+
+.body .body-time .time-content .block-time {
+    display: flex;
+}
+
+.body .body-time .time-content .oblongs {
+    background-size: cover;
+}
+
+.body .body-time .time-content .oblongs .trangle {
+    border-left: 30rpx solid #f4f8fe;
+}
+
+.body .body-time .time-content .oblongs .text-title {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 16rpx;
+}
+
+.body .body-time .time-content .oblongs .text-time {
+    color: #000;
+    font-size: 24rpx;
+    line-height: 24rpx;
+}
+
+.body .body-time .time-content .oblongs .unfinished {
+    color: #a5a9b4;
+}
+
+.body .body-time .oblong {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    width: 200rpx;
+    height: 112rpx;
+    background-size: cover;
+}
+
+.body .body-time .oblong .text-title {
+    font-size: 28rpx;
+    line-height: 28rpx;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16rpx;
+}
+
+.body .body-time .oblong .text-time {
+    color: #fff;
+    font-size: 24rpx;
+    line-height: 24rpx;
+}
+
+.body .body-time .time-tag-block {
+    margin-top: 32rpx;
+}
+
+.body .body-time .time-tag-block .time-tag {
+    width: 154rpx;
+    height: 48rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #fff;
+    line-height: 48rpx;
+    margin-right: 18rpx;
+    background: #bac2cc;
+    border-radius: 24rpx;
+    display: inline-block;
+}
+
+.body .body-time .time-tag-block .time-tag-active {
+    background: linear-gradient(309deg,#2b67ff,#619efd);
+}
+
+.body .sigle {
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.body .sigle .block {
+    width: 100%;
+    display: flex;
+    margin-bottom: 16rpx;
+}
+
+.body .sigle .block .block-left {
+    width: 140rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8b9199;
+    line-height: 40rpx;
+}
+
+.body .sigle .block .block-right {
+    width: 528rpx;
+    min-height: 40rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+}
+
+.body .sigle .block .block-right .r-block {
+    line-height: 40rpx;
+}
+
+.body .floor-plan {
+    padding-bottom: 64rpx;
+}
+
+.body .floor-plan .floor-img .floor-block {
+    width: 278rpx;
+    height: 256rpx;
+    margin-right: 16rpx;
+    background: #f3f3f4;
+    border-radius: 8rpx;
+    padding: 8rpx;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    display: inline-block;
+}
+
+.body .floor-plan .floor-img .floor-block .floor-top {
+    width: 262rpx;
+    height: 176rpx;
+    border-radius: 4px;
+}
+
+.body .floor-plan .floor-img .floor-block .floor-top image {
+    width: 100%;
+    height: 100%;
+}
+
+.body .floor-plan .floor-img .floor-block .floor-bottom {
+    padding: 0 8rpx;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 72rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+}
+
+.body .school-dis {
+    width: 100%;
+}
+
+.body .school-dis .schoolDistrictImage {
+    border-radius: 6PX;
+    width: 670rpx;
+    height: 400rpx;
+}
+
+.body .school-dis .school-tags {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+}
+
+.body .school-dis .school-tags .school-tag {
+    height: 56rpx;
+    background: #f1f3f5;
+    border-radius: 32rpx;
+    line-height: 56rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #595f66;
+    padding: 8rpx 24rpx;
+}
+
+.body .school-dis .school-tags .school-tag-active {
+    color: #fff;
+    background: #2c68ff;
+}
+
+.body .school-dis .school-map {
+    width: 670rpx;
+    height: 415rpx;
+    background: url(https://cdn.lottery.okgoes.com/map1.png) no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    margin: 0 0 24rpx;
+}
+
+.body .school-dis .school-title {
+    margin: 0 0 24rpx;
+}
+
+.body .school-dis .school-title .school-des {
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 20rpx;
+    color: #000;
+}
+
+.body .school-dis .school-title .des-title {
+    margin-top: 32rpx;
+    width: 100%;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #5b6168;
+    line-height: 50rpx;
+}
+
+.body .school-dis .school-footer {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.body .school-dis .school-footer .controls-obs {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.body .school-dis .school-footer .observeCount {
+    font-size: 28rpx;
+}
+
+.body .sunshine {
+    width: 100%;
+    margin-bottom: 32rpx;
+}
+
+.body .sunshine .sun-tags {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+}
+
+.body .sunshine .sun-tags .sun-tag {
+    height: 56rpx;
+    background: #f1f3f5;
+    border-radius: 32rpx;
+    line-height: 56rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #595f66;
+    padding: 8rpx 24rpx;
+}
+
+.body .sunshine .sun-tags .sun-tag-active {
+    color: #fff;
+    background: #2c68ff;
+}
+
+.body .sunshine .sun-photo {
+    width: 693rpx;
+    height: 336rpx;
+    margin: 40rpx 0 34rpx;
+}
+
+.body .sunshine .big-sun {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 32rpx;
+}
+
+.body .sunshine .big-sun .sun-title {
+    white-space: nowrap;
+    height: 40rpx;
+    font-size: 28rpx;
+    color: #000;
+    line-height: 40rpx;
+    margin-right: 32rpx;
+    margin-left: 16rpx;
+}
+
+.body .sunshine .big-sun .controls-sun {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.body .sun {
+    width: 100%;
+    height: 572rpx;
+}
+
+.body .sun .sun-img {
+    width: 100%;
+    height: 448rpx;
+}
+
+.body .assort {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding-bottom: 64rpx;
+}
+
+.body .assort .assort-map {
+    width: 100%;
+    height: 440rpx;
+    background: url(https://cdn.lottery.okgoes.com/map1.png) no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    margin: 0 0 24rpx;
+}
+
+.body .assort .selet-map-type {
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 120rpx;
+}
+
+.body .assort .selet-map-type,.body .assort .selet-map-type .type-block {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .assort .selet-map-type .type-block {
+    width: 25%;
+    height: 84rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.body .assort .selet-map-type .type-block .type-icon {
+    width: 52rpx;
+    height: 52rpx;
+}
+
+.body .assort .selet-map-type .type-block .type-icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.body .assort .selet-map-type .type-block .type-name {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #5b6168;
+}
+
+.body .assort .selet-map-type-text {
+    color: #5b6168;
+}
+
+.body .assort ._p {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #5b6168;
+    line-height: 52rpx;
+}
+
+.isTop {
+    top: 620rpx;
+}
+
+.footer {
+    width: 100vw;
+    height: 124rpx;
+    background: #fff;
+    box-shadow: 0rpx 2rpx 0rpx 0rpx #f0f0f0;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1rpx solid #f0f0f0;
+    font-size: 30rpx;
+    color: #fff;
+    z-index: 99;
+}
+
+.footer .follow_box {
+    width: 150rpx;
+    height: 80rpx;
+    text-align: center;
+    color: #333;
+}
+
+.footer .follow_box .follow_text {
+    height: 20rpx;
+    line-height: 20rpx;
+    font-size: 20rpx;
+    text-align: center;
+}
+
+.footer .follow {
+    display: block;
+    margin: 0 auto 4rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.footer .mes,.footer .relation {
+    width: 272rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 50px;
+    text-align: center;
+    border: none!important;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.footer .relation {
+    background: #2b67ff;
+    margin-right: 16rpx;
+}
+
+.footer .mes {
+    background: #00bfbf;
+}
+
+.vocational-counselor {
+    width: 100%;
+}
+
+.vocational-counselor .vocational {
+    width: 214rpx;
+    height: 292rpx;
+    display: inline-block;
+    border-radius: 6rpx;
+    margin-right: 18rpx;
+    margin-bottom: 64rpx;
+}
+
+.vocational-counselor .vocational .voc-right {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.vocational-counselor .vocational .voc-right .voc-img {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+}
+
+.vocational-counselor .vocational .voc-left {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+
+.vocational-counselor .vocational .voc-left .voc-name {
+    height: 32rpx;
+    margin-bottom: 52rpx;
+    font-size: 32rpx;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    font-weight: 600;
+    color: #000;
+    line-height: 32rpx;
+}
+
+.vocational-counselor .vocational .voc-left .voc-title {
+    height: 24rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #666;
+    line-height: 24rpx;
+}
+
+.vocational-counselor .vocational .voc-left .voc-consult-btn {
+    width: 90rpx;
+    height: 40rpx;
+    background: #eff6ff;
+    border-radius: 20rpx;
+    font-weight: 400;
+    border: 1px solid #2c68ff;
+    color: #2c68ff;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    padding: 0;
+}
+
+.information {
+    padding-bottom: 32rpx;
+}
+
+.information .inf-list .inf-block {
+    width: 100%;
+    height: 222rpx;
+    display: flex;
+    border-bottom: 1rpx solid #ebebeb;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.information .inf-list .inf-block .i-left {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-right: 30rpx;
+}
+
+.information .inf-list .inf-block .i-left .t-b {
+    margin-bottom: 40rpx;
+}
+
+.information .inf-list .inf-block .i-left .t-b ._span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+}
+
+.information .inf-list .inf-block .i-left .b-i {
+    display: flex;
+}
+
+.information .inf-list .inf-block .i-left .b-i ._span {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #868e99;
+}
+
+.information .inf-list .inf-block .i-left .b-i image {
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 50%;
+    margin-right: 8rpx;
+}
+
+.information .inf-list .inf-block .i-left .b-i .b-left {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.information .inf-list .inf-block .i-left .b-i .b-right {
+    margin-left: 20rpx;
+}
+
+.information .inf-list .inf-block .i-right image {
+    width: 224rpx;
+    height: 160rpx;
+}
+
+.table-list {
+    font-size: 14rpx;
+    color: #8c9299;
+    border-left: 1rpx solid #ccc;
+}
+
+.table-list-item {
+    text-align: center;
+    padding: 9rpx 0;
+    width: 25vw;
+    border-right: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;
+}
+
+.table-list .text-black {
+    color: #000;
+}
+
+.border-top {
+    border-top: 1rpx solid #ccc;
+}
+
+.table {
+    margin: 20rpx 0;
+}
+
+.table t-tr t-th {
+    background: #f4f8fe;
+    box-shadow: 0 2rpx 0 0 #e0ecff,0 -2rpx 0 0 #e0ecff;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8c9299;
+    line-height: 28rpx;
+}
+
+.table t-tr t-td {
+    background: #fff;
+    box-shadow: 0 -2rpx 0 0rpx #e0ecff;
+}
+
+.table .t-td {
+    padding: 14rpx 0;
+}

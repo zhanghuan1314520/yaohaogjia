@@ -1,0 +1,90 @@
+.layout.data-v-1649f8c1 {
+    width: 100vw;
+    height: 1780rpx;
+    overflow: hidden;
+    position: relative;
+    background: url(https://cdn.lottery.okgoes.com/postersPage-bg.png) 0 0 100% no-repeat;
+}
+
+.layout .left.data-v-1649f8c1 {
+    width: 80rpx;
+    height: 80rpx;
+    top: 120rpx;
+    left: 20rpx;
+    position: absolute;
+    z-index: 100;
+}
+
+.layout .left cover-image.data-v-1649f8c1 {
+    margin-top: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.layout .cimg.data-v-1649f8c1 {
+    width: 100%;
+    height: 100%;
+}
+
+.layout canvas.data-v-1649f8c1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.layout .header-canvas.data-v-1649f8c1 {
+    width: 100vw;
+    height: 1780rpx;
+    box-shadow: 0 5rpx 16rpx 0 rgba(20,104,255,.07);
+    position: absolute;
+    left: -999999px;
+}
+
+.layout .share-btn.data-v-1649f8c1 {
+    position: absolute;
+    width: 690rpx;
+    bottom: 140rpx;
+    padding-left: 30rpx;
+    display: flex;
+    padding-right: 30rpx;
+    z-index: 999;
+}
+
+.layout .share-btn .felx.data-v-1649f8c1 {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.layout .share-btn .mr30.data-v-1649f8c1 {
+    margin-right: 30rpx;
+}
+
+.layout .share-btn .ml30.data-v-1649f8c1 {
+    margin-left: 30rpx;
+}
+
+.layout .share-btn .btn.data-v-1649f8c1 {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 28rpx;
+    background: transparent;
+}
+
+.layout .share-btn .btn.data-v-1649f8c1::after {
+    display: none;
+}
+
+.layout .share-btn .btn cover-image.data-v-1649f8c1 {
+    width: 88rpx;
+    height: 88rpx;
+    margin-left: 20rpx;
+    border-radius: 44rpx;
+}
+
+.layout .share-btn .btn.bg-white cover-image.data-v-1649f8c1 {
+    background: #fff;
+}

@@ -1,0 +1,159 @@
+.content {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.my-icon {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.header {
+    width: 100%;
+    height: 540rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+}
+
+.header .my-top {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 192rpx;
+    margin-bottom: 44rpx;
+}
+
+.header .my-top image {
+    width: 128rpx;
+    height: 128rpx;
+    margin-right: 32rpx;
+}
+
+.header .my-top .userAvt {
+    border-radius: 50%;
+    border: 3rpx solid #fff;
+}
+
+.header .my-top .my-name {
+    font-size: 40rpx;
+    font-family: Helvetica;
+    color: #fff;
+    line-height: 40rpx;
+    font-weight: 600;
+}
+
+.header .my-top .nolog {
+    margin-left: 0;
+    width: 224rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    border: 1rpx solid #fff;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 40rpx;
+    font-weight: 600;
+    color: #fff;
+    background: none;
+}
+
+.header .my-h-b .h-block {
+    display: inline-block;
+    margin-right: 64rpx;
+    text-align: center;
+    background: none;
+    padding: 0;
+}
+
+.header .my-h-b .h-block::after {
+    border: none;
+}
+
+.header .my-h-b .h-block .my-title {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #fff;
+    line-height: 24rpx;
+}
+
+.body {
+    position: absolute;
+    top: 500rpx;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 40rpx;
+    padding: 32rpx 0;
+    box-sizing: border-box;
+}
+
+.body .b-block {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.body .b-block .line {
+    height: 20rpx;
+    background-color: #f1f3f5;
+}
+
+.body .b-block .b-title {
+    height: 88rpx;
+    padding: 0 40rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 88rpx;
+}
+
+.body .b-block .b-ul {
+    padding: 0 40rpx;
+}
+
+.body .b-block .b-ul .b-li {
+    height: 112rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .b-block .b-ul .b-li image {
+    margin-right: 20rpx;
+}
+
+.body .b-block .b-ul .b-li ._span,.body .b-block .b-ul .b-li button {
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #000;
+    line-height: 32rpx;
+}
+
+.body .b-block .b-ul .b-li button {
+    margin: 0;
+    border: none;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 0;
+    -webkit-tap-highlight-color: white;
+}
+
+.body .b-block .b-ul .b-li button::after {
+    border: none;
+}
+
+.body .b-block .b-ul .b-li button.hover-class {
+    color: #000;
+}
+
+.body .b-block .b-ul .b-li .button-hover {
+    color: rgba(0,0,0,.6)!important;
+    background-color: #fff!important;
+}

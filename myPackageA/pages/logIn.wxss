@@ -1,0 +1,20 @@
+.login {
+    margin: 10vh auto 0;
+}
+
+.login .logo {
+    width: 144rpx;
+    height: 144rpx;
+}
+
+.login .btn-lg {
+    margin-top: 30vh;
+    width: 640rpx;
+    background: #2b67ff;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 88rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #fff;
+}

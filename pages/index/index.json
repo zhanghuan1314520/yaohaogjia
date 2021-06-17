@@ -1,0 +1,11 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "drag-ball": "/components/drag-ball/drag-ball",
+        "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
+        "axb-check-box": "/components/axb-checkbox/axb-checkbox",
+        "house": "/pages/common/house",
+        "search": "/pages/common/search",
+        "broadcast": "/pages/index/broadcast"
+    }
+}

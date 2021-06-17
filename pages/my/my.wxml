@@ -1,0 +1,40 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/mybg.png);background-size:cover;">
+        <view class="my-top" wx:if="{{userName}}">
+            <image class="userAvt" src="{{userAvt}}"></image>
+            <view class="my-name">{{userName}}</view>
+        </view>
+        <view class="my-top" wx:else>
+            <image class="my-head" src="https://cdn.lottery.okgoes.com/nolog.png"></image>
+            <view bindtap="__e" class="nolog" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$0'],['getData'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" withCredentials="true">立即登录</view>
+        </view>
+        <view class="my-h-b" wx:if="{{userName}}">
+            <view bindtap="__e" class="h-block" data-event-opts="{{[ [ 'tap',[ [ 'toMyFocus',['$event'] ] ] ] ]}}">
+                <image class="my-icon" src="https://cdn.lottery.okgoes.com/my1.png"></image>
+                <view class="my-title">我的关注</view>
+            </view>
+        </view>
+        <view class="my-h-b" wx:else>
+            <view bindtap="__e" class="h-block" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$0'],['getData'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" withCredentials="true">
+                <image class="my-icon" src="https://cdn.lottery.okgoes.com/my1.png"></image>
+                <view class="my-title">我的关注</view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="b-block" wx:for="{{myiconData}}" wx:key="index">
+            <view class="b-title">{{item.title}}</view>
+            <view class="b-ul">
+                <view bindtap="__e" class="b-li" data-event-opts="{{[ [ 'tap',[ [ 'curIndex',['$0'],[ [ ['myiconData','',index],['content','',i] ] ] ] ] ] ]}}" wx:for="{{item.content}}" wx:for-index="i" wx:for-item="content" wx:key="i">
+                    <image class="my-icon" src="{{content.src}}"></image>
+                    <view bindtap="__e" class="nolog" data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$0'],['getData'] ] ] ] ]}}" lang="zh_CN" openType="getUserInfo" withCredentials="true" wx:if="{{(content.id===1||content.id===2)&&!userName}}">{{content.name}}</view>
+                    <block wx:else>
+                        <label class="_span" wx:if="{{content.id!=7}}">{{content.name}}</label>
+                    </block>
+                    <button sessionFrom openType="contact" plain="true" wx:if="{{content.id==7}}">{{content.name}}</button>
+                </view>
+            </view>
+            <view class="line" wx:if="{{index===0}}"></view>
+        </view>
+    </view>
+</view>

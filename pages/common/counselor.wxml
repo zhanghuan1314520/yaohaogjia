@@ -1,0 +1,23 @@
+<view class="content">
+    <view class="nav">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/back.png"></image>置业顾问</view>
+    </view>
+    <scroll-view bindscroll="__e" bindscrolltolower="__e" bindscrolltoupper="__e" class="scroll-Y" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'upper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'lower',['$event'] ] ] ],[ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollTop="{{scrollTop}}" scrollY="true">
+        <view class="scroll-view-item block" id="demo1" wx:for="{{list}}" wx:key="index">
+            <view class="voc-left">
+                <view class="{{[ 'icon',[index===0?'icon1':'',index===1?'icon2':'',index===2?'icon3':''] ]}}"></view>
+                <image class="voc-head" src="{{item.avatar}}"></image>
+            </view>
+            <view class="voc-middle">
+                <label class="voc-name _span">{{item.name}}</label>
+                <label class="voc-name2 _span">{{item.pfsName}}</label>
+                <label class="voc-title _span">{{'活跃度：'+item.active}}</label>
+            </view>
+            <view class="voc-right">
+                <image bindtap="__e" class="voc-img" data-event-opts="{{[ [ 'tap',[ [ 'vocmes',['$0',index],[ [ ['list','',index] ] ] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/mes.png"></image>
+                <image bindtap="__e" class="voc-img" data-event-opts="{{[ [ 'tap',[ [ 'vocphone',['$0',index],[ [ ['list','',index] ] ] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/phone.png"></image>
+            </view>
+        </view>
+    </scroll-view>
+</view>

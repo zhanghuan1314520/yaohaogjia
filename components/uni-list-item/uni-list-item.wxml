@@ -1,0 +1,30 @@
+<view catchtap="__e" class="{{['uni-list-item',disabled?'uni-list-item--disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'onClick',['$event'] ] ] ] ]}}" hoverClass="{{!clickable&&!link||disabled||showSwitch?'':'uni-list-item--hover'}}">
+    <view class="{{['border--left',border?'uni-list--border':'']}}" wx:if="{{!isFirstChild}}"></view>
+    <view class="{{['uni-list-item__container',showArrow||link?'container--right':'',direction==='column'?'flex--direction':'']}}">
+        <slot name="header" wx:if="{{$slots.header}}"></slot>
+        <view class="uni-list-item__header" wx:else>
+            <view class="uni-list-item__icon" wx:if="{{thumb}}">
+                <image class="{{['uni-list-item__icon-img','uni-list--'+thumbSize]}}" src="{{thumb}}"></image>
+            </view>
+            <block wx:else>
+                <view class="uni-list-item__icon" wx:if="{{showExtraIcon}}">
+                    <uni-icons bind:__l="__l" color="{{extraIcon.color}}" size="{{extraIcon.size}}" type="{{extraIcon.type}}" vueId="01e39c76-1"></uni-icons>
+                </view>
+            </block>
+        </view>
+        <slot name="body" wx:if="{{$slots.body}}"></slot>
+        <view class="{{['uni-list-item__content',thumb||showExtraIcon||showBadge||showSwitch?'uni-list-item__content--center':'']}}" wx:else>
+            <text class="{{['uni-list-item__content-title',ellipsis!==0&&ellipsis<=2?'uni-ellipsis-'+ellipsis:'']}}" wx:if="{{title}}">{{title}}</text>
+            <text class="uni-list-item__content-note" wx:if="{{note}}">{{note}}</text>
+        </view>
+        <slot name="footer" wx:if="{{$slots.footer}}"></slot>
+        <block wx:else>
+            <view class="{{['uni-list-item__extra',direction==='column'?'flex--justify':'']}}" wx:if="{{rightText||showBadge||showSwitch}}">
+                <text class="uni-list-item__extra-text" wx:if="{{rightText}}">{{rightText}}</text>
+                <uni-badge bind:__l="__l" text="{{badgeText}}" type="{{badgeType}}" vueId="01e39c76-2" wx:if="{{showBadge}}"></uni-badge>
+                <switch bindchange="__e" checked="{{switchChecked}}" data-event-opts="{{[ [ 'change',[ [ 'onSwitchChange',['$event'] ] ] ] ]}}" disabled="{{disabled}}" wx:if="{{showSwitch}}"></switch>
+            </view>
+        </block>
+    </view>
+    <uni-icons bind:__l="__l" class="uni-icon-wrapper" color="#bbb" size="{{16}}" type="arrowright" vueId="01e39c76-3" wx:if="{{showArrow||link}}"></uni-icons>
+</view>

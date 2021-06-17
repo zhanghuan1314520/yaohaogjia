@@ -1,0 +1,26 @@
+<view>
+    <web-view src="{{url}}" webviewStyles="{{webviewStyles}}">
+        <cover-view bindtap="__e" class="{{['share-button',isScrolling?'hide':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['$event'] ] ] ] ]}}" wx:if="{{isShow}}">
+            <cover-image mode class="share-img" src="https://cdn.lottery.okgoes.com/btn_share.png"></cover-image>
+        </cover-view>
+        <cover-view class="newsInfo-footer flex justify-between align-center" wx:if="{{customers}}">
+            <cover-view bindtap="__e" class="btns btn-lg " data-event-opts="{{[ [ 'tap',[ [ 'wxGetUserInfo',['$0'],['navTo'] ] ] ] ]}}" wx:if="{{!isLogin}}">转发获客</cover-view>
+            <cover-view bindtap="__e" class="btns btn-lg " data-event-opts="{{[ [ 'tap',[ [ 'navTo',['$event'] ] ] ] ]}}" wx:else>转发获客</cover-view>
+        </cover-view>
+        <cover-view class="newsInfo-footer flex justify-between align-center" wx:if="{{adviser}}">
+            <cover-view class=" flex justify-between align-center">
+                <cover-view>
+                    <cover-image mode class="atava-img" src="{{info.avatar}}"></cover-image>
+                </cover-view>
+                <cover-view>
+                    <cover-view class="name">{{info.name||info.nickname}}</cover-view>
+                    <cover-view class="text pfsName" wx:if="{{info.pfsName}}">{{info.pfsName||''}}</cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class=" flex justify-between">
+                <cover-view bindtap="__e" class="btns relation" data-event-opts="{{[ [ 'tap',[ [ 'chooseRoom',[0] ] ] ] ]}}">咨询</cover-view>
+                <cover-view bindtap="__e" class="btns  mes" data-event-opts="{{[ [ 'tap',[ [ 'chooseRoom',[1] ] ] ] ]}}">电话</cover-view>
+            </cover-view>
+        </cover-view>
+    </web-view>
+</view>

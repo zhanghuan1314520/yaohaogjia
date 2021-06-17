@@ -1,0 +1,1 @@
+<text bindtap="__e" class="{{['uni-badge data-v-f952f9e2',inverted?'uni-badge--'+type+' uni-badge--'+size+' uni-badge--'+type+'-inverted':'uni-badge--'+type+' uni-badge--'+size]}}" data-event-opts="{{[ [ 'tap',[ ['onClick'] ] ] ]}}" style="{{badgeStyle}}" wx:if="{{text}}">{{text}}</text>

@@ -1,0 +1,8 @@
+<uni-list bind:__l="__l" vueId="0aeb8680-2" vueSlots="{{['default']}}">
+    <uni-list-item bind:__l="__l" direction="row" note="{{item.user_name+' '+item.last_modify_date}}" title="{{item.title}}" to="{{'/pages/detail/detail?id='+item._id+'&title='+item.title}}" vueId="{{'0aeb8680-3-'+__i0__+','+'0aeb8680-2'}}" vueSlots="{{['header']}}" wx:for="{{data}}" wx:for-index="__i0__" wx:key="id">
+        <view class="uni-thumb" slot="header">
+            <image mode="aspectFill" src="{{item.avatar.length>3?item.avatar:item.avatar[0]}}"></image>
+        </view>
+    </uni-list-item>
+</uni-list>
+<uni-load-more bind:__l="__l" status="{{options.status}}" vueId="0aeb8680-4" wx:if="{{loading||options.status==='noMore'}}"></uni-load-more>

@@ -1,0 +1,13 @@
+.scroll.data-v-59f4fdfe {
+    transform: translateY(-40rpx);
+    transition: all .5s;
+}
+
+.piece.data-v-59f4fdfe {
+    height: 40rpx;
+    line-height: 40rpx;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

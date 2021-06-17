@@ -1,0 +1,97 @@
+.content {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.content,.header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 0 40rpx;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.header .title {
+    margin-top: 88rpx;
+    width: 100%;
+    height: 80rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 80rpx;
+    text-align: center;
+    position: relative;
+}
+
+.header .title .left {
+    width: 40rpx;
+    height: 40rpx;
+    top: 20rpx;
+    left: 0;
+    position: absolute;
+}
+
+.new-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 0 40rpx;
+}
+
+.new-block,.new-block .timeline {
+    display: flex;
+}
+
+.new-block .timeline {
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.new-block .timeline image {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 16rpx;
+}
+
+.new-block .timeline ._span {
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #868e99;
+    line-height: 32rpx;
+}
+
+.new-block .new-content {
+    border-left: 4rpx dashed #ccc;
+    margin: 0 0 0 24rpx;
+    padding: 0 0 60rpx 40rpx;
+}
+
+.new-block .new-content .title {
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 48rpx;
+    margin-bottom: 20rpx;
+    margin-top: 32rpx;
+}
+
+.new-block .new-content .title-content {
+    width: 100%;
+    padding: 20rpx 0 20rpx 20rpx;
+    margin-right: 20rpx;
+    background: #fff8e7;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #b36f0a;
+    line-height: 40rpx;
+}
+
+.new-block .new-content .title-content .text {
+    padding-right: 10rpx;
+}

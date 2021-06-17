@@ -1,0 +1,15 @@
+<view class="data-v-e1aa9f84">
+    <view class="box data-v-e1aa9f84">
+        <view class="text-box data-v-e1aa9f84">
+            <input bindinput="__e" class="data-v-e1aa9f84" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','user','$event',[] ] ] ] ] ]}}" placeholder="请输入账号" type="text" value="{{user}}"></input>
+        </view>
+        <view class="text-box data-v-e1aa9f84">
+            <input bindinput="__e" class="data-v-e1aa9f84" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','pwd','$event',[] ] ] ] ] ]}}" placeholder="请输入密码" type="password" value="{{pwd}}"></input>
+        </view>
+        <view class="msg-box data-v-e1aa9f84">
+            <view class="_p data-v-e1aa9f84">静态登录用户信息在:commen/tim/user.js 中,登录用户为 user1~user9;密码随便输</view>
+            <view class="_p data-v-e1aa9f84">测试/开发时请先更换为自己的IM腾讯云账户</view>
+        </view>
+        <button bindtap="__e" class="data-v-e1aa9f84" data-event-opts="{{[ [ 'tap',[ [ 'loginBtn',['$event'] ] ] ] ]}}" type="primary">登录</button>
+    </view>
+</view>

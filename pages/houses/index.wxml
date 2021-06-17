@@ -1,0 +1,42 @@
+<view class="container">
+    <view class="nav">
+        <view class="title">楼盘</view>
+        <view class="search">
+            <search bind:__l="__l" placeholderList="{{placeholderList}}" vueId="123fc7d7-1"></search>
+        </view>
+    </view>
+    <view class="body">
+        <view class="footer">
+            <view class="floorSelect">
+                <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{loupan}}" wx:key="index">{{''+item+''}}</view>
+            </view>
+            <scroll-view scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;margin-bottom:40rpx;">
+                <view class="scroll-view_H">
+                    <view bindtap="__e" class="single" data-event-opts="{{[ [ 'tap',[ [ 'skip',['$0'],[ [ ['list','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                        <view class="host-photo" style="{{'background-size:cover;'+'background-image:'+'url('+item[$orig].picture+'?x-oss-process=style/123)'+';'}}">
+                            <view class="t">{{item.g0[0]}}</view>
+                            <view class="b">
+                                <view class="host-n">{{item[$orig].name}}</view>
+                                <view class="host-p">{{item.f0}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+            <view class="tagSelect">
+                <label bindtap="__e" class="{{['tag _span',index==tagIndex?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tagSelect',[index] ] ] ] ]}}" wx:for="{{tagList}}" wx:key="index">{{item.name}}</label>
+            </view>
+        </view>
+    </view>
+    <view class="select-area">
+        <area-select bind:__l="__l" bind:confirmSelect="__e" data-event-opts="{{[ [ '^confirmSelect',[ ['confirmSelect'] ] ] ]}}" topDistance="{{topDistance}}" vueId="123fc7d7-2"></area-select>
+    </view>
+    <view class="footer-data">
+        <house bind:__l="__l" houseData="{{showHouseData}}" isToDetail="{{true}}" show_des="{{false}}" vueId="123fc7d7-3"></house>
+        <view class="no-img-box" wx:if="{{showHouseData.length==0}}">
+            <image mode class="no-img" src="https://cdn.lottery.okgoes.com/img_no_floor.png"></image>
+            <view class="no-img-text">暂无符合条件数据</view>
+        </view>
+        <view class="tip" wx:else>{{noData}}</view>
+    </view>
+</view>

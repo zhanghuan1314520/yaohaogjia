@@ -1,0 +1,19 @@
+<view class="school-map data-v-d96a382e">
+    <view class="lq_nav data-v-d96a382e">
+        <view class="title data-v-d96a382e">
+            <view bindtap="__e" class="left data-v-d96a382e" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                <image class="data-v-d96a382e" src="https://cdn.lottery.okgoes.com/back.png"></image>
+            </view>学区地图</view>
+    </view>
+    <view class="map-container data-v-d96a382e">
+        <map class="data-v-d96a382e" latitude="{{list[curActive].polygons[curActive].latitude}}" longitude="{{list[curActive].polygons[curActive].longitude}}" markers="{{[ covers[curActive] ]}}" polygons="{{list[curActive].polygons}}" scale="{{14}}" style="width:100%;height:100%;"></map>
+    </view>
+    <cover-view class="btns data-v-d96a382e">
+        <cover-view bindtap="__e" class="{{[ 'data-v-d96a382e','btn',[curActive==0?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'toggleType',[0] ] ] ] ]}}">小学</cover-view>
+        <cover-view bindtap="__e" class="{{[ 'data-v-d96a382e','btn',[curActive==1?'active':''] ]}}" data-event-opts="{{[ [ 'tap',[ [ 'toggleType',[1] ] ] ] ]}}">中学</cover-view>
+    </cover-view>
+    <cover-view class="floor data-v-d96a382e">
+        <cover-view class="title data-v-d96a382e">{{''+list[curActive].name+''}}</cover-view>
+        <cover-view class="desc data-v-d96a382e">{{''+list[curActive].content+''}}</cover-view>
+    </cover-view>
+</view>

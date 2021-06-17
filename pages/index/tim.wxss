@@ -1,0 +1,20 @@
+.box.data-v-e1aa9f84 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-box.data-v-e1aa9f84 {
+    height: 80rpx;
+    border-bottom: 1px solid #eee;
+    margin: 20rpx 0;
+    font-size: 28rpx;
+    color: #f66;
+    line-height: 80rpx;
+}
+
+.msg-box.data-v-e1aa9f84 {
+    margin: 50rpx 0;
+    color: #f06c7a;
+    font-size: 24rpx;
+    line-height: 40rpx;
+}

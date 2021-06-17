@@ -1,0 +1,128 @@
+.nav {
+    padding: 88rpx 10rpx 10rpx;
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    z-index: 9;
+}
+
+.nav .title {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 40rpx;
+    text-align: center;
+    font-size: 40rpx;
+    font-weight: 600;
+    color: #000;
+    position: relative;
+}
+
+.nav .title .left {
+    width: 40rpx;
+    height: 40rpx;
+    top: 20rpx;
+    left: 20rpx;
+    position: absolute;
+}
+
+.content {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.content,.scroll-Y {
+    width: 100%;
+}
+
+.scroll-Y .block {
+    width: 710rpx;
+    margin-left: 40rpx;
+    height: 190rpx;
+    padding-right: 40rpx;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    align-items: center;
+    border-bottom: 2rpx solid #dbdbdb;
+}
+
+.scroll-Y .block .voc-left {
+    position: relative;
+}
+
+.scroll-Y .block .voc-left .icon {
+    position: absolute;
+    width: 64rpx;
+    height: 64rpx;
+    top: -33rpx;
+    right: -17rpx;
+    background-size: cover;
+}
+
+.scroll-Y .block .voc-left .icon.icon1 {
+    background-image: url(https://cdn.lottery.okgoes.com/counselor_no1.png);
+}
+
+.scroll-Y .block .voc-left .icon.icon2 {
+    background-image: url(https://cdn.lottery.okgoes.com/counselor_no2.png);
+}
+
+.scroll-Y .block .voc-left .icon.icon3 {
+    background-image: url(https://cdn.lottery.okgoes.com/counselor_no3.png);
+}
+
+.scroll-Y .block .voc-left .voc-head {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.scroll-Y .block .voc-middle {
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding-left: 24rpx;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.scroll-Y .block .voc-middle .voc-name2 {
+    font-size: 24rpx;
+    color: #666;
+    font-weight: 400;
+}
+
+.scroll-Y .block .voc-middle .voc-name {
+    font-size: 32rpx;
+    color: #000;
+    font-weight: 700;
+}
+
+.scroll-Y .block .voc-middle .voc-title {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #666;
+}
+
+.scroll-Y .block .voc-middle .voc-title .line {
+    margin: 0 30rpx;
+}
+
+.scroll-Y .block .voc-right .voc-img {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.scroll-Y .block .voc-right .voc-img:nth-of-type(1) {
+    margin-right: 32rpx;
+}

@@ -1,0 +1,10 @@
+<view class="{{['drag-ball-area',isScrolling?'hide':'']}}">
+    <button openType="share" plain="{{true}}" wx:if="{{postersData==0}}">
+        <image mode class="img" src="../../static/icon-share.png"></image>
+    </button>
+    <block wx:else>
+        <button bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'houseDetails',['$event'] ] ] ] ]}}" plain="{{true}}" wx:if="{{postersData!=0}}">
+            <image mode class="img" src="../../static/icon-share.png"></image>
+        </button>
+    </block>
+</view>

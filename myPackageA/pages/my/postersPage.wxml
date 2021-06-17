@@ -1,0 +1,22 @@
+<view class="layout data-v-1649f8c1" style="{{'height:'+(isMine?'1780rpx':'1684rpx')+';'}}">
+    <cover-view bindtap="__e" class="left data-v-1649f8c1" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+        <cover-image class="data-v-1649f8c1" src="https://cdn.lottery.okgoes.com/left.png"></cover-image>
+    </cover-view>
+    <painter bind:__l="__l" bind:imgErr="__e" bind:imgOK="__e" class="data-v-1649f8c1" customStyle="position: absolute; left: -9999rpx;" data-com-type="wx" data-event-opts="{{[ [ '^imgOK',[ ['onImgOk'] ] ],[ '^imgErr',[ ['onImgErr'] ] ] ]}}" palette="{{template}}" vueId="1c21b0bf-1" widthPixels="750" wx:if="{{show}}"></painter>
+    <image mode class="cimg data-v-1649f8c1" src="{{src}}"></image>
+    <cover-view class="share-btn data-v-1649f8c1">
+        <cover-view bindtap="__e" class="data-v-1649f8c1" data-event-opts="{{[ [ 'tap',[ [ 'handleTap',['$event'] ] ] ] ]}}">
+            <button class="btn data-v-1649f8c1">
+                <cover-image class="img data-v-1649f8c1" src="https://cdn.lottery.okgoes.com/saveImage.png"></cover-image>
+                <cover-view class="data-v-1649f8c1">保存为图片</cover-view>
+            </button>
+        </cover-view>
+        <cover-view class="felx data-v-1649f8c1"></cover-view>
+        <cover-view class="data-v-1649f8c1">
+            <button class="btn bg-white data-v-1649f8c1" openType="share">
+                <cover-image class="img data-v-1649f8c1" src="https://cdn.lottery.okgoes.com/wx-logo.png"></cover-image>
+                <cover-view class="data-v-1649f8c1">分享给好友</cover-view>
+            </button>
+        </cover-view>
+    </cover-view>
+</view>

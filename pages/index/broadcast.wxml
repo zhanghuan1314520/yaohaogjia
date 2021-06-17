@@ -1,0 +1,4 @@
+<view bindtap="__e" class="{{['data-v-59f4fdfe',canScroll?'scroll':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleClick',['$event'] ] ] ] ]}}">
+    <view class="piece data-v-59f4fdfe">{{''+(curItem.title||'')+''}}</view>
+    <view class="piece data-v-59f4fdfe">{{''+(nextItem.title||'')+''}}</view>
+</view>

@@ -1,0 +1,108 @@
+<view class="content" id="mychat" style="{{'height:'+'calc(100vh - '+keyboardHeight+'px)'+';'}}">
+    <view class="myChat-nav">
+        <view class="header">
+            <view class="status-bar" style="{{'height:'+statusBarHeight+'px'+';'}}"></view>
+            <view class="title" style="{{'height:'+navHeight-statusBarHeight+'px'+';'+'line-height:'+navHeight-statusBarHeight+'px'+';'}}">
+                <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/back.png"></image>我的聊天</view>
+        </view>
+    </view>
+    <view class="card">
+        <view class="b-my">
+            <view class="b-left">
+                <image class="avt" src="{{currentCounselor.avatar}}"></image>
+            </view>
+            <view class="b-right">
+                <view class="name">{{currentCounselor.name||currentCounselor.nickname}}</view>
+                <view class="mes">{{currentCounselor.pfsName||''}}</view>
+            </view>
+        </view>
+        <view class="phone-vx" wx:if="{{currentCounselor.pfsName}}">
+            <image bindtap="__e" class="phone" data-event-opts="{{[ [ 'tap',[ [ 'toPhone',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/phone.png"></image>
+            <image bindtap="__e" class="vx" data-event-opts="{{[ [ 'tap',[ [ 'sendWechatCard',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/vx.png"></image>
+        </view>
+    </view>
+    <view bindtap="__e" class="body" data-event-opts="{{[ [ 'tap',[ [ 'toHideKeyboard',['$event'] ] ] ] ]}}">
+        <scroll-view bindscrolltoupper="__e" class="msg-list" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'loadHistory',['$event'] ] ] ] ]}}" scrollIntoView="{{scrollToView}}" scrollTop="{{scrollTop}}" scrollWithAnimation="{{scrollAnimation}}" scrollY="true" upperThreshold="50">
+            <view class="body-mes">
+                <view class="system" wx:if="{{row.type=='system'}}">
+                    <view class="text" wx:if="{{row.msg.type=='text'}}">{{row.msg.content.text}}</view>
+                </view>
+                <view class="row" id="{{item[$orig].ID}}" wx:for="{{$root.l0}}" wx:key="index">
+                    <view class="{{['block',item[$orig].flow==='out'?'my':'']}}">
+                        <view class="time-area">
+                            <view class="mes-time">{{item.m0}}</view>
+                        </view>
+                        <view class="vx-box" wx:if="{{item[$orig].payload.data&&item[$orig].payload.data==='wechatCard'}}">
+                            <view class="vx-title">
+                                <image class="vx" src="https://cdn.lottery.okgoes.com/vx.png"></image>
+                                <view class="vx-user">
+                                    <view class="vx-name">{{(item.g0.name||item.g1.nickname)+' 的微信号码'}}</view>
+                                    <view class="vx-number">{{item.g2.weixinNum}}</view>
+                                </view>
+                            </view>
+                            <view class="vx-content">
+                                <view bindtap="__e" class="vx-copy" data-event-opts="{{[ [ 'tap',[ [ 'copy',['$event'] ] ] ] ]}}">复制微信号</view>
+                                <view class="_hr" style="width:1rpx;height:20rpx;background:#f0f0f0;"></view>
+                                <view bindtap="__e" class="vx-erweima" data-event-opts="{{[ [ 'tap',[ [ 'erweima',['$event'] ] ] ] ]}}" data-url="{{''+item.g3.weixinQrcode}}">查看二维码</view>
+                            </view>
+                        </view>
+                        <block wx:else>
+                            <view class="vx-box phone" wx:if="{{item[$orig].payload.data&&item[$orig].payload.data==='phoneCard'}}">
+                                <view class="vx-title">您好，如果没有及时回复，您可以加我微信，我会第一时间回复您，并给您发送一些项目资料。您也可以拨打我的电话！</view>
+                                <view bindtap="__e" class="vx-content" data-event-opts="{{[ [ 'tap',[ [ 'toPhone',['$event'] ] ] ] ]}}">
+                                    <view class="vx-erweima">拨打电话</view>
+                                </view>
+                            </view>
+                            <view class="content-area" wx:else>
+                                <view class="avatar-area">
+                                    <image src="{{item[$orig].flow==='out'?userInfo.img:currentCounselor.avatar}}"></image>
+                                </view>
+                                <view bindlongpress="__e" class="msg-area" data-event-opts="{{[ [ 'longpress',[ [ 'copyMsg',['$0'],[ [ ['msgList','',index,'payload.text'] ] ] ] ] ] ]}}">
+                                    <view class="bubble" wx:if="{{item[$orig].type==TIM.TYPES.MSG_TEXT}}">
+                                        <rich-text nodes="{{item.m1}}"></rich-text>
+                                    </view>
+                                    <view class="img" wx:if="{{item[$orig].payload.description}}">
+                                        <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'showPic',['$event'] ] ] ] ]}}" data-url="{{item[$orig].payload.description}}" mode="aspectFill" src="{{item[$orig].payload.description}}" style="max-width:300rpx;max-height:300rpx;"></image>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="floor" style="{{'bottom:'+inputHeight+'px'+';'}}">
+        <view class="f-f">
+            <view bindtap="__e" class="f-h" data-event-opts="{{[ [ 'tap',[ [ 'useful',['$event'] ] ] ] ]}}" wx:if="{{showCommon}}">
+                <image class="vx" src="https://cdn.lottery.okgoes.com/message-use.png"></image>
+                <text>常用语</text>
+            </view>
+        </view>
+        <view class="f-b">
+            <view class="box">
+                <input adjustPosition="{{false}}" bindblur="__e" bindconfirm="__e" bindfocus="__e" bindinput="__e" class="textarea" confirmHold="{{true}}" confirmType="send" data-event-opts="{{[ [ 'confirm',[ [ 'sendText',['$event'] ] ] ],[ 'focus',[ [ 'handleKeyboardHeightChange',['$event'] ] ] ],[ 'blur',[ [ 'toHideKeyboard',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','textMsg','$event',[] ] ] ] ] ]}}" holdKeyboard="{{true}}" placeholder="对TA发送消息" showConfirmBar="{{false}}" value="{{textMsg}}"></input>
+            </view>
+            <view bindtap="__e" class="send" data-event-opts="{{[ [ 'tap',[ [ 'sendText',['$event'] ] ] ] ]}}" wx:if="{{textMsg}}">发送</view>
+            <view class="addSelect" wx:if="{{!textMsg}}">
+                <view bindtap="__e" class="add" data-event-opts="{{[ [ 'tap',[ [ 'showMore',['$event'] ] ] ] ]}}" wx:if="{{hideMore}}">+</view>
+                <view bindtap="__e" class="icon close" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" wx:if="{{!hideMore}}"></view>
+            </view>
+        </view>
+        <view class="function">
+            <view class="{{['more-layer',hideMore?'hidden':'']}}">
+                <view class="list">
+                    <view bindtap="__e" class="box" data-event-opts="{{[ [ 'tap',[ [ 'chooseImage',['$event'] ] ] ] ]}}">
+                        <view class="icon tupian2"></view>
+                    </view>
+                    <view bindtap="__e" class="box" data-event-opts="{{[ [ 'tap',[ [ 'camera',['$event'] ] ] ] ]}}">
+                        <view class="icon paizhao"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="useful-list" wx:if="{{usefulShow}}">
+            <view bindtap="__e" class="useful-block" data-event-opts="{{[ [ 'tap',[ [ 'send',['$0'],[ [ ['usefulList','',index] ] ] ] ] ] ]}}" wx:for="{{usefulList}}" wx:key="index">{{''+item+''}}</view>
+        </view>
+    </view>
+</view>

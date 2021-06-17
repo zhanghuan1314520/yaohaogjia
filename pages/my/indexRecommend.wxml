@@ -1,0 +1,103 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/client.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>
+        </view>
+        <view class="index-recommend">首页推荐位</view>
+        <view class="h-content">展示时间：2020.01.30(00:00-23:59)</view>
+    </view>
+    <view class="body">
+        <view class="b-padding">
+            <blcok bind:__l="__l" class="block" vueId="0337173c-1" vueSlots="{{['default']}}">
+                <view class="text">
+                    <view class="body-title">我的出价</view>
+                    <view bindtap="__e" class="text-a" data-event-opts="{{[ [ 'tap',[ [ 'rule',['$event'] ] ] ] ]}}">竞价规则</view>
+                </view>
+                <view class="body-input">
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','bidGold','$event',[] ] ] ] ] ]}}" placeholder="请输入出价金币" type="text" value="{{bidGold}}"></input>
+                    <view class="input-p">
+                        <image class="my-icon" src="https://cdn.lottery.okgoes.com/time.png"></image>
+                        <label class="_span">00:56:18</label>
+                    </view>
+                </view>
+                <view class="des">
+                    <label class="text-c _span">
+                        <switch bindchange="__e" checked="{{isAutoRecommend}}" color="#3BCD8D" data-event-opts="{{[ [ 'change',[ [ 'switch1Change',['$event'] ] ] ] ]}}" style="transform:scale(0.6);"></switch>
+                        <label class="text-b _span">自动竞价</label>
+                    </label>
+                    <view class="text-right">
+                        <label class="text-b _span" style="margin-right:16rpx;">自动竞价设置</label>
+                        <image bindtap="__e" class="my-icon" data-event-opts="{{[ [ 'tap',[ [ 'AutoRecommend',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/edit.png"></image>
+                    </view>
+                </view>
+            </blcok>
+        </view>
+        <view bindtap="__e" class="confirm" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">
+            <view class="btn">立即出价</view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="title">竞价记录</view>
+        <scroll-view bindscroll="__e" bindscrolltolower="__e" bindscrolltoupper="__e" class="scroll-Y" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'upper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'lower',['$event'] ] ] ],[ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollTop="{{scrollTop}}" scrollY="true">
+            <view class="scroll-view-item block" id="demo1" wx:for="{{houseData}}" wx:key="index">
+                <view class="voc-left">
+                    <image class="voc-head" src="https://cdn.lottery.okgoes.com/avt.png"></image>
+                    <view class="voc-middle">
+                        <label class="voc-name _span">岁月如歌</label>
+                        <label class="voc-title _span">周二 12.16 11:48:32</label>
+                    </view>
+                </view>
+                <view class="voc-right">
+                    <label class="r-red _span">901</label>
+                    <label class="r-ccc _span">金币</label>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="modal" wx:if="{{show}}">
+        <view class="pop">
+            <view class="pop-header">自动竞价设置</view>
+            <view class="pop-body">
+                <view class="pop-body-block">
+                    <view class="pop-block-title">每次自动加价</view>
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','bidGold','$event',[] ] ] ] ] ]}}" placeholder="相对最高价" type="text" value="{{bidGold}}"></input>
+                </view>
+                <view class="pop-body-block">
+                    <view class="pop-block-title">最多出价</view>
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','bidGold','$event',[] ] ] ] ] ]}}" placeholder="当前最多出价500金币" type="text" value="{{bidGold}}"></input>
+                </view>
+            </view>
+            <view class="pop-footer">
+                <view bindtap="__e" class="bth cancle" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}">取消</view>
+                <view bindtap="__e" class="bth confirm-yes" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">确定</view>
+            </view>
+        </view>
+    </view>
+    <view class="rule" wx:if="{{ruleShow}}">
+        <view class="pop">
+            <view class="pop-header">竞价规则</view>
+            <view class="pop-body">
+                <scroll-view bindscroll="__e" bindscrolltolower="__e" bindscrolltoupper="__e" class="pop-scroll" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'upper',['$event'] ] ] ],[ 'scrolltolower',[ [ 'lower',['$event'] ] ] ],[ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollTop="{{scrollTop}}" scrollY="true">
+                    <view class="pop-body-block">
+                        <view class="pop-block-title">关于竞价</view>
+                        <view class="_p">每日竞价从0点开始, 23:00点结束,结束时出价最高的置业顾问获得上首页(楼盘详情页)推荐位的机会。展示时间由次日的0点开</view>
+                    </view>
+                    <view class="pop-body-block">
+                        <view class="pop-block-title">关于低价</view>
+                        <view class="_p">1、首页底价为10金币,最小加价单位1金币;</view>
+                        <view class="_p">2、楼盘详情页底价5金币,最小加价单位1金币;</view>
+                    </view>
+                    <view class="pop-body-block">
+                        <view class="pop-block-title">关于低价</view>
+                        <view class="_p">1、起始价:为当前楼盘最高竞价,如果无人竞价,则为该位置的底价。 2、每次加价金额,首页最小加价单位为10金币,楼盘详情页最小加价单位为5金币;
+							3、最高价:最高价为您愿意出的最高价,不能超过自己身上金币数量。设置好后点击开始自动竞价按钮,当其他的出价低于您设置的最高价时,就会自动加价,如果其他人竞价超过您设置的最高价,则竞价失败,您可以选择再次设置自动竞价或者手动竞价。
+							4、金币扣除:竞价成功的用户,会在竞价结束时扣除金币；竞价失败的用户,不扣除任何金币。</view>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="pop-footer">
+                <view bindtap="__e" class="bth cancle" data-event-opts="{{[ [ 'tap',[ [ 'ok',['$event'] ] ] ] ]}}">知道了</view>
+            </view>
+        </view>
+    </view>
+</view>

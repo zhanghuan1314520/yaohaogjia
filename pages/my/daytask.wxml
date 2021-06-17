@@ -1,0 +1,33 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/daybg.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>
+        </view>
+        <view class="pagedes">每日任务</view>
+    </view>
+    <view class="body">
+        <view class="day" wx:for="{{$root.l0}}" wx:key="$orig">
+            <view class="day-block" wx:if="{{item[$orig].sign!==4}}">
+                <view class="block-left">
+                    <image class="day-img" src="{{icon[index]}}"></image>
+                    <view class="left-text">
+                        <view class="block-row">
+                            <view class="text-b">{{item[$orig].title}}</view>
+                            <view class="text-red" wx:if="{{item[$orig].sign===1}}">{{'+'+item[$orig].minPoint+'~'+item[$orig].maxPoint+'积分'}}</view>
+                            <view class="text-red" wx:else>{{'+'+item[$orig].minPoint+'积分'}}</view>
+                        </view>
+                        <view class="flex self-start" wx:if="{{item[$orig].sign!==1&&item[$orig].maxLimit!==0}}">
+                            <view class="progress">
+                                <view class="progress-bar" style="{{'width:'+(item[$orig].finishNum>=item[$orig].maxLimit?'100%':item[$orig].finishNum*100/item[$orig].maxLimit+'%')+';'}}"></view>
+                            </view>
+                            <text class="progress-num">{{(item[$orig].finishNum||0)+'/'+item[$orig].maxLimit}}</text>
+                        </view>
+                        <view class="text-ccc" wx:if="{{item[$orig].sign===1}}">连续签到积分会变多</view>
+                        <view class="text-ccc" wx:else>{{item[$orig].description}}</view>
+                    </view>
+                </view>
+                <view bindtap="__e" class="block-right" data-event-opts="{{[ [ 'tap',[ [ 'signIn',['$0'],[ [ ['list','',index,'sign'] ] ] ] ] ] ]}}">{{item.m0}}</view>
+            </view>
+        </view>
+    </view>
+</view>

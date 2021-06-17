@@ -1,0 +1,33 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/8.png);background-size:cover;">
+        <view class="pageTitle">智能选房</view>
+    </view>
+    <view class="body">
+        <view class="title total">总价</view>
+        <view class="input">
+            <input bindconfirm="__e" bindinput="__e" class="search-input" confirmType="search" data-event-opts="{{[ [ 'confirm',[ [ 'confirm',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','searchVal','$event',[] ] ] ] ] ]}}" placeholder="{{placeholder}}" type="text" value="{{searchVal}}"></input>
+            <view class="suff">万元</view>
+        </view>
+        <view class="sigle" wx:for="{{sigle}}" wx:for-index="i" wx:key="i">
+            <view class="title">{{item.title}}</view>
+            <view class="block">
+                <view bindtap="__e" class="{{['tag',index==tagIndex?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'areaSelect',[index,'$0'],[ [ ['sigle','',i],['tag','',index] ] ] ] ] ] ]}}" wx:for="{{item.tag}}" wx:for-item="b" wx:key="index">{{b}}</view>
+            </view>
+        </view>
+        <view class="sigle">
+            <view class="title">{{demand.title}}</view>
+            <view class="block">
+                <view bindtap="__e" class="{{['tag',index==demandIndex?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'demandSelect',[index,'$0'],[ [ ['demand.tag','',index] ] ] ] ] ] ]}}" wx:for="{{demand.tag}}" wx:for-item="b" wx:key="index">{{b}}</view>
+            </view>
+        </view>
+        <view class="sigle">
+            <view class="title">{{mating.title}}</view>
+            <view class="block">
+                <view bindtap="__e" class="{{['tag',index==matingIndex?'tag-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'matingSelect',[index,'$0'],[ [ ['mating.tag','',index] ] ] ] ] ] ]}}" wx:for="{{mating.tag}}" wx:for-item="b" wx:key="index">{{b}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">开始匹配</view>
+    </view>
+</view>

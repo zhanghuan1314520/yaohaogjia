@@ -1,0 +1,16 @@
+<view class="content">
+    <view class="header">
+        <view class="title">
+            <view bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                <image src="https://cdn.lottery.okgoes.com/back.png"></image>
+            </view>开盘信息</view>
+    </view>
+    <view class="body">
+        <view class="body-content">
+            <view bindtap="__e" class="body-content" data-event-opts="{{[ [ 'tap',[ [ 'openImg',['$0'],['info.icon'] ] ] ] ]}}">
+                <image class="more-icon" src="{{info.icon}}"></image>
+            </view>
+            <view class="sigin">{{''+info.content+''}}</view>
+        </view>
+    </view>
+</view>

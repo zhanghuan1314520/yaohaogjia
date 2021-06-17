@@ -1,0 +1,29 @@
+<view>
+    <view bindtap="__e" class="{{['scroll-view-item data-house',show_des?'bor':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'houseDetails',['$0'],[ [ ['houseData','',index] ] ] ] ] ] ]}}" id="house" wx:for="{{$root.l0}}" wx:key="index">
+        <view class="line">
+            <view class="left-dotted"></view>
+            <view class="{{['top',topLine?'topline':'']}}">
+                <view class="house-img">
+                    <view class="host-photo" style="{{'background-size:cover;'+'background-image:'+'url('+item[$orig].picture+')'+';'}}">
+                        <view class="host-describe" wx:if="{{!show_des}}">
+                            <view catchtap="__e" class="host-status" data-event-opts="{{[ [ 'tap',[ [ 'showRes',['$0'],[ [ ['houseData','',index] ] ] ] ] ] ]}}" wx:if="{{item.m0}}">{{item.m1}}</view>
+                            <view class="host-time" wx:if="{{item.m2&&item[$orig].saleStatus!=9}}">{{item.m3}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="house-right">
+                    <view class="house-des">{{item[$orig].name||'暂无'}}</view>
+                    <view class="house-price" wx:if="{{item[$orig].minPrice}}">{{item[$orig].maxPrice?item[$orig].minPrice+'-'+item[$orig].maxPrice+'元/㎡':item[$orig].minPrice+'元/㎡起'}}</view>
+                    <view class="house-price" wx:else>价格待定</view>
+                    <view class="house-addr">{{item[$orig].addr||''}}</view>
+                    <view class="house-tag">
+                        <label class="_span" wx:for="{{item[$orig].tabs?item.g0:[]}}" wx:for-index="i" wx:for-item="tab" wx:key="i">{{tab}}</label>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="bottom" wx:if="{{show_des}}">
+            <label class="_span">{{item[$orig].lotteryComment||'暂无'}}</label>
+        </view>
+    </view>
+</view>

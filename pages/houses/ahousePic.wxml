@@ -1,0 +1,16 @@
+<view class="content">
+    <view class="header" style="{{'background-size:cover;'+'background-image:'+'url('+data.src+')'+';'}}">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>一房一价表</view>
+        <view class="name">{{name}}</view>
+        <view class="address">{{address}}</view>
+    </view>
+    <view class="body">
+        <view class="floorSelect">
+            <view bindtap="__e" class="{{['footer-radio',item.floorName==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{titList}}" wx:key="index">{{''+item.floorName+'#'}}</view>
+        </view>
+        <view class="one" wx:for="{{oneHouseOnePrice}}" wx:for-index="i" wx:key="i">
+            <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'openImg',['$0'],[ [ ['oneHouseOnePrice','',i,'picture'] ] ] ] ] ] ]}}" mode="widthFix" src="{{item.picture}}" wx:if="{{item.floorName===floorIndex}}"></image>
+        </view>
+    </view>
+</view>

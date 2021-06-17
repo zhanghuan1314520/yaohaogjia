@@ -1,0 +1,32 @@
+<view class="content">
+    <view class="header">
+        <view class="title">用户画像</view>
+    </view>
+    <view class="body">
+        <view class="b-block">
+            <view class="b-title">浏览楼盘总价</view>
+            <view class="sigle">
+                <view class="b-top">
+                    <view class="scope">100万-200万</view>
+                    <view class="percentage">{{width+'%'}}</view>
+                </view>
+                <view class="b-bottom">
+                    <view class="bgline">
+                        <view class="line" style="{{'width:'+width+'%'+';'}}"></view>
+                    </view>
+                </view>
+            </view>
+            <view class="sigle">
+                <view class="b-top">
+                    <view class="scope">100万-200万</view>
+                    <view class="percentage">{{width+'%'}}</view>
+                </view>
+                <view class="b-bottom">
+                    <view class="bgline">
+                        <view class="line" style="{{'width:'+width+'%'+';'}}"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

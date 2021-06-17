@@ -1,0 +1,54 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/confirm5.png);background-size:cover;">
+        <view class="title"></view>
+        <view class="pagedes">完善楼盘信息</view>
+    </view>
+    <view class="body">
+        <view class="progeress">
+            <view class="progress-text">
+                <label class="_span">楼盘基本信息</label>
+                <label class="_span">上传楼盘照片</label>
+            </view>
+            <view class="progress-circle">
+                <view class="cricle1">1</view>
+                <view class="_hr" style="width:210rpx;height:2rpx;background-color:#2b67ff;margin:0 18rpx;"></view>
+                <view class="cricle2">2</view>
+            </view>
+        </view>
+        <view class="hint">
+            <view class="_p">上传了照片规则：</view>
+            <view class="_p">1、照片清晰</view>
+            <view class="_p">2、不要带其他平台水印</view>
+            <view class="_p">3、上传照片需要审核，审核通过后可增加5～10个积分</view>
+        </view>
+        <view class="upload-area">
+            <view class="upload-title">
+                <view class="uload-b">效果图</view>
+                <view class="upload-s">(不超过5张)</view>
+            </view>
+            <view class="uni-upload-img uni-flex uni-row">
+                <view class="flex-item preview_img" wx:for="{{imageList}}" wx:for-item="image" wx:key="index">
+                    <image bindtap="__e" class="uni-uploader__img" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$event'] ] ] ] ]}}" data-src="{{image}}" src="{{image}}"></image>
+                    <uni-icons bind:__l="__l" bind:tap="__e" class="img_icon" data-event-opts="{{[ [ '^tap',[ [ 'delect',[index] ] ] ] ]}}" size="20" type="clear" vueId="{{'c74bd0a0-1-'+index}}"></uni-icons>
+                </view>
+                <view bindtap="__e" class="upload-img" data-event-opts="{{[ [ 'tap',[ [ 'addPic',['$event'] ] ] ] ]}}">+</view>
+            </view>
+        </view>
+        <view class="upload-area">
+            <view class="upload-title">
+                <view class="uload-b">位置图</view>
+                <view class="upload-s">(不超过5张)</view>
+            </view>
+            <view class="uni-upload-img uni-flex uni-row">
+                <view class="flex-item preview_img" wx:for="{{imageList}}" wx:for-item="image" wx:key="index">
+                    <image bindtap="__e" class="uni-uploader__img" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$event'] ] ] ] ]}}" data-src="{{image}}" src="{{image}}"></image>
+                    <uni-icons bind:__l="__l" bind:tap="__e" class="img_icon" data-event-opts="{{[ [ '^tap',[ [ 'delect',[index] ] ] ] ]}}" size="20" type="clear" vueId="{{'c74bd0a0-2-'+index}}"></uni-icons>
+                </view>
+                <view bindtap="__e" class="upload-img" data-event-opts="{{[ [ 'tap',[ [ 'addPic',['$event'] ] ] ] ]}}">+</view>
+            </view>
+        </view>
+        <view bindtap="__e" class="confirm" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">
+            <view class="btn">提交</view>
+        </view>
+    </view>
+</view>

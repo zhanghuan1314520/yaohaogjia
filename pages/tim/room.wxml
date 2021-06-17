@@ -1,0 +1,112 @@
+<view>
+    <view bindtouchstart="__e" class="content" data-event-opts="{{[ [ 'touchstart',[ [ 'hideDrawer',['$event'] ] ] ] ]}}">
+        <scroll-view bindscrolltoupper="__e" class="msg-list" data-event-opts="{{[ [ 'scrolltoupper',[ [ 'loadHistory',['$event'] ] ] ] ]}}" scrollIntoView="{{scrollToView}}" scrollTop="{{scrollTop}}" scrollWithAnimation="{{scrollAnimation}}" scrollY="true" upperThreshold="50">
+            <view class="loading" wx:if="{{isHistoryLoading}}">
+                <view class="spinner">
+                    <view class="rect1"></view>
+                    <view class="rect2"></view>
+                    <view class="rect3"></view>
+                    <view class="rect4"></view>
+                    <view class="rect5"></view>
+                </view>
+            </view>
+            <view class="row" id="{{item[$orig].ID}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="my" wx:if="{{item[$orig].flow=='out'}}">
+                    <view class="left">
+                        <view class="bubble" wx:if="{{item[$orig].type==TIM.TYPES.MSG_TEXT}}">
+                            <rich-text nodes="{{item.m0}}"></rich-text>
+                        </view>
+                    </view>
+                    <view class="right">
+                        <image src="{{userInfo.img}}"></image>
+                    </view>
+                </view>
+                <view class="other" wx:else>
+                    <view class="left">
+                        <image src="{{toUserInfo.img}}"></image>
+                    </view>
+                    <view class="right">
+                        <view class="username">
+                            <view class="name">{{toUserInfo.user}}</view>
+                            <view class="time">{{item.m1}}</view>
+                        </view>
+                        <view class="bubble" wx:if="{{item[$orig].type==TIM.TYPES.MSG_TEXT}}">
+                            <rich-text nodes="{{item.m2}}"></rich-text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view catchtouchmove="__e" class="{{['popup-layer',popupLayerClass]}}" data-event-opts="{{[ [ 'touchmove',[ [ 'discard',['$event'] ] ] ] ]}}">
+        <swiper class="{{['emoji-swiper',hideEmoji?'hidden':'']}}" duration="150" indicatorDots="true">
+            <swiper-item wx:for="{{emojiList}}" wx:for-index="pid" wx:for-item="page" wx:key="pid">
+                <view bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'addEmoji',['$0'],[ [ ['emojiList','',pid],['','',eid] ] ] ] ] ] ]}}" wx:for="{{page}}" wx:for-index="eid" wx:for-item="em" wx:key="eid">
+                    <image mode="widthFix" src="{{'/static/img/emoji/'+em.url}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+        <view class="{{['more-layer',hideMore?'hidden':'']}}">
+            <view class="list">
+                <view bindtap="__e" class="box" data-event-opts="{{[ [ 'tap',[ [ 'chooseImage',['$event'] ] ] ] ]}}">
+                    <view class="icon tupian2"></view>
+                </view>
+                <view bindtap="__e" class="box" data-event-opts="{{[ [ 'tap',[ [ 'camera',['$event'] ] ] ] ]}}">
+                    <view class="icon paizhao"></view>
+                </view>
+                <view bindtap="__e" class="box" data-event-opts="{{[ [ 'tap',[ [ 'handRedEnvelopes',['$event'] ] ] ] ]}}">
+                    <view class="icon hongbao"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="__e" class="{{['input-box',popupLayerClass]}}" data-event-opts="{{[ [ 'touchmove',[ [ 'discard',['$event'] ] ] ] ]}}">
+        <view class="voice">
+            <view bindtap="__e" class="{{['icon',isVoice?'jianpan':'yuyin']}}" data-event-opts="{{[ [ 'tap',[ [ 'switchVoice',['$event'] ] ] ] ]}}"></view>
+        </view>
+        <view class="textbox">
+            <view bindtouchcancel="__e" bindtouchend="__e" bindtouchstart="__e" catchtouchmove="__e" class="{{['voice-mode',isVoice?'':'hidden',recording?'recording':'']}}" data-event-opts="{{[ [ 'touchstart',[ [ 'voiceBegin',['$event'] ] ] ],[ 'touchmove',[ [ 'voiceIng',['$event'] ] ] ],[ 'touchend',[ [ 'voiceEnd',['$event'] ] ] ],[ 'touchcancel',[ [ 'voiceCancel',['$event'] ] ] ] ]}}">{{voiceTis}}</view>
+            <view class="{{['text-mode',isVoice?'hidden':'']}}">
+                <view class="box">
+                    <textarea autoHeight="true" bindfocus="__e" bindinput="__e" data-event-opts="{{[ [ 'focus',[ [ 'textareaFocus',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','textMsg','$event',[] ] ] ] ] ]}}" value="{{textMsg}}"></textarea>
+                </view>
+                <view bindtap="__e" class="em" data-event-opts="{{[ [ 'tap',[ [ 'chooseEmoji',['$event'] ] ] ] ]}}">
+                    <view class="icon biaoqing"></view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="__e" class="more" data-event-opts="{{[ [ 'tap',[ [ 'showMore',['$event'] ] ] ] ]}}">
+            <view class="icon add"></view>
+        </view>
+        <view bindtap="__e" class="{{['send',isVoice?'hidden':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'sendText',['$event'] ] ] ] ]}}">
+            <view class="btn">发送</view>
+        </view>
+    </view>
+    <view class="{{['record',recording?'':'hidden']}}">
+        <view class="{{['ing',willStop?'hidden':'']}}">
+            <view class="icon luyin2"></view>
+        </view>
+        <view class="{{['cancel',willStop?'':'hidden']}}">
+            <view class="icon chehui"></view>
+        </view>
+        <view class="{{['tis',willStop?'change':'']}}">{{recordTis}}</view>
+    </view>
+    <view class="{{['windows',windowsState]}}">
+        <view bindtap="__e" catchtouchmove="__e" class="mask" data-event-opts="{{[ [ 'touchmove',[ [ 'discard',['$event'] ] ] ],[ 'tap',[ [ 'closeRedEnvelope',['$event'] ] ] ] ]}}"></view>
+        <view catchtouchmove="__e" class="layer" data-event-opts="{{[ [ 'touchmove',[ [ 'discard',['$event'] ] ] ] ]}}">
+            <view class="open-redenvelope">
+                <view class="top">
+                    <view class="close-btn">
+                        <view bindtap="__e" class="icon close" data-event-opts="{{[ [ 'tap',[ [ 'closeRedEnvelope',['$event'] ] ] ] ]}}"></view>
+                    </view>
+                    <image src="/static/img/im/face/face_1.jpg"></image>
+                </view>
+                <view class="from">{{'来自'+redenvelopeData.from}}</view>
+                <view class="blessing">{{redenvelopeData.blessing}}</view>
+                <view class="money">{{redenvelopeData.money}}</view>
+                <view bindtap="__e" class="showDetails" data-event-opts="{{[ [ 'tap',[ [ 'toDetails',['$0'],['redenvelopeData.rid'] ] ] ] ]}}">查看领取详情<view class="icon to"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

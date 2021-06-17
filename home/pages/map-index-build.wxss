@@ -1,0 +1,7 @@
+.page {
+    position: relative;
+}
+
+.page,.page .page-body .map {
+    height: 100vh;
+}

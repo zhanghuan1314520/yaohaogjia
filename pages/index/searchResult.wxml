@@ -1,0 +1,60 @@
+<view class="content searchResult">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/img_bg_lotteryResult.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>
+            <view class="pageTitle">查询结果</view>
+        </view>
+        <view class="address">{{name}}</view>
+    </view>
+    <view class="body">
+        <view class="floorSelect">
+            <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{res}}" wx:key="index">{{''+item+''}}</view>
+        </view>
+        <view class="search-map">
+            <view class="search">
+                <icon class="icon-search" color="#999999" size="18" type="search"></icon>
+                <input bindconfirm="__e" bindinput="__e" class="search-input" confirmType="search" data-event-opts="{{[ [ 'confirm',[ [ 'queryData',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '$0','keyword','$event',[] ],['params'] ] ] ] ]}}" placeholder="请输入摇号编码查询" type="text" value="{{params.keyword}}"></input>
+            </view>
+            <t-table bind:__l="__l" bind:change="__e" class="t-table" data-event-opts="{{[ [ '^change',[ ['change'] ] ] ]}}" vueId="1a11c72b-1" vueSlots="{{['default']}}">
+                <t-tr bind:__l="__l" vueId="{{'1a11c72b-2'+','+'1a11c72b-1'}}" vueSlots="{{['default']}}">
+                    <t-th bind:__l="__l" vueId="{{'1a11c72b-3'+','+'1a11c72b-2'}}" vueSlots="{{['default']}}">房源类型</t-th>
+                    <t-th bind:__l="__l" vueId="{{'1a11c72b-4'+','+'1a11c72b-2'}}" vueSlots="{{['default']}}">全部</t-th>
+                    <t-th bind:__l="__l" vueId="{{'1a11c72b-5'+','+'1a11c72b-2'}}" vueSlots="{{['default']}}">人才</t-th>
+                    <t-th bind:__l="__l" vueId="{{'1a11c72b-6'+','+'1a11c72b-2'}}" vueSlots="{{['default']}}">无房</t-th>
+                    <t-th bind:__l="__l" vueId="{{'1a11c72b-7'+','+'1a11c72b-2'}}" vueSlots="{{['default']}}">有房</t-th>
+                </t-tr>
+                <t-tr bind:__l="__l" vueId="{{'1a11c72b-8-'+index+','+'1a11c72b-1'}}" vueSlots="{{['default']}}" wx:for="{{showTableList}}" wx:key="index">
+                    <t-td bind:__l="__l" vueId="{{'1a11c72b-9-'+index+','+'1a11c72b-8-'+index}}" vueSlots="{{['default']}}">{{item.houseType}}</t-td>
+                    <t-td bind:__l="__l" vueId="{{'1a11c72b-10-'+index+','+'1a11c72b-8-'+index}}" vueSlots="{{['default']}}">{{item.num||'-'}}</t-td>
+                    <t-td bind:__l="__l" vueId="{{'1a11c72b-11-'+index+','+'1a11c72b-8-'+index}}" vueSlots="{{['default']}}">{{item.personnel||'-'}}</t-td>
+                    <t-td bind:__l="__l" vueId="{{'1a11c72b-12-'+index+','+'1a11c72b-8-'+index}}" vueSlots="{{['default']}}">{{item.noHouse||'-'}}</t-td>
+                    <t-td bind:__l="__l" vueId="{{'1a11c72b-13-'+index+','+'1a11c72b-8-'+index}}" vueSlots="{{['default']}}">{{item.hasHouse||'-'}}</t-td>
+                </t-tr>
+            </t-table>
+        </view>
+    </view>
+    <block wx:if="{{isLoad}}">
+        <view class="footer" wx:if="{{!floorIndex}}">
+            <view class="title">当前页面仅展示部分结果数据</view>
+            <view bindtap="__e" class="sigle" data-event-opts="{{[ [ 'tap',[ [ 'toResult',['$0'],[ [ ['sigleData','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l1}}" wx:key="index">
+                <view class="block" wx:for="{{item.l0}}" wx:for-index="key" wx:for-item="t" wx:key="key">
+                    <view class="block-left">{{t.f0}}</view>
+                    <view class="block-right">
+                        <view class="r-block" wx:for="{{t[$orig]}}" wx:for-index="__i0__" wx:for-item="i" wx:key="*this">{{''+i+''}}</view>
+                    </view>
+                </view>
+                <image class="icon-right" src="https://cdn.lottery.okgoes.com/arrow_right.png"></image>
+            </view>
+        </view>
+        <view class="footer" wx:else>
+            <view class="title">当前页面仅展示部分结果数据</view>
+            <view class="sigle" wx:for="{{$root.l3}}" wx:key="index">
+                <view class="block" wx:for="{{item.l2}}" wx:for-index="key" wx:for-item="t" wx:key="key">
+                    <view class="block-left">{{t.f1}}</view>
+                    <view class="{{[ 'block-right',[key==='status'?'blue':''] ]}}" wx:if="{{key==='status'}}">复核通过</view>
+                    <view class="block-right" wx:else>{{''+t[$orig]+''}}</view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

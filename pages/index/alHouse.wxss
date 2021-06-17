@@ -1,0 +1,41 @@
+.content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.content,.search {
+    width: 100%;
+    display: flex;
+}
+
+.search {
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 16rpx 0 0;
+}
+
+.footer-data {
+    padding: 0 40rpx;
+}
+
+.footer-data .result {
+    height: 28rpx;
+    font-size: 28rpx;
+    line-height: 28rpx;
+    font-weight: 400;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 40rpx 0;
+}
+
+.footer-data .result .l-result {
+    color: #000;
+}
+
+.footer-data .result .r-result {
+    color: #2b67ff;
+}

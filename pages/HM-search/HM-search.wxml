@@ -1,0 +1,46 @@
+<view class="content">
+    <view class="search-box">
+        <m-search bind:__l="__l" bind:confirm="__e" bind:input="__e" bind:search="__e" button="inside" class="mSearch-input-box vue-ref" data-event-opts="{{[ [ '^search',[ [ 'doSearch',[false] ] ] ],[ '^input',[ [ '__set_model',[ '','keyword','$event',[] ] ],['inputChange'] ] ],[ '^confirm',[ [ 'doSearch',[false] ] ] ] ]}}" data-ref="mSearch" mode="{{1}}" placeholder="{{defaultKeyword}}" value="{{keyword}}" vueId="f1594444-1"></m-search>
+        <view bindtap="__e" class="cancel-btn" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}">取消</view>
+    </view>
+    <view class="no-img-box" wx:if="{{isShowKeywordList&&keywordList.length===0}}">
+        <image mode class="no-img" src="https://cdn.lottery.okgoes.com/img_no_floor.png"></image>
+        <view class="no-img-text">未找到该楼盘</view>
+    </view>
+    <view class="search-keyword" wx:else>
+        <scroll-view class="keyword-list-box" hidden="{{!isShowKeywordList}}" scrollY="{{true}}">
+            <view class="keyword-entry" hoverClass="keyword-entry-tap" wx:for="{{keywordList}}" wx:for-item="row" wx:key="index">
+                <view catchtap="__e" class="keyword-text" data-event-opts="{{[ [ 'tap',[ [ 'doSearch',['$0','$1'],['keywordList.'+index+'.keyword','keywordList.'+index+'.pfsId'] ] ] ] ]}}">
+                    <rich-text nodes="{{row.htmlStr}}"></rich-text>
+                </view>
+            </view>
+        </scroll-view>
+        <scroll-view class="keyword-box" hidden="{{!!isShowKeywordList}}" scrollY="{{true}}">
+            <view class="keyword-block" wx:if="{{oldKeywordList.length>0}}">
+                <view class="keyword-list-header">
+                    <view>历史搜索</view>
+                    <view>
+                        <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'oldDelete',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/delete.png"></image>
+                    </view>
+                </view>
+                <view class="keyword">
+                    <view bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'doSearch',['$0','$1'],[ [ ['oldKeywordList','',index,'keyword'] ],[ ['oldKeywordList','',index,'id'] ] ] ] ] ] ]}}" wx:for="{{oldKeywordList}}" wx:for-item="keyword" wx:key="index">{{keyword.keyword}}</view>
+                </view>
+            </view>
+            <view class="keyword-block">
+                <view class="keyword-list-header">
+                    <view>热门搜索</view>
+                    <view>
+                        <image bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'hotToggle',['$event'] ] ] ] ]}}" src="{{'https://cdn.lottery.okgoes.com/attention'+forbid+'.png'}}"></image>
+                    </view>
+                </view>
+                <view class="keyword" wx:if="{{forbid==''}}">
+                    <view bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'hotSearch',['$0'],[ [ ['hotKeywordList','',index] ] ] ] ] ] ]}}" wx:for="{{hotKeywordList}}" wx:for-item="keyword" wx:key="index">{{keyword}}</view>
+                </view>
+                <view class="hide-hot-tis" wx:else>
+                    <view>当前搜热门搜索已隐藏</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

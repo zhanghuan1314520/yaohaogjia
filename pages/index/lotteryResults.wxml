@@ -1,0 +1,50 @@
+<view class="content lotteryResults">
+    <view class="header">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/back.png"></image>摇号结果详情</view>
+        <view class="img-content">
+            <image class="status" src="{{'https://cdn.lottery.okgoes.com/'+(result.status===1?'success':'noSuccess')+'.png'}}"></image>
+            <view class="text-p">
+                <view class="status-title">{{'第'+result.frontSort+'号'}}</view>
+                <label class="_span" wx:if="{{result.status===1}}">恭喜你中签啦！记得按时选房哦。</label>
+                <label class="_span" wx:else>{{'您当前排位'+result.frontSort+'位，若前面有'+result.sort+'位客户放弃，则您可有机会选房哦。'}}</label>
+            </view>
+        </view>
+    </view>
+    <view class="_hr" style="width:100vw;height:20rpx;background:#F1F3F5;margin:20rpx 0 30rpx 0;"></view>
+    <view class="body">
+        <view bindtap="__e" class="body-title" data-event-opts="{{[ [ 'tap',[ [ 'tohouse',['$event'] ] ] ] ]}}">
+            <image class="house" src="https://cdn.lottery.okgoes.com/ic_building_sel.png"></image>
+            <label class="pfs_name _span">{{name}}</label>
+            <image class="house" src="https://cdn.lottery.okgoes.com/right_blue.png"></image>
+        </view>
+        <view class="table">
+            <t-table bind:__l="__l" bind:change="__e" class="t-table" data-event-opts="{{[ [ '^change',[ ['change'] ] ] ]}}" vueId="4b0a1723-1" vueSlots="{{['default']}}">
+                <t-tr bind:__l="__l" vueId="{{'4b0a1723-2'+','+'4b0a1723-1'}}" vueSlots="{{['default']}}">
+                    <t-th bind:__l="__l" vueId="{{'4b0a1723-3'+','+'4b0a1723-2'}}" vueSlots="{{['default']}}">房源类型</t-th>
+                    <t-th bind:__l="__l" vueId="{{'4b0a1723-4'+','+'4b0a1723-2'}}" vueSlots="{{['default']}}">全部</t-th>
+                    <t-th bind:__l="__l" vueId="{{'4b0a1723-5'+','+'4b0a1723-2'}}" vueSlots="{{['default']}}">人才</t-th>
+                    <t-th bind:__l="__l" vueId="{{'4b0a1723-6'+','+'4b0a1723-2'}}" vueSlots="{{['default']}}">无房</t-th>
+                    <t-th bind:__l="__l" vueId="{{'4b0a1723-7'+','+'4b0a1723-2'}}" vueSlots="{{['default']}}">有房</t-th>
+                </t-tr>
+                <t-tr bind:__l="__l" vueId="{{'4b0a1723-8-'+__i0__+','+'4b0a1723-1'}}" vueSlots="{{['default']}}" wx:for="{{tableList}}" wx:for-index="__i0__" wx:key="id">
+                    <t-td bind:__l="__l" vueId="{{'4b0a1723-9-'+__i0__+','+'4b0a1723-8-'+__i0__}}" vueSlots="{{['default']}}">{{item.houseType}}</t-td>
+                    <t-td bind:__l="__l" class="{{[item.id===3?'blue':'']}}" vueId="{{'4b0a1723-10-'+__i0__+','+'4b0a1723-8-'+__i0__}}" vueSlots="{{['default']}}">{{item.num||'-'}}</t-td>
+                    <t-td bind:__l="__l" class="{{[item.id===3?'blue':'']}}" vueId="{{'4b0a1723-11-'+__i0__+','+'4b0a1723-8-'+__i0__}}" vueSlots="{{['default']}}">{{item.personnel||'-'}}</t-td>
+                    <t-td bind:__l="__l" class="{{[item.id===3?'blue':'']}}" vueId="{{'4b0a1723-12-'+__i0__+','+'4b0a1723-8-'+__i0__}}" vueSlots="{{['default']}}">{{item.noHouse||'-'}}</t-td>
+                    <t-td bind:__l="__l" class="{{[item.id===3?'blue':'']}}" vueId="{{'4b0a1723-13-'+__i0__+','+'4b0a1723-8-'+__i0__}}" vueSlots="{{['default']}}">{{item.hasHouse||'-'}}</t-td>
+                </t-tr>
+            </t-table>
+        </view>
+    </view>
+    <view class="footer" wx:if="{{false}}">
+        <view class="footer-left">
+            <image bindtap="__e" class="erweima" data-event-opts="{{[ [ 'tap',[ ['download'] ] ] ]}}" src="https://cdn.lottery.okgoes.com/download.png"></image>
+            <label class="_span">微信扫码查看</label>
+        </view>
+        <view class="footer-right">
+            <image bindtap="__e" class="house" data-event-opts="{{[ [ 'tap',[ ['download'] ] ] ]}}" src="https://cdn.lottery.okgoes.com/download.png"></image>
+            <label class="_span">保存图片</label>
+        </view>
+    </view>
+</view>

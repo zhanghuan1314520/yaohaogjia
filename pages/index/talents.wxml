@@ -1,0 +1,37 @@
+<view class="content">
+    <view class="header" style="background:url('https://cdn.lottery.okgoes.com/blue_bg.png');background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>高端人才</view>
+        <view class="h-top">
+            <view class="h-title">每日新增</view>
+        </view>
+        <view class="h-bottom">
+            <view class="h-block">
+                <view class="h-center">
+                    <view class="h-title">今日新增高层次人才</view>
+                    <label calss="price" class="_span">{{info.currentDayAdd||0}}</label>
+                </view>
+            </view>
+            <view class="h-block">
+                <view class="h-center">
+                    <view class="h-title">{{$root.g0+'月累计新增高层次人才'}}</view>
+                    <label calss="price" class="_span">{{info.currentMonthAdd||0}}</label>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="bar">
+            <view class="title-ccc">新增高层次人才统计</view>
+            <view class="qiun-charts">
+                <canvas bindtouchend="__e" bindtouchmove="__e" bindtouchstart="__e" canvasId="canvasColumn" class="charts" data-event-opts="{{[ [ 'touchstart',[ [ 'touchMix',['$event'] ] ] ],[ 'touchmove',[ [ 'moveMix',['$event'] ] ] ],[ 'touchend',[ [ 'touchEndMix',['$event'] ] ] ] ]}}" height="{{cHeight*pixelRatio}}" id="canvasColumn" style="{{'width:'+cWidth+'px'+';'+'height:'+cHeight+'px'+';'}}" width="{{cWidth*pixelRatio}}"></canvas>
+            </view>
+        </view>
+        <view class="qiun-columns" wx:if="{{ageListData!==null}}">
+            <view class="title">年龄结构</view>
+            <view class="qiun-charts">
+                <canvas bindtouchstart="__e" canvasId="canvasRing" class="charts" data-event-opts="{{[ [ 'touchstart',[ [ 'touchRing',['$event'] ] ] ] ]}}" height="{{cHeight*pixelRatio}}" id="canvasRing" style="{{'width:'+cWidth+'px'+';'+'height:'+cHeight+'px'+';'}}" width="{{cWidth*pixelRatio}}"></canvas>
+            </view>
+        </view>
+    </view>
+</view>

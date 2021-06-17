@@ -1,0 +1,59 @@
+cover-view.data-v-d96a382e,view.data-v-d96a382e {
+    box-sizing: border-box;
+}
+
+.school-map.data-v-d96a382e {
+    position: relative;
+}
+
+.school-map .map-container.data-v-d96a382e {
+    height: 80vh;
+}
+
+.school-map .btns.data-v-d96a382e {
+    position: absolute;
+    top: 35vh;
+    right: 20rpx;
+    width: 60rpx;
+    height: 200rpx;
+    border-radius: 30rpx;
+    background: #fff;
+    box-shadow: 0 0 10rpx #ccc;
+}
+
+.school-map .btns .btn.data-v-d96a382e {
+    padding: 10rpx;
+    text-align: center;
+    white-space: pre-wrap;
+    border-radius: 30rpx;
+}
+
+.school-map .btns .btn.active.data-v-d96a382e {
+    padding: 26rpx 10rpx;
+    color: #fff;
+    background: #2b67ff;
+}
+
+.school-map .floor.data-v-d96a382e {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 22vh;
+    background: #fff;
+    border-radius: 40rpx;
+    padding: 40rpx;
+}
+
+.school-map .floor .title.data-v-d96a382e {
+    font-weight: 700;
+    font-size: 32rpx;
+    font-family: Helvetica;
+}
+
+.school-map .floor .desc.data-v-d96a382e {
+    margin-top: 30rpx;
+    line-height: 38rpx;
+    font-size: 28rpx;
+    color: #848484;
+    white-space: pre-wrap;
+}

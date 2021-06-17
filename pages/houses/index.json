@@ -1,0 +1,8 @@
+{
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "area-select": "/pages/common/area",
+        "house": "/pages/common/house",
+        "search": "/pages/common/search"
+    }
+}

@@ -1,0 +1,126 @@
+.content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.content,.search {
+    width: 100%;
+    display: flex;
+}
+
+.search {
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.swiper-content {
+    padding: 0 40rpx;
+    margin: 24rpx 0 48rpx;
+}
+
+.footer-data {
+    padding: 0 24rpx;
+}
+
+.new-block {
+    margin-top: 10rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.new-block,.new-block .timeline {
+    display: flex;
+}
+
+.new-block .timeline {
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.new-block .timeline image {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 16rpx;
+}
+
+.new-block .timeline ._span {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 32rpx;
+}
+
+.new-block .new-content {
+    border-left: 2rpx dashed #9ca6b3;
+    margin: 0 0rpx 0 24rpx;
+    padding: 40rpx 0 40rpx 39rpx;
+}
+
+.new-block .new-content .title {
+    font-size: 36rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 48rpx;
+    margin-bottom: 20rpx;
+    margin-top: 32rpx;
+}
+
+.new-block .new-content .des {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+    line-height: 28rpx;
+    margin-bottom: 24rpx;
+}
+
+.new-block .new-content .new-img .block-img {
+    width: 192rpx;
+    height: 192rpx;
+    border-radius: 4rpx;
+    margin: 0 16rpx 16rpx 0;
+}
+
+.new-block .new-content .bodydis .title {
+    width: 100%;
+    height: 88rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    margin-top: 40rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.new-block .new-content .sigle {
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.new-block .new-content .sigle .block {
+    width: 100%;
+    display: flex;
+    margin-bottom: 16rpx;
+}
+
+.new-block .new-content .sigle .block .block-left {
+    width: 200rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #8b9199;
+    line-height: 40rpx;
+}
+
+.new-block .new-content .sigle .block .block-right {
+    min-height: 40rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+    line-height: 40rpx;
+}

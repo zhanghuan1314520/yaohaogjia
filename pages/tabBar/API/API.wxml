@@ -1,0 +1,13 @@
+<view class="uni-container">
+    <view class="body">
+        <view class="search">
+            <uni-icons bind:__l="__l" class="icon-search" color="#999999" size="18" type="search" vueId="b6f3af4e-1"></uni-icons>
+            <input bindconfirm="__e" bindinput="__e" class="search-input" confirmType="search" data-event-opts="{{[ [ 'confirm',[ [ 'confirm',['$event'] ] ] ],[ 'input',[ [ '__set_model',[ '','searchVal','$event',[] ] ] ] ] ]}}" focus="{{showSync}}" placeholder="{{placeholder}}" type="text" value="{{searchVal}}"></input>
+        </view>
+        <view class="footer">
+            <view class="floorSelect">
+                <view bindtap="__e" class="{{['footer-radio',index==floorIndex?'floor-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'floorSelect',[index] ] ] ] ]}}" wx:for="{{loupan}}" wx:key="index">{{''+item+''}}</view>
+            </view>
+        </view>
+    </view>
+</view>

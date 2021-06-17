@@ -1,0 +1,30 @@
+<view class="content data-v-758fc162">
+    <view class="header data-v-758fc162" style="{{'background-size:cover;'+'background-image:'+'url('+data.src+')'+';'}}">
+        <view class="title data-v-758fc162">
+            <view bindtap="__e" class="left data-v-758fc162" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}">
+                <image class="data-v-758fc162" src="https://cdn.lottery.okgoes.com/left.png"></image>
+            </view>楼盘详情</view>
+        <view class="name data-v-758fc162">{{buildingInfo.name}}</view>
+        <view class="address data-v-758fc162">{{buildingInfo.address}}</view>
+    </view>
+    <view class="body data-v-758fc162">
+        <view class="sigle data-v-758fc162">
+            <view class="block data-v-758fc162" wx:if="{{item.title!=null&&item.title!==''}}" wx:for="{{sigleData}}" wx:key="index">
+                <view class="block-left data-v-758fc162">{{item.name+': '}}</view>
+                <view class="block-right data-v-758fc162">{{''+item.title+''}}</view>
+            </view>
+        </view>
+        <view class="project data-v-758fc162" wx:if="{{buildingInfo.projectDesc!==null&&buildingInfo.projectDesc!==''}}">
+            <view class="title data-v-758fc162">项目简介</view>
+            <text class="project-text data-v-758fc162">{{''+$root.m0+''}}</text>
+        </view>
+    </view>
+    <view class="footer data-v-758fc162">
+        <view class="follow_box data-v-758fc162">
+            <image bindtap="__e" class="follow data-v-758fc162" data-event-opts="{{[ [ 'tap',[ [ 'toFocus',['$event'] ] ] ] ]}}" src="{{'https://cdn.lottery.okgoes.com/follow'+(isFocus?'-active':'')+'.png'}}"></image>
+            <view class="follow_text data-v-758fc162">{{isFocus?'已关注':'关注'}}</view>
+        </view>
+        <view bindtap="__e" class="relation data-v-758fc162" data-event-opts="{{[ [ 'tap',[ [ 'chooseRoom',[0] ] ] ] ]}}">联系置业顾问</view>
+        <button sessionFrom class="mes data-v-758fc162" openType="contact" plain="true">选房问清秋</button>
+    </view>
+</view>

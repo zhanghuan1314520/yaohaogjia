@@ -1,0 +1,29 @@
+.t-tr {
+    width: 100%;
+}
+
+.t-tr,.t-tr t-td,.t-tr t-th {
+    display: flex;
+}
+
+.t-tr t-td,.t-tr t-th {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.t-tr .t-check-box {
+    flex-shrink: 0;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 80rpx;
+    color: #3b4246;
+    border-left: 1px solid #d0dee5;
+    border-top: 1px solid #d0dee5;
+}
+
+.t-tr .t-check-box checkbox {
+    transform: scale(.8);
+}

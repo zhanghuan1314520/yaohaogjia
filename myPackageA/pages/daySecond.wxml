@@ -1,0 +1,38 @@
+<view class="content">
+    <view class="header" style="background:url('https://cdn.lottery.okgoes.com/blue_bg.png');background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>每日二手</view>
+        <view class="h-top">
+            <view class="h-title">{{$root.g0+'月成交(套)'}}</view>
+            <label calss="total" class="_span">{{info.num||0}}</label>
+        </view>
+        <view class="h-bottom">
+            <view class="h-block">
+                <view class="h-title">均价</view>
+                <label calss="price" class="_span">{{info.price+'元/㎡'}}</label>
+            </view>
+            <view class="_hr" style="width:2rpx;height:54rpx;background:rgba(121, 155, 254, 1);"></view>
+            <view class="h-block">
+                <view class="h-title">环比</view>
+                <label calss="price" class="_span">{{info.chainComparison+'%'}}</label>
+            </view>
+            <view class="_hr" style="width:2rpx;height:54rpx;background:rgba(121, 155, 254, 1);"></view>
+            <view class="h-block">
+                <view class="h-title">同比</view>
+                <label calss="price" class="_span">{{info.yearOnYear+'%'}}</label>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="qiun-charts">
+            <canvas bindtouchend="__e" bindtouchmove="__e" bindtouchstart="__e" canvasId="canvasMix" class="charts" data-event-opts="{{[ [ 'touchstart',[ [ 'touchMix',['$event'] ] ] ],[ 'touchmove',[ [ 'moveMix',['$event'] ] ] ],[ 'touchend',[ [ 'touchEndMix',['$event'] ] ] ] ]}}" disableScroll="true" height="{{cHeight*pixelRatio}}" id="canvasMix" style="{{'width:'+cWidth+'px'+';'+'height:'+cHeight+'px'+';'}}" width="{{cWidth*pixelRatio}}"></canvas>
+        </view>
+        <view class="pad-time">
+            <view class="time-table">
+                <scroll-view bindscroll="__e" data-event-opts="{{[ [ 'scroll',[ [ 'scroll',['$event'] ] ] ] ]}}" scrollLeft="{{scrollLeft}}" scrollX="true" style="width:100%;overflow:hidden;white-space:nowrap;">
+                    <view bindtap="__e" class="{{['time-item',index==currentIndex?'time-item--active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'timeSelect',[index] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">{{item.g1+'~'+item.g2}}</view>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+</view>

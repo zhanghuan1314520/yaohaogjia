@@ -1,0 +1,9 @@
+{
+    "onReachBottomDistance": 50,
+    "navigationBarTitleText": "选择楼盘",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "search": "/pages/common/search",
+        "house": "/pages/common/house"
+    }
+}

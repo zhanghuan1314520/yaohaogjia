@@ -1,0 +1,76 @@
+.hide {
+    transform: translateX(90rpx);
+}
+
+.share-button {
+    width: 132rpx;
+    height: 132rpx;
+    position: fixed;
+    right: 30rpx;
+    bottom: 30vh;
+    border-radius: 50%;
+    transition: all .3s;
+    z-index: 99999;
+}
+
+.share-button .share-img {
+    width: 100%;
+    height: 100%;
+}
+
+.newsInfo-footer {
+    width: 92vw;
+    min-height: 130rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 4vw;
+    background: #fff;
+}
+
+.newsInfo-footer .btns {
+    width: 150rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    border: none!important;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.newsInfo-footer .btn-lg {
+    width: 574rpx;
+    height: 88rpx;
+    border-radius: 50px;
+    margin: auto;
+    background: #2b67ff;
+}
+
+.newsInfo-footer .relation {
+    background: #2b67ff;
+    margin-right: 16rpx;
+}
+
+.newsInfo-footer .atava-img {
+    width: 90rpx;
+    height: 90rpx;
+    margin-right: 20rpx;
+    border-radius: 50%;
+}
+
+.newsInfo-footer .mes {
+    background: #00bfbf;
+}
+
+.newsInfo-footer .name {
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+}
+
+.newsInfo-footer .pfsName {
+    width: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

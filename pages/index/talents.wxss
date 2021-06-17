@@ -1,0 +1,156 @@
+.content,.header {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.header {
+    position: relative;
+    padding: 88rpx 40rpx 0;
+    height: 552rpx;
+}
+
+.header .title {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #fff;
+    height: 80rpx;
+    text-align: center;
+    position: relative;
+    line-height: 80rpx;
+}
+
+.header .title .left {
+    width: 40rpx;
+    height: 40rpx;
+    top: 20rpx;
+    left: 0rpx;
+    position: absolute;
+}
+
+.header .h-top {
+    margin-bottom: 20rpx;
+}
+
+.header .h-top .h-title {
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #fff;
+    line-height: 38px;
+}
+
+.header .h-bottom {
+    box-sizing: border-box;
+}
+
+.header .h-bottom,.header .h-bottom .h-block {
+    display: flex;
+}
+
+.header .h-bottom .h-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.header .h-bottom .h-block:first-of-type {
+    border-right: 1rpx solid #ccc;
+}
+
+.header .h-bottom .h-block:nth-of-type(2) {
+    padding-left: 24rpx;
+}
+
+.header .h-bottom .h-title {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #d8d8d8;
+    line-height: 28px;
+}
+
+.header .h-bottom ._span {
+    font-size: 64rpx;
+    font-family: Helvetica;
+    color: #fff;
+    line-height: 64rpx;
+    letter-spacing: 1px;
+}
+
+.body {
+    width: 100%;
+    height: 570rpx;
+    background: #fff;
+    border-radius: 40rpx;
+    position: absolute;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    top: 440rpx;
+    padding: 40rpx 0;
+    box-sizing: border-box;
+}
+
+.body .title {
+    padding: 0 40rpx;
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #000;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.body .bar {
+    margin-bottom: 56rpx;
+}
+
+.body .bar .title-ccc {
+    padding: 0 40rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #868e99;
+    line-height: 28px;
+}
+
+.qiun-padding {
+    padding: 2%;
+    width: 96%;
+}
+
+.qiun-wrap {
+    flex-wrap: wrap;
+}
+
+.qiun-rows,.qiun-wrap {
+    display: flex;
+}
+
+.qiun-rows {
+    -webkit-box-orient: horizontal!important;
+    -webkit-box-direction: normal!important;
+    flex-direction: row!important;
+}
+
+.qiun-title-dot-light {
+    border-left: 10rpx solid #0ea391;
+    padding-left: 10rpx;
+    font-size: 32rpx;
+    color: #000;
+}
+
+.qiun-charts {
+    padding: 0 40rpx;
+}
+
+.charts,.qiun-charts {
+    height: 500rpx;
+    background-color: #fff;
+}
+
+.charts {
+    width: 750rpx;
+}

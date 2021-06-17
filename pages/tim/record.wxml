@@ -1,0 +1,46 @@
+<view class="data-v-063a9b76">
+    <view class="user-box data-v-063a9b76">
+        <view class="nav-tab data-v-063a9b76">
+            <view bindtap="__e" class="{{['data-v-063a9b76',isActive==0?'tab-item-active tab-item':'tab-item']}}" data-event-opts="{{[ [ 'tap',[ [ 'changeTabBtn',[0] ] ] ] ]}}">聊天记录</view>
+            <view bindtap="__e" class="{{['data-v-063a9b76',isActive==1?'tab-item-active tab-item1':'tab-item1']}}" data-event-opts="{{[ [ 'tap',[ [ 'changeTabBtn',[1] ] ] ] ]}}">好友列表</view>
+            <view bindtap="__e" class="out-login data-v-063a9b76" data-event-opts="{{[ [ 'tap',[ ['outLoginBtn'] ] ] ]}}">注 销</view>
+            <view class="clear-box data-v-063a9b76"></view>
+        </view>
+    </view>
+    <view class="conversition-box data-v-063a9b76" wx:if="{{isActive==0}}">
+        <view class="list-box data-v-063a9b76" wx:if="{{conversationList&&conversationList.length>0}}">
+            <view bindtap="__e" class="data-v-063a9b76" data-event-opts="{{[ [ 'tap',[ [ 'toRoom',['$0'],[ [ ['conversationList','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="item-box data-v-063a9b76">
+                    <view class="item-img data-v-063a9b76">
+                        <image alt class="_img data-v-063a9b76" src="{{item[$orig].userProfile.avatar}}"></image>
+                    </view>
+                    <view class="item-text data-v-063a9b76">
+                        <view class="item-user data-v-063a9b76">{{''+item[$orig].userProfile.nick+''}}</view>
+                        <view class="item-text-info data-v-063a9b76">
+                            <rich-text class="data-v-063a9b76" nodes="{{item.m0}}"></rich-text>
+                        </view>
+                    </view>
+                    <view class="item-msg data-v-063a9b76">
+                        <view class="item-msg-icon data-v-063a9b76" wx:if="{{item[$orig].unreadCount}}">{{item[$orig].unreadCount}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="list-box data-v-063a9b76" wx:else>
+            <label class="msg-box _span data-v-063a9b76">暂无聊天记录，请选择好友进行聊天</label>
+        </view>
+    </view>
+    <view class="user-box data-v-063a9b76" wx:if="{{isActive==1}}">
+        <view class="list-box data-v-063a9b76">
+            <view bindtap="__e" class="user-item-box data-v-063a9b76" data-event-opts="{{[ [ 'tap',[ [ 'checkUserToRoom',['$0'],[ [ ['friendList','',index] ] ] ] ] ] ]}}" wx:for="{{friendList}}" wx:key="index">
+                <view class="user-img data-v-063a9b76">
+                    <image alt class="data-v-063a9b76" src="{{item.img}}"></image>
+                </view>
+                <view class="user-name data-v-063a9b76">{{''+item.user+''}}</view>
+            </view>
+        </view>
+        <view class="btn data-v-063a9b76" style="margin-top:40rpx;">
+            <button bindtap="__e" class="data-v-063a9b76" data-event-opts="{{[ [ 'tap',[ ['createGroup'] ] ] ]}}" type="default">创建群组</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,250 @@
+page {
+    background: rgba(255,253,253,.99);
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #f1f3f5;
+}
+
+.content .header {
+    padding: 0 40rpx;
+    background-color: #fff;
+}
+
+.content .header .title {
+    margin-top: 88rpx;
+    width: 100%;
+    height: 80rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #fff;
+    line-height: 80rpx;
+    text-align: center;
+    position: relative;
+}
+
+.content .header .title .left {
+    width: 40rpx;
+    height: 40rpx;
+    top: 20rpx;
+    left: 0;
+    position: absolute;
+}
+
+.content .nav {
+    width: 100%;
+    height: 88rpx;
+    background: #fff8e7;
+    border-radius: 8rpx;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16rpx;
+}
+
+.content .nav .span {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #b36f0a;
+    line-height: 36rpx;
+}
+
+.content .nav .btn {
+    width: 136rpx;
+    height: 56rpx;
+    background: #fdde93;
+    border-radius: 28rpx;
+    border: 2rpx solid #e18f16;
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #b36f0a;
+    line-height: 56rpx;
+    text-align: center;
+}
+
+.content .body .body-sigin {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: #fcfcfc;
+    padding: 64rpx 40rpx 80rpx;
+    margin-bottom: 28rpx;
+}
+
+.content .body .body-sigin .title-block {
+    display: flex;
+    position: relative;
+}
+
+.content .body .body-sigin .title-block .block-title {
+    font-size: 40rpx;
+    font-weight: 600;
+    color: #000;
+    line-height: 40rpx;
+}
+
+.content .body .body-sigin .title-block .integral {
+    min-width: 110rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    text-align: center;
+    margin-left: 24rpx;
+    font-size: 22rpx;
+    background: linear-gradient(321deg,#fb8a09,#febc15);
+    border-radius: 200rpx 200rpx 200rpx 0rpx;
+    font-weight: 600;
+    color: #fff;
+}
+
+.content .body .body-sigin .istitle-block {
+    display: flex;
+}
+
+.content .body .body-sigin .istitle-block .block-title {
+    color: #868e99;
+}
+
+.content .body .body-sigin .istitle-block .integral {
+    background: linear-gradient(321deg,#858f99,#b9c2cc);
+}
+
+.content .body .body-sigin .istitle-block .overdue {
+    position: absolute;
+    width: 142rpx;
+    height: 142rpx;
+    top: 0;
+    right: 0;
+}
+
+.content .body .body-sigin .body-content {
+    margin-top: 20rpx;
+}
+
+.content .body .body-sigin .body-content ._p {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #868e99;
+    line-height: 40rpx;
+    margin-bottom: 24rpx;
+}
+
+.content .body .body-sigin .body-content .inf-block {
+    width: 100%;
+    height: 208rpx;
+    background: #fff;
+    box-shadow: 0 6px 48px 2px rgba(32,43,52,.1);
+    border-radius: 12px;
+    padding: 0 24rpx;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content .body .body-sigin .body-content .inf-block,.content .body .body-sigin .body-content .inf-block .i-left {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left {
+    width: 374rpx;
+    padding-right: 24rpx;
+    height: 160rpx;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left .t-b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left .t-b spam {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #000;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left .b-i {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left .b-i ._span {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: #868e99;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left .b-i image {
+    width: 32rpx;
+    height: 32rpx;
+    border-radius: 50%;
+    margin-right: 8rpx;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-left .b-i .b-left {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-right {
+    width: 224rpx;
+    height: 160rpx;
+}
+
+.content .body .body-sigin .body-content .inf-block .i-right image {
+    width: 100%;
+    height: 100%;
+}
+
+.content .body .body-sigin .body-content .observer {
+    position: relative;
+    margin-top: 24rpx;
+    left: -17PX;
+}
+
+.content .body .body-sigin .body-content .observer .obs {
+    position: absolute;
+    width: 508rpx;
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    border: 2rpx solid #fff;
+}
+
+.content .body .body-sigin .body-content .observer .obs-last {
+    text-align: center;
+    line-height: 44rpx;
+    background: #e2eaf5;
+    font-size: 30rpx;
+    color: #868e99;
+}
+
+.content .body .body-sigin .body-content .observer .per-number {
+    position: absolute;
+    left: 508rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #868e99;
+    line-height: 44rpx;
+}

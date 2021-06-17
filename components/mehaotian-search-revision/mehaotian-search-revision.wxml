@@ -1,0 +1,12 @@
+<view class="serach">
+    <view class="content" style="{{'border-radius:'+radius+'px'+';'}}">
+        <view class="{{['content-box',mode===2?'center':'']}}">
+            <image class="icon-search" src="https://cdn.lottery.okgoes.com/search1.png"></image>
+            <input bindblur="__e" bindconfirm="__e" bindfocus="__e" bindinput="__e" class="{{['input',!active&&mode===2?'center':'']}}" confirmType="search" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','inputVal','$event',[] ] ],[ 'inputChange',['$event'] ] ] ],[ 'confirm',[ [ 'triggerConfirm',['$event'] ] ] ],[ 'focus',[ [ 'focus',['$event'] ] ] ],[ 'blur',[ [ 'blur',['$event'] ] ] ] ]}}" focus="{{isFocus}}" placeholder="{{placeholder}}" value="{{inputVal}}"></input>
+            <text catchtap="__e" class="icon icon-del" data-event-opts="{{[ [ 'tap',[ [ 'clear',['$event'] ] ] ] ]}}" wx:if="{{isDelShow}}"></text>
+        </view>
+    </view>
+    <view bindtap="__e" class="{{['button',show||active?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'search',['$event'] ] ] ] ]}}" wx:if="{{button==='outside'}}">
+        <view class="button-item">{{!show?searchName:'搜索'}}</view>
+    </view>
+</view>

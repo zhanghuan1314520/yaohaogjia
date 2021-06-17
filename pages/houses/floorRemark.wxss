@@ -1,0 +1,110 @@
+.content,.header {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 640rpx;
+    position: relative;
+    padding: 88rpx 10rpx 0;
+}
+
+.header .title {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #000;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    position: relative;
+}
+
+.header .title .left {
+    width: 80rpx;
+    height: 80rpx;
+    top: 0;
+    left: 0rpx;
+    position: absolute;
+    z-index: 100;
+}
+
+.header .title .left image {
+    margin-top: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.header .name {
+    height: 48rpx;
+    font-size: 48rpx;
+    font-weight: 600;
+    color: #fff;
+    line-height: 48rpx;
+    margin-bottom: 28rpx;
+}
+
+.header .address {
+    height: 28rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #fff;
+    line-height: 28rpx;
+}
+
+.body {
+    width: 100%;
+    height: 570rpx;
+    background: #fff;
+    border-radius: 40rpx;
+    position: absolute;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    top: 560rpx;
+    padding: 40rpx 40rpx 0;
+    box-sizing: border-box;
+}
+
+.body .bodydis .nav {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.body .bodydis .nav,.body .bodydis .nav .title-area {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body .bodydis .nav .title-area {
+    -webkit-box-flex: 1;
+    flex: 1;
+    min-width: 0;
+    height: 88rpx;
+    color: #000;
+}
+
+.body .bodydis .nav .title-area .title {
+    font-size: 38rpx;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.body .bodydis .nav .title-area image {
+    width: 18px;
+    height: 18px;
+    transform: rotate(180deg);
+}
+
+.body .bodydis .nav .time {
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #9ca6b3;
+}
+
+.body .bodydis .content-p {
+    display: block;
+    color: #5b6168;
+}

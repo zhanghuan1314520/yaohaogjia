@@ -1,0 +1,18 @@
+<view class="content">
+    <view class="search">
+        <search bind:__l="__l" bind:confirm="__e" data-event-opts="{{[ [ '^confirm',[ ['confirm'] ] ] ]}}" disabled="{{false}}" placeholderList="{{placeholderList}}" vueId="fa7e990a-1"></search>
+    </view>
+    <view class="swiper-content" wx:if="{{info.length!=0}}">
+        <uni-swiper-dot bind:__l="__l" current="{{current}}" dotsStyles="{{dotsStyles}}" field="content" info="{{info}}" mode="{{mode}}" vueId="fa7e990a-2" vueSlots="{{['default']}}">
+            <swiper autoplay="{{autoplay}}" bindchange="__e" class="swiper" data-event-opts="{{[ [ 'change',[ [ 'change',['$event'] ] ] ] ]}}">
+                <swiper-item wx:for="{{info}}" wx:key="index">
+                    <view bindtap="__e" class="swiper-item" data-event-opts="{{[ [ 'tap',[ [ 'previewImage',['$0'],[ [ ['info','',index] ] ] ] ] ] ]}}" style="{{'background-image:'+'url('+item.picture+')'+';'+'background-size:'+'cover'+';'}}"></view>
+                </swiper-item>
+            </swiper>
+        </uni-swiper-dot>
+    </view>
+    <view class="footer-data">
+        <house bind:__l="__l" houseData="{{houseData}}" isQueryRes="{{true}}" show_des="{{false}}" vueId="fa7e990a-3"></house>
+    </view>
+    <view class="tip" wx:if="{{isBottom}}">没有更多信息...</view>
+</view>

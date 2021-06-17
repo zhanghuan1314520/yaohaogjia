@@ -1,0 +1,32 @@
+.drag-ball-area {
+    box-sizing: border-box;
+    width: 80rpx;
+    height: 80rpx;
+    background: #fff;
+    position: fixed;
+    right: 30rpx;
+    bottom: 220rpx;
+    border-radius: 50%;
+    box-shadow: 0 8rpx 60rpx 0 rgba(0,0,0,.2);
+    transition: all .3s;
+    z-index: 99999;
+    padding: 20rpx;
+}
+
+.drag-ball-area.hide {
+    transform: translateX(90rpx);
+}
+
+.drag-ball-area button {
+    border: none;
+    border-radius: 0;
+    background: transform;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+}
+
+.drag-ball-area button image {
+    width: 100%;
+    height: 100%;
+}

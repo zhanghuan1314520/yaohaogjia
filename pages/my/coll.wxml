@@ -1,0 +1,17 @@
+<view class="Suborder data-v-9ef86ce6">
+    <view class="collaose data-v-9ef86ce6" wx:for="{{list}}" wx:key="index">
+        <view bindtap="__e" class="{{['section data-v-9ef86ce6',item.open?'openbgc':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'handleclick',[index] ] ] ] ]}}">
+            <view class="box data-v-9ef86ce6">2020.12.27</view>
+            <view class="incon data-v-9ef86ce6">+80</view>
+        </view>
+        <view class="coll-open data-v-9ef86ce6" hidden="{{!item.open}}">
+            <view class="coll-block data-v-9ef86ce6">
+                <view class="coll-left data-v-9ef86ce6">
+                    <view class="c-l-t data-v-9ef86ce6">{{item.head}}</view>
+                    <view class="c-l-b data-v-9ef86ce6">{{item.time}}</view>
+                </view>
+                <view class="coll-right data-v-9ef86ce6">{{item.count}}</view>
+            </view>
+        </view>
+    </view>
+</view>

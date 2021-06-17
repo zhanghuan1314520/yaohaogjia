@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "学区分析",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+        "search": "/pages/common/search"
+    }
+}

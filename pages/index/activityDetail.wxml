@@ -1,0 +1,22 @@
+<view class="content">
+    <web-view src="{{url}}" webviewStyles="{{webviewStyles}}">
+        <cover-view class="share-button" wx:if="{{detail}}">
+            <button openType="share" plain="{{true}}">
+                <cover-image mode class="share-img" src="https://cdn.lottery.okgoes.com/btn_share.png"></cover-image>
+            </button>
+        </cover-view>
+        <cover-view class="bottom-area" wx:if="{{detail}}">
+            <cover-view class="left">
+                <button bindtap="__e" data-event-opts="{{[ [ 'tap',[ [ 'phoneCall',['$event'] ] ] ] ]}}" plain="{{true}}" type="default">
+                    <cover-image mode src="https://cdn.lottery.okgoes.com/phone-black.png"></cover-image>
+                    <cover-view class="label">电话</cover-view>
+                </button>
+                <button openType="contact" plain="{{true}}" type="default">
+                    <cover-image mode src="https://cdn.lottery.okgoes.com/myicon6.png"></cover-image>
+                    <cover-view class="label">客服</cover-view>
+                </button>
+            </cover-view>
+            <cover-view bindtap="__e" class="{{['right',detail.status!==1?'disabled':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toSignup',['$event'] ] ] ] ]}}">{{detail.signup?'已报名':'立即参与'}}</cover-view>
+        </cover-view>
+    </web-view>
+</view>

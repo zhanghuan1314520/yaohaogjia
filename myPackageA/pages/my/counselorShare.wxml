@@ -1,0 +1,23 @@
+<view class="shared-contain data-v-514fe3ee">
+    <view class="bg data-v-514fe3ee"></view>
+    <view class="content data-v-514fe3ee">
+        <view class="title _div data-v-514fe3ee">
+            <image class="data-v-514fe3ee" src="https://cdn.lottery.okgoes.com/logo-circle.png"></image>摇号大师</view>
+        <view class="top-left data-v-514fe3ee">
+            <image class="my-head data-v-514fe3ee" src="{{info.avatar}}"></image>
+            <view class="my-des data-v-514fe3ee">
+                <view class="my-name data-v-514fe3ee">{{info.name||userInfo.user}}</view>
+                <view class="my-rank data-v-514fe3ee">{{rankName}}</view>
+            </view>
+        </view>
+        <image class="QR-codd data-v-514fe3ee" src="{{qrcode}}"></image>
+        <view class="img-tip data-v-514fe3ee">
+            <view class="icon data-v-514fe3ee"></view>扫码和我一起入驻摇号大师</view>
+        <view class="invitor-code data-v-514fe3ee">{{''+(info.inviteCode||'')+''}}</view>
+        <view class="invitor-code-tip data-v-514fe3ee">我的邀请码</view>
+    </view>
+    <view class="share-btn data-v-514fe3ee">
+        <button class="btn data-v-514fe3ee" openType="share">
+            <image class="data-v-514fe3ee" src="https://cdn.lottery.okgoes.com/wx-logo.png"></image>分享给好友</button>
+    </view>
+</view>

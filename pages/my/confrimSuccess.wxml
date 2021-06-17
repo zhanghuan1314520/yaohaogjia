@@ -1,0 +1,7 @@
+<view class="content">
+    <view class="center">
+        <image mode src="https://cdn.lottery.okgoes.com/confirmSuccess.png"></image>
+        <label class="_span">感谢您提交的材料，我们将在1个工作日内审核<view class="_hr"></view>审核通过后可获得5～10积分。</label>
+    </view>
+    <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'toIndex',['$event'] ] ] ] ]}}">返回首页</view>
+</view>

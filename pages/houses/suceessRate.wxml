@@ -1,0 +1,24 @@
+<view class="content">
+    <view class="header">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/back.png"></image>历史中签率</view>
+    </view>
+    <view class="body">
+        <view class="new-block" wx:for="{{$root.l0}}" wx:for-index="i" wx:key="i">
+            <view class="timeline">
+                <image class="lineimg" src="https://cdn.lottery.okgoes.com/timeline.png"></image>
+                <label class="time-line-title _span">{{item.m0}}</label>
+            </view>
+            <view class="new-content">
+                <view class="title">{{'摇号范围：'+item[$orig].floorNum}}</view>
+                <view class="title-content">
+                    <text class="text">{{'总套数：'+(item[$orig].allHouseNum||'')}}</text>
+                    <text>摇中率：</text>
+                    <text class="text" wx:if="{{item[$orig].noHourseWinningRate!==null&&item[$orig].noHourseWinningRate!==''}}">{{'无房 '+item[$orig].noHourseWinningRate+'%'}}</text>
+                    <text class="text">{{'有房'+(item[$orig].hasHouseWinningRate||'')+'%'}}</text>
+                    <text class="text" wx:if="{{item[$orig].personnelWinningRate!==null&&item[$orig].personnelWinningRate!==''}}">{{'人才'+(item[$orig].personnelWinningRate||'')+'%'}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="data-v-99fb23ea">
+    <view class="search data-v-99fb23ea">
+        <search bind:__l="__l" bind:confirm="__e" bind:input="__e" class="data-v-99fb23ea" data-event-opts="{{[ [ '^confirm',[ ['confirmSearch'] ] ],[ '^input',[ [ '__set_model',[ '','searchValue','$event',[] ] ] ] ] ]}}" disabled="{{false}}" isHideTips="{{isHideTips}}" value="{{searchValue}}" vueId="2ed8c45c-1"></search>
+    </view>
+    <view class="body data-v-99fb23ea">
+        <house bind:__l="__l" bind:getDetail="__e" class="data-v-99fb23ea" data-event-opts="{{[ [ '^getDetail',[ ['toDetail'] ] ] ]}}" houseData="{{houseData}}" isToDetail="{{false}}" show_des="{{false}}" vueId="2ed8c45c-2"></house>
+        <view class="tips data-v-99fb23ea" wx:if="{{isBottom}}">没有更多信息...</view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="myFocus data-v-03a5e418">
+    <house bind:__l="__l" class="data-v-03a5e418" houseData="{{houseData}}" show_des="{{false}}" vueId="23144138-1" wx:if="{{houseData.length>0}}"></house>
+    <view class="empty data-v-03a5e418" wx:else>
+        <text class="data-v-03a5e418">暂无关注楼盘信息</text>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<view>
+    <slot></slot>
+    <scoped-slots-default bind:__l="__l" class="scoped-ref" data="{{dataList}}" error="{{errorMessage}}" loading="{{loading}}" options="{{options}}" pagination="{{paginationInternal}}"></scoped-slots-default>
+</view>

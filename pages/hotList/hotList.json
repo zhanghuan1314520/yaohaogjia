@@ -1,0 +1,12 @@
+{
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "楼盘列表",
+    "usingComponents": {
+        "uni-swiper-dot": "/components/uni-swiper-dot/uni-swiper-dot",
+        "uni-list": "/components/uni-list/uni-list",
+        "uni-list-item": "/components/uni-list-item/uni-list-item",
+        "uni-load-more": "/components/uni-load-more/uni-load-more",
+        "house": "/pages/common/house",
+        "search": "/pages/common/search"
+    }
+}

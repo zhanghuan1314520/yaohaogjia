@@ -1,0 +1,82 @@
+.page {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg,#fff,#fff 50%,#f2f1ed 0,#f2f1ed);
+    padding-top: 112rpx;
+}
+
+.page .input-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    padding: 20rpx 40rpx;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.page .input-search .icon-list {
+    margin-left: 36rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.page .search {
+    box-sizing: border-box;
+    position: relative;
+    width: 586rpx;
+}
+
+.page .page-body .map {
+    height: 600rpx;
+}
+
+.page .page-body .list {
+    height: 0;
+    transition: all .5s;
+}
+
+.page .body,.page .isbody {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-radius: 32rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    min-height: 90vh;
+}
+
+.page .body {
+    position: absolute;
+    top: 760rpx;
+    left: 0;
+}
+
+.page .body .body-title {
+    width: 100%;
+    line-height: 60rpx;
+    height: 60rpx;
+    text-align: center;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999;
+    border-bottom: 2rpx solid #f0f0f0;
+}
+
+.page .house-data {
+    padding-bottom: 30rpx;
+}
+
+.page .house-data .tips {
+    text-align: center;
+    color: #ccc;
+}

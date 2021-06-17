@@ -1,0 +1,50 @@
+<view class="content">
+    <view class="header" style="background:url(https://cdn.lottery.okgoes.com/confirm5.png);background-size:cover;">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/left.png"></image>
+        </view>
+        <view class="pagedes">完善楼盘信息</view>
+    </view>
+    <view class="body">
+        <view class="progeress">
+            <view class="progress-text">
+                <label class="_span">楼盘基本信息</label>
+                <label class="_span">上传楼盘照片</label>
+            </view>
+            <view class="progress-circle">
+                <view class="cricle1">1</view>
+                <view class="_hr" style="width:210rpx;height:1rpx;border-top:2rpx dotted #ccc;margin:0 18rpx;"></view>
+                <view class="cricle2">2</view>
+            </view>
+        </view>
+        <view class="b-padding">
+            <blcok bind:__l="__l" class="block" vueId="4addc8fc-1" vueSlots="{{['default']}}">
+                <view class="body-title">楼盘名称</view>
+                <view class="body-input">
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','name','$event',[] ] ] ] ] ]}}" placeholder="请输入楼盘名称" type="text" value="{{name}}"></input>
+                </view>
+            </blcok>
+            <blcok bind:__l="__l" vueId="4addc8fc-2" vueSlots="{{['default']}}">
+                <view class="body-title">均价</view>
+                <view class="body-input">
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','phone','$event',[] ] ] ] ] ]}}" placeholder="请输入均价" type="text" value="{{phone}}"></input>
+                </view>
+            </blcok>
+            <blcok bind:__l="__l" vueId="4addc8fc-3" vueSlots="{{['default']}}">
+                <view class="body-title">周边均价</view>
+                <view class="body-input">
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','vx','$event',[] ] ] ] ] ]}}" placeholder="请输入周边均价" type="text" value="{{vx}}"></input>
+                </view>
+            </blcok>
+            <blcok bind:__l="__l" vueId="4addc8fc-4" vueSlots="{{['default']}}">
+                <view class="body-title">地理位置</view>
+                <view class="body-input">
+                    <input bindinput="__e" class="name-input" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','code','$event',[] ] ] ] ] ]}}" placeholder="请输入地理位置" type="text" value="{{code}}"></input>
+                </view>
+            </blcok>
+        </view>
+        <view bindtap="__e" class="confirm" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}">
+            <view class="btn">下一步</view>
+        </view>
+    </view>
+</view>

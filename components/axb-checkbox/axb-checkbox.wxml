@@ -1,0 +1,3 @@
+<view class="style-flex style-flex-wrap">
+    <filter-radio-item bind:__l="__l" bind:change="__e" checked="{{item.checked}}" data-event-opts="{{[ [ '^change',[ ['radioChange'] ] ] ]}}" name="{{item.name}}" value="{{item.value}}" vueId="{{'a5b0c03c-1-'+idx}}" wx:for="{{items}}" wx:for-index="idx" wx:key="idx"></filter-radio-item>
+</view>

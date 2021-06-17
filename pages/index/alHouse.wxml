@@ -1,0 +1,12 @@
+<view class="content">
+    <view class="search">
+        <search bind:__l="__l" bind:confirm="__e" data-event-opts="{{[ [ '^confirm',[ ['search'] ] ] ]}}" placeholder="搜索：翠语华庭" vueId="586d7917-1"></search>
+    </view>
+    <view class="footer-data">
+        <view class="result">
+            <view class="l-result">楼盘匹配(85)</view>
+            <view bindtap="__e" class="r-result" data-event-opts="{{[ [ 'tap',[ [ 'edit',['$event'] ] ] ] ]}}">修改需求</view>
+        </view>
+        <house bind:__l="__l" houseData="{{houseData}}" show_des="{{false}}" vueId="586d7917-2"></house>
+    </view>
+</view>

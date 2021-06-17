@@ -1,0 +1,19 @@
+.search.data-v-99fb23ea {
+    display: flex;
+    padding-top: 10rpx;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.body.data-v-99fb23ea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40rpx;
+}
+
+.tips.data-v-99fb23ea {
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    transition: all .3s;
+}

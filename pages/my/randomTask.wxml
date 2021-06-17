@@ -1,0 +1,49 @@
+<view class="content">
+    <view class="header">
+        <view class="title">
+            <image bindtap="__e" class="left" data-event-opts="{{[ [ 'tap',[ [ 'back',['$event'] ] ] ] ]}}" src="https://cdn.lottery.okgoes.com/black.png"></image>随机任务</view>
+        <view class="nav">
+            <label class="_span">添加客服微信：yaohaodashi</label>
+            <view bindtap="__e" class="btn" data-event-opts="{{[ [ 'tap',[ [ 'copyCenter',['yaohaodashi'] ] ] ] ]}}">点击复制</view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="body-sigin" wx:for="{{$root.l0}}" wx:for-index="__i0__" wx:key="randTaskId">
+            <view class="{{[item[$orig].validStartTime-timestamp<0&&item[$orig].validEndTime-timestamp>0?'title-block':'title-block istitle-block']}}">
+                <view class="block-title">{{item.m0+'任务'}}</view>
+                <view class="integral">{{item[$orig].minPoint+'-'+item[$orig].maxPoint+'积分'}}</view>
+                <image class="overdue" src="https://cdn.lottery.okgoes.com/overdue.png" wx:if="{{item[$orig].validStartTime-timestamp>0||item[$orig].validEndTime-timestamp<0}}"></image>
+            </view>
+            <view class="body-content">
+                <view class="_p">任务说明：添加摇号大师客服微信(对客服可见)，转发文章到朋友圈，点赞+在看。</view>
+                <view bindtap="__e" class="inf-block" data-event-opts="{{[ [ 'tap',[ [ 'navTo',['$0'],[ [ ['news','randTaskId',item[$orig].randTaskId] ] ] ] ] ] ]}}">
+                    <view class="i-left">
+                        <view class="t-b">
+                            <label class="_span">{{item[$orig].title}}</label>
+                        </view>
+                        <view class="b-i">
+                            <view class="b-left">
+                                <label class="_span">{{item[$orig].officialAccount}}</label>
+                            </view>
+                            <view class="b-right">
+                                <label class="_span">{{item.m1}}</label>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="i-right">
+                        <image class="i-img" src="{{item[$orig].picture}}"></image>
+                    </view>
+                </view>
+                <view class="observer" wx:if="{{item[$orig].forwardUserList.length>0}}">
+                    <view class="obs-imgs">
+                        <block wx:for="{{item[$orig].forwardUserList}}" wx:for-item="i" wx:key="*this">
+                            <image class="obs" src="{{i.avatar}}" style="{{'left:'+(index+1)*17+'PX'+';'}}" wx:if="{{index<=6}}"></image>
+                            <view class="obs obs-last" style="{{'left:'+(index+2)*17+'PX'+';'}}" wx:if="{{index===6}}">···</view>
+                        </block>
+                    </view>
+                    <view class="per-number" style="{{'left:'+(item[$orig].forwardUserList.length<7?(item[$orig].forwardUserList.length+2)*17:10*17)+'PX'+';'}}">{{item[$orig].forwardUserList.length+'人已转发'}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

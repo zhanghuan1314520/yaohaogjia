@@ -1,0 +1,8 @@
+<view class="t-tr">
+    <view class="t-check-box" style="{{'border-width:'+thBorder+'px'+';'+'border-color:'+borderColor+';'}}" wx:if="{{isCheck}}">
+        <checkbox-group bindchange="__e" data-event-opts="{{[ [ 'change',[ [ 'checkboxChange',['$event'] ] ] ] ]}}">
+            <checkbox checked="{{checkboxData.checked}}" value="{{checkboxData.value+''}}"></checkbox>
+        </checkbox-group>
+    </view>
+    <slot></slot>
+</view>
